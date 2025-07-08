@@ -1,0 +1,12 @@
+python-multipart
+# Add python-multipart for form data handling
+fastapi
+uvicorn
+python-dotenv
+sqlalchemy
+psycopg2-binary
+python-jose
+reportlab
+# Add reportlab for PDF generation
+pytz
+# Add pytz for timezone handling

@@ -1,0 +1,462 @@
+/* ReportsLanding.css - Responsive styles for the reports landing page */
+
+/* Main container */
+.reports-landing {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+/* Header */
+.reports-header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.reports-header h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 0.75rem;
+}
+
+.reports-header p {
+  font-size: 1rem;
+  color: #718096;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Report Generation Section */
+.report-generation-section {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.report-generation-section h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+
+/* Success Message */
+.success-message {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background-color: #c6f6d5;
+  color: #22543d;
+  border-radius: 0.375rem;
+  margin-bottom: 1.5rem;
+}
+
+.success-message svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.75rem;
+}
+
+/* Report Types Grid */
+.report-types-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.report-type-card {
+  background-color: #f7fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.375rem;
+  padding: 1.25rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.report-type-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.report-type-card h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 0 0 0.75rem 0;
+}
+
+.report-type-card p {
+  font-size: 0.875rem;
+  color: #4a5568;
+  margin: 0 0 1.25rem 0;
+  line-height: 1.5;
+}
+
+.generate-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #4fd1c5;
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.generate-button:hover {
+  background-color: #38b2ac;
+}
+
+.generate-button:disabled {
+  background-color: #cbd5e0;
+  cursor: not-allowed;
+}
+
+/* Reports List Section */
+.reports-list-section {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+
+.reports-controls {
+  margin-bottom: 1.5rem;
+}
+
+.reports-controls h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+
+/* Filters */
+.reports-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-group label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #4a5568;
+  margin-bottom: 0.25rem;
+}
+
+.filter-group select {
+  padding: 0.5rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  min-width: 150px;
+}
+
+/* Search Bar */
+.search-bar {
+  position: relative;
+  max-width: 300px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 0.5rem 2.5rem 0.5rem 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+}
+
+.search-bar svg {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #a0aec0;
+}
+
+/* Reports Table */
+.reports-table-container {
+  overflow-x: auto;
+}
+
+.reports-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.reports-table th,
+.reports-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.reports-table th {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #4a5568;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.reports-table td {
+  font-size: 0.875rem;
+  color: #2d3748;
+}
+
+/* Status Badge */
+.status-badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.status-badge.completed {
+  background-color: #c6f6d5;
+  color: #22543d;
+}
+
+.status-badge.processing {
+  background-color: #feebc8;
+  color: #7b341e;
+}
+
+/* Report Actions */
+.report-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.download-button {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  background-color: #4fd1c5;
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.download-button:hover {
+  background-color: #38b2ac;
+}
+
+.download-button:disabled {
+  background-color: #cbd5e0;
+  cursor: not-allowed;
+}
+
+.download-button svg {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.25rem;
+}
+
+.format-badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  background-color: #ebf4ff;
+  color: #3182ce;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* Loading, Error, and Empty States */
+.loading-state,
+.error-state,
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.loading-state p,
+.error-state p,
+.empty-state p {
+  margin-top: 1rem;
+  color: #4a5568;
+  font-size: 0.875rem;
+}
+
+.error-state svg,
+.empty-state svg {
+  width: 3rem;
+  height: 3rem;
+  color: #a0aec0;
+}
+
+.error-state button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #4fd1c5;
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+/* Spinners */
+.spinner {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s linear infinite;
+  margin-right: 0.5rem;
+}
+
+.spinner-large {
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  border: 3px solid rgba(79, 209, 197, 0.3);
+  border-radius: 50%;
+  border-top-color: #4fd1c5;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .reports-filters {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .filter-group {
+    width: 100%;
+  }
+  
+  .filter-group select {
+    width: 100%;
+    min-width: auto;
+  }
+  
+  .search-bar {
+    max-width: 100%;
+    margin-top: 0.75rem;
+  }
+  
+  .reports-table th,
+  .reports-table td {
+    padding: 0.5rem;
+  }
+  
+  .report-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .download-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .reports-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .report-generation-section,
+  .reports-list-section {
+    padding: 1rem;
+  }
+  
+  .report-types-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .reports-table {
+    display: block;
+  }
+  
+  .reports-table thead {
+    display: none;
+  }
+  
+  .reports-table tbody {
+    display: block;
+  }
+  
+  .reports-table tr {
+    display: block;
+    margin-bottom: 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.375rem;
+    padding: 1rem;
+  }
+  
+  .reports-table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #edf2f7;
+    padding: 0.5rem 0;
+  }
+  
+  .reports-table td:last-child {
+    border-bottom: none;
+  }
+  
+  .reports-table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #4a5568;
+    margin-right: 1rem;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .reports-landing {
+    padding: 0;
+  }
+  
+  .report-generation-section,
+  .reports-filters,
+  .search-bar,
+  .report-actions {
+    display: none;
+  }
+  
+  .reports-table th,
+  .reports-table td {
+    padding: 0.5rem;
+  }
+}

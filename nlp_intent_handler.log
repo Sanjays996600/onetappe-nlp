@@ -1,0 +1,1258 @@
+2025-07-02 08:06:05,602 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-02 08:06:05,602 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-02 08:06:05,602 - nlp.multilingual_handler - INFO - Detected language: en for message: Show me top 5 products
+2025-07-02 08:06:05,605 - intent_handler - INFO - Recognized intent: get_top_products, entities: {'limit': 5, 'range': 'week'}
+2025-07-02 08:06:05,605 - nlp.multilingual_handler - INFO - English intent recognized: get_top_products
+2025-07-02 08:06:05,605 - nlp.command_router - INFO - API Request: GET http://127.0.0.1:8000/seller/products/top
+2025-07-02 08:06:05,605 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer test_user'}
+2025-07-02 08:06:05,610 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products/top (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10157bcb0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-02 08:06:05,610 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products/top (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10157bcb0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-02 08:06:05,610 - nlp.command_router - INFO - Simulated response for get_top_products: {"products": [{"name": "Rice", "sales": 500, "revenue": 25000}, {"name": "Sugar", "sales": 350, "revenue": 21000}, {"name": "Tea", "sales": 300, "revenue": 36000}, {"name": "Coffee", "sales": 250, "revenue": 37500}, {"name": "Wheat", "sales": 200, "revenue": 15000}], "time_range": "week"}
+2025-07-02 08:06:05,610 - nlp.command_router - ERROR - Error processing command: 'products'
+2025-07-02 08:06:05,610 - nlp.multilingual_handler - INFO - Detected language: en for message: Top 3 products this week
+2025-07-02 08:06:05,610 - intent_handler - INFO - Recognized intent: get_top_products, entities: {'limit': 3, 'range': 'week'}
+2025-07-02 08:06:05,610 - nlp.multilingual_handler - INFO - English intent recognized: get_top_products
+2025-07-02 08:06:05,610 - nlp.command_router - INFO - API Request: GET http://127.0.0.1:8000/seller/products/top
+2025-07-02 08:06:05,610 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer test_user'}
+2025-07-02 08:06:05,611 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products/top (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x101cc4050>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-02 08:06:05,611 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products/top (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x101cc4050>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-02 08:06:05,611 - nlp.command_router - INFO - Simulated response for get_top_products: {"products": [{"name": "Rice", "sales": 500, "revenue": 25000}, {"name": "Sugar", "sales": 350, "revenue": 21000}, {"name": "Tea", "sales": 300, "revenue": 36000}], "time_range": "week"}
+2025-07-02 08:06:05,611 - nlp.command_router - ERROR - Error processing command: 'products'
+2025-07-02 08:06:05,611 - nlp.multilingual_handler - INFO - Detected language: en for message: Give me the top products this month
+2025-07-02 08:06:05,611 - intent_handler - INFO - Recognized intent: get_top_products, entities: {'limit': 5, 'range': 'this-month'}
+2025-07-02 08:06:05,611 - nlp.multilingual_handler - INFO - English intent recognized: get_top_products
+2025-07-02 08:06:05,611 - nlp.command_router - INFO - API Request: GET http://127.0.0.1:8000/seller/products/top
+2025-07-02 08:06:05,611 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer test_user'}
+2025-07-02 08:06:05,612 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products/top (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x101cc4910>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-02 08:06:05,612 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products/top (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x101cc4910>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-02 08:06:05,612 - nlp.command_router - INFO - Simulated response for get_top_products: {"products": [{"name": "Rice", "sales": 500, "revenue": 25000}, {"name": "Sugar", "sales": 350, "revenue": 21000}, {"name": "Tea", "sales": 300, "revenue": 36000}, {"name": "Coffee", "sales": 250, "revenue": 37500}, {"name": "Wheat", "sales": 200, "revenue": 15000}], "time_range": "this-month"}
+2025-07-02 08:06:05,612 - nlp.command_router - ERROR - Error processing command: 'products'
+2025-07-02 08:06:05,612 - nlp.multilingual_handler - INFO - Detected language: en for message: Show top products
+2025-07-02 08:06:05,612 - intent_handler - INFO - Recognized intent: get_top_products, entities: {'limit': 5, 'range': 'week'}
+2025-07-02 08:06:05,612 - nlp.multilingual_handler - INFO - English intent recognized: get_top_products
+2025-07-02 08:06:05,612 - nlp.command_router - INFO - API Request: GET http://127.0.0.1:8000/seller/products/top
+2025-07-02 08:06:05,612 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer test_user'}
+2025-07-02 08:06:05,613 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products/top (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x101cc0fc0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-02 08:06:05,613 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products/top (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x101cc0fc0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-02 08:06:05,613 - nlp.command_router - INFO - Simulated response for get_top_products: {"products": [{"name": "Rice", "sales": 500, "revenue": 25000}, {"name": "Sugar", "sales": 350, "revenue": 21000}, {"name": "Tea", "sales": 300, "revenue": 36000}, {"name": "Coffee", "sales": 250, "revenue": 37500}, {"name": "Wheat", "sales": 200, "revenue": 15000}], "time_range": "week"}
+2025-07-02 08:06:05,613 - nlp.command_router - ERROR - Error processing command: 'products'
+2025-07-02 08:06:05,613 - nlp.multilingual_handler - INFO - Detected language: hi for message: टॉप 5 प्रोडक्ट्स दिखाओ
+2025-07-02 08:06:05,618 - nlp.multilingual_handler - INFO - Hindi intent recognized: get_top_products
+2025-07-02 08:06:05,618 - nlp.command_router - INFO - API Request: GET http://127.0.0.1:8000/seller/products/top
+2025-07-02 08:06:05,618 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer test_user'}
+2025-07-02 08:06:05,619 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products/top (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x101cc16e0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-02 08:06:05,619 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products/top (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x101cc16e0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-02 08:06:05,619 - nlp.command_router - INFO - Simulated response for get_top_products: {"products": [{"name": "Rice", "sales": 500, "revenue": 25000}, {"name": "Sugar", "sales": 350, "revenue": 21000}, {"name": "Tea", "sales": 300, "revenue": 36000}, {"name": "Coffee", "sales": 250, "revenue": 37500}, {"name": "Wheat", "sales": 200, "revenue": 15000}], "time_range": "all"}
+2025-07-02 08:06:05,619 - nlp.command_router - ERROR - Error processing command: 'products'
+2025-07-02 08:06:05,619 - nlp.multilingual_handler - INFO - Detected language: hi for message: इस हफ्ते के टॉप 3 प्रोडक्ट्स बताओ
+2025-07-02 08:06:05,619 - nlp.multilingual_handler - INFO - Hindi intent recognized: get_top_products
+2025-07-02 08:06:05,619 - nlp.command_router - INFO - API Request: GET http://127.0.0.1:8000/seller/products/top
+2025-07-02 08:06:05,619 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer test_user'}
+2025-07-02 08:06:05,620 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products/top (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x101c63d10>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-02 08:06:05,620 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products/top (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x101c63d10>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-02 08:06:05,620 - nlp.command_router - INFO - Simulated response for get_top_products: {"products": [{"name": "Rice", "sales": 500, "revenue": 25000}, {"name": "Sugar", "sales": 350, "revenue": 21000}, {"name": "Tea", "sales": 300, "revenue": 36000}], "time_range": "week"}
+2025-07-02 08:06:05,620 - nlp.command_router - ERROR - Error processing command: 'products'
+2025-07-02 08:06:05,620 - nlp.multilingual_handler - INFO - Detected language: hi for message: इस महीने के टॉप प्रोडक्ट्स बताओ
+2025-07-02 08:06:05,620 - nlp.multilingual_handler - INFO - Hindi intent recognized: get_top_products
+2025-07-02 08:06:05,620 - nlp.command_router - INFO - API Request: GET http://127.0.0.1:8000/seller/products/top
+2025-07-02 08:06:05,620 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer test_user'}
+2025-07-02 08:06:05,620 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products/top (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x101c5f790>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-02 08:06:05,620 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products/top (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x101c5f790>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-02 08:06:05,620 - nlp.command_router - INFO - Simulated response for get_top_products: {"products": [{"name": "Rice", "sales": 500, "revenue": 25000}, {"name": "Sugar", "sales": 350, "revenue": 21000}, {"name": "Tea", "sales": 300, "revenue": 36000}, {"name": "Coffee", "sales": 250, "revenue": 37500}, {"name": "Wheat", "sales": 200, "revenue": 15000}], "time_range": "this-month"}
+2025-07-02 08:06:05,620 - nlp.command_router - ERROR - Error processing command: 'products'
+2025-07-02 08:06:05,620 - nlp.multilingual_handler - INFO - Detected language: en for message: Show top 3 products
+2025-07-02 08:06:05,620 - intent_handler - INFO - Recognized intent: get_top_products, entities: {'limit': 3, 'range': 'week'}
+2025-07-02 08:06:05,620 - nlp.multilingual_handler - INFO - English intent recognized: get_top_products
+2025-07-02 08:06:05,620 - nlp.command_router - INFO - API Request: GET http://127.0.0.1:8000/seller/products/top
+2025-07-02 08:06:05,621 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer test_user'}
+2025-07-02 08:06:05,621 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products/top (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x101cf8050>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-02 08:06:05,621 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products/top (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x101cf8050>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-02 08:06:05,621 - nlp.command_router - INFO - Simulated response for get_top_products: {"products": [{"name": "Rice", "sales": 500, "revenue": 25000}, {"name": "Sugar", "sales": 350, "revenue": 21000}, {"name": "Tea", "sales": 300, "revenue": 36000}], "time_range": "week"}
+2025-07-02 08:06:05,621 - nlp.command_router - ERROR - Error processing command: 'products'
+2025-07-02 08:06:05,621 - nlp.multilingual_handler - INFO - Detected language: hi for message: टॉप 2 प्रोडक्ट्स दिखाओ
+2025-07-02 08:06:05,621 - nlp.multilingual_handler - INFO - Hindi intent recognized: get_top_products
+2025-07-02 08:06:05,621 - nlp.command_router - INFO - API Request: GET http://127.0.0.1:8000/seller/products/top
+2025-07-02 08:06:05,621 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer test_user'}
+2025-07-02 08:06:05,621 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products/top (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x101cf8490>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-02 08:06:05,622 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products/top (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x101cf8490>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-02 08:06:05,622 - nlp.command_router - INFO - Simulated response for get_top_products: {"products": [{"name": "Rice", "sales": 500, "revenue": 25000}, {"name": "Sugar", "sales": 350, "revenue": 21000}], "time_range": "all"}
+2025-07-02 08:06:05,622 - nlp.command_router - ERROR - Error processing command: 'products'
+2025-07-07 15:55:51,623 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-07 15:55:51,623 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-07 15:55:51,624 - __main__ - INFO - Testing command: 'Update stock of Sugar to 15qty'
+2025-07-07 15:55:51,624 - nlp.multilingual_handler - INFO - Detected language: en for message: Update stock of Sugar to 15qty
+2025-07-07 15:55:51,624 - intent_handler - INFO - Raw command: Update stock of Sugar to 15qty
+2025-07-07 15:55:51,624 - intent_handler - INFO - Normalized command: अपडेट स्टॉक of sugar to 15qty
+2025-07-07 15:55:51,624 - intent_handler - INFO - Language detection: hi
+2025-07-07 15:55:51,628 - intent_handler - WARNING - No intent matched for message: Update stock of Sugar to 15qty
+2025-07-07 15:55:51,628 - nlp.multilingual_handler - INFO - English intent recognized: unknown
+2025-07-07 15:55:51,628 - __main__ - INFO - Parsed result: {
+  "intent": "unknown",
+  "entities": {},
+  "raw_text": "Update stock of Sugar to 15qty",
+  "normalized_text": "\u0905\u092a\u0921\u0947\u091f \u0938\u094d\u091f\u0949\u0915 of sugar to 15qty",
+  "language": "en"
+}
+2025-07-07 15:55:51,628 - __main__ - ERROR - Expected intent 'edit_stock', got 'unknown'
+2025-07-07 15:55:51,628 - __main__ - INFO - Testing Hindi command: 'चीनी का स्टॉक 15 करो'
+2025-07-07 15:55:51,628 - nlp.multilingual_handler - INFO - Detected language: hi for message: चीनी का स्टॉक 15 करो
+2025-07-07 15:55:51,629 - nlp.multilingual_handler - INFO - Hindi intent recognized: edit_stock
+2025-07-07 15:55:51,629 - __main__ - INFO - Parsed result: {
+  "intent": "edit_stock",
+  "entities": {
+    "name": "\u091a\u0940\u0928\u0940",
+    "stock": 15
+  },
+  "language": "hi"
+}
+2025-07-07 15:55:51,629 - __main__ - INFO - Extracted entities: name='चीनी', stock=15
+2025-07-07 15:55:51,630 - nlp.command_router - INFO - API Request: POST http://127.0.0.1:8000/seller/products/update-stock
+2025-07-07 15:55:51,630 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json'}
+2025-07-07 15:55:51,630 - nlp.command_router - INFO - Request Data: {"name": "\u091a\u0940\u0928\u0940", "stock": 15}
+2025-07-07 15:55:51,634 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products/update-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x106430d70>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-07 15:55:51,634 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products/update-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x106430d70>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-07 15:55:51,634 - nlp.command_router - INFO - Simulated response for edit_stock: {"success": true, "product": {"name": "\u091a\u0940\u0928\u0940", "stock": 15, "id": "sim123"}}
+2025-07-07 15:55:51,634 - __main__ - INFO - API Response: चीनी का स्टॉक 15 इकाइयों में अपडेट किया गया।
+2025-07-07 15:55:51,635 - nlp.multilingual_handler - INFO - Detected language: en for message: Update stock of Sugar to -5
+2025-07-07 15:55:51,635 - intent_handler - INFO - Raw command: Update stock of Sugar to -5
+2025-07-07 15:55:51,635 - intent_handler - INFO - Normalized command: अपडेट स्टॉक of sugar to -5
+2025-07-07 15:55:51,635 - intent_handler - INFO - Language detection: hi
+2025-07-07 15:55:51,635 - intent_handler - WARNING - No intent matched for message: Update stock of Sugar to -5
+2025-07-07 15:55:51,635 - nlp.multilingual_handler - INFO - English intent recognized: unknown
+2025-07-07 21:15:59,284 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-07 21:15:59,285 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-07 21:16:54,447 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-07 21:16:54,447 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-07 21:17:19,810 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-07 21:17:19,810 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-07 21:18:07,016 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-07 21:18:07,016 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-07 21:18:44,360 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-07 21:18:44,360 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-07 21:18:54,704 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-07 21:18:54,704 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-07 21:19:05,723 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-07 21:19:05,724 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-07 21:19:55,212 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-07 21:19:55,212 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-07 21:20:04,800 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-07 21:20:04,800 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-07 21:29:12,762 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-07 21:29:12,762 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-07 21:29:12,784 - nlp.multilingual_handler - INFO - Detected language: en for message: Show my inventory
+2025-07-07 21:29:12,785 - nlp.intent_handler - INFO - Raw command: Show my inventory
+2025-07-07 21:29:12,785 - nlp.intent_handler - INFO - Normalized command: show my inventory
+2025-07-07 21:29:12,785 - nlp.intent_handler - INFO - Language detection: en
+2025-07-07 21:29:12,785 - nlp.intent_handler - INFO - Recognized intent: get_inventory, entities: {}
+2025-07-07 21:29:12,785 - nlp.multilingual_handler - INFO - English intent recognized: get_inventory
+2025-07-07 21:29:12,785 - nlp.command_router - INFO - API Request: GET http://127.0.0.1:8000/seller/products
+2025-07-07 21:29:12,785 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer whatsapp-1234567890'}
+2025-07-07 21:29:12,790 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10438aba0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-07 21:29:12,790 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10438aba0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-07 21:29:12,790 - nlp.command_router - INFO - Simulated response for get_inventory: {"products": [{"name": "Rice", "price": 50, "stock": 100}, {"name": "Wheat", "price": 40, "stock": 75}, {"name": "Sugar", "price": 45, "stock": 60}, {"name": "\u091a\u093e\u0935\u0932", "price": 50, "stock": 100}, {"name": "\u0917\u0947\u0939\u0942\u0902", "price": 40, "stock": 75}, {"name": "\u091a\u0940\u0928\u0940", "price": 45, "stock": 60}]}
+2025-07-07 21:29:12,791 - nlp.multilingual_handler - INFO - Detected language: en for message: Show top customers
+2025-07-07 21:29:12,791 - nlp.intent_handler - INFO - Raw command: Show top customers
+2025-07-07 21:29:12,791 - nlp.intent_handler - INFO - Normalized command: show top customers
+2025-07-07 21:29:12,791 - nlp.intent_handler - INFO - Language detection: en
+2025-07-07 21:29:12,795 - nlp.intent_handler - INFO - Recognized intent: get_customer_data, entities: {'range': 'this-month'}
+2025-07-07 21:29:12,795 - nlp.multilingual_handler - INFO - English intent recognized: get_customer_data
+2025-07-07 21:29:12,795 - nlp.command_router - INFO - Processing get_customer_data intent with range: this-month and limit: 10
+2025-07-07 21:29:12,795 - nlp.command_router - INFO - API Request: GET http://127.0.0.1:8000/seller/customers/report
+2025-07-07 21:29:12,795 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer whatsapp-1234567890'}
+2025-07-07 21:29:12,795 - nlp.command_router - INFO - Query Params: {'range': 'this-month', 'limit': 10}
+2025-07-07 21:29:12,795 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/customers/report?range=this-month&limit=10 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1043f0410>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-07 21:29:12,795 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/customers/report?range=this-month&limit=10 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1043f0410>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-07 21:29:12,795 - nlp.command_router - INFO - Simulated response for get_customer_data: {"customers": [{"name": "Rahul Sharma", "total_spent": 25000, "order_count": 12}, {"name": "Priya Patel", "total_spent": 18500, "order_count": 8}, {"name": "Amit Singh", "total_spent": 15000, "order_count": 6}, {"name": "Neha Gupta", "total_spent": 12800, "order_count": 5}, {"name": "Vikram Malhotra", "total_spent": 10500, "order_count": 4}, {"name": "Ananya Desai", "total_spent": 9200, "order_count": 7}, {"name": "Rajesh Kumar", "total_spent": 8500, "order_count": 3}, {"name": "Sunita Verma", "total_spent": 7800, "order_count": 5}, {"name": "Deepak Joshi", "total_spent": 6500, "order_count": 4}, {"name": "Meera Reddy", "total_spent": 5200, "order_count": 3}], "time_range": "this-month"}
+2025-07-07 21:29:12,798 - nlp.multilingual_handler - INFO - Detected language: en for message: Show my inventory
+2025-07-07 21:29:12,798 - nlp.intent_handler - INFO - Raw command: Show my inventory
+2025-07-07 21:29:12,798 - nlp.intent_handler - INFO - Normalized command: show my inventory
+2025-07-07 21:29:12,798 - nlp.intent_handler - INFO - Language detection: en
+2025-07-07 21:29:12,798 - nlp.intent_handler - INFO - Recognized intent: get_inventory, entities: {}
+2025-07-07 21:29:12,798 - nlp.multilingual_handler - INFO - English intent recognized: get_inventory
+2025-07-07 21:29:12,798 - nlp.command_router - INFO - API Request: GET http://127.0.0.1:8000/seller/products
+2025-07-07 21:29:12,798 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer whatsapp-1234567890'}
+2025-07-07 21:29:12,798 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10435ac10>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-07 21:29:12,798 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10435ac10>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-07 21:29:12,798 - nlp.command_router - INFO - Simulated response for get_inventory: {"products": [{"name": "Rice", "price": 50, "stock": 100}, {"name": "Wheat", "price": 40, "stock": 75}, {"name": "Sugar", "price": 45, "stock": 60}, {"name": "\u091a\u093e\u0935\u0932", "price": 50, "stock": 100}, {"name": "\u0917\u0947\u0939\u0942\u0902", "price": 40, "stock": 75}, {"name": "\u091a\u0940\u0928\u0940", "price": 45, "stock": 60}]}
+2025-07-07 21:29:12,800 - nlp.multilingual_handler - INFO - Detected language: en for message: This is not a valid command
+2025-07-07 21:29:12,800 - nlp.intent_handler - INFO - Raw command: This is not a valid command
+2025-07-07 21:29:12,800 - nlp.intent_handler - INFO - Normalized command: this इस not a valid command
+2025-07-07 21:29:12,800 - nlp.intent_handler - INFO - Language detection: hi
+2025-07-07 21:29:12,802 - nlp.intent_handler - INFO - Recognized intent: search_product, entities: {'name': 'इस not a valid command'}
+2025-07-07 21:29:12,802 - nlp.multilingual_handler - INFO - English intent recognized: search_product
+2025-07-07 21:29:12,802 - nlp.command_router - INFO - Processing search_product intent for: इस not a valid command
+2025-07-07 21:29:12,802 - nlp.command_router - INFO - API Request: POST http://127.0.0.1:8000/seller/products/check-stock
+2025-07-07 21:29:12,802 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer whatsapp-1234567890'}
+2025-07-07 21:29:12,802 - nlp.command_router - INFO - Request Data: {"name": "\u0907\u0938 not a valid command"}
+2025-07-07 21:29:12,802 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products/check-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x104342fd0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-07 21:29:12,802 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products/check-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x104342fd0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-07 21:29:12,802 - nlp.command_router - INFO - Simulated response for search_product: {"found": false, "name": "\u0907\u0938 not a valid command"}
+2025-07-07 21:29:12,803 - nlp.multilingual_handler - INFO - Detected language: hi for message: मेरा इन्वेंटरी दिखाओ
+2025-07-07 21:29:12,806 - nlp.multilingual_handler - INFO - Hindi intent recognized: get_inventory
+2025-07-07 21:29:12,806 - nlp.command_router - INFO - API Request: GET http://127.0.0.1:8000/seller/products
+2025-07-07 21:29:12,806 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer whatsapp-1234567890'}
+2025-07-07 21:29:12,806 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10444c2b0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-07 21:29:12,806 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10444c2b0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-07 21:29:12,806 - nlp.command_router - INFO - Simulated response for get_inventory: {"products": [{"name": "Rice", "price": 50, "stock": 100}, {"name": "Wheat", "price": 40, "stock": 75}, {"name": "Sugar", "price": 45, "stock": 60}, {"name": "\u091a\u093e\u0935\u0932", "price": 50, "stock": 100}, {"name": "\u0917\u0947\u0939\u0942\u0902", "price": 40, "stock": 75}, {"name": "\u091a\u0940\u0928\u0940", "price": 45, "stock": 60}]}
+2025-07-07 21:29:12,807 - nlp.multilingual_handler - INFO - Detected language: en for message: Show my inventory 📦
+2025-07-07 21:29:12,807 - nlp.intent_handler - INFO - Raw command: Show my inventory 📦
+2025-07-07 21:29:12,807 - nlp.intent_handler - INFO - Normalized command: show my inventory 📦
+2025-07-07 21:29:12,807 - nlp.intent_handler - INFO - Language detection: en
+2025-07-07 21:29:12,807 - nlp.intent_handler - INFO - Recognized intent: get_inventory, entities: {}
+2025-07-07 21:29:12,807 - nlp.multilingual_handler - INFO - English intent recognized: get_inventory
+2025-07-07 21:29:12,807 - nlp.command_router - INFO - API Request: GET http://127.0.0.1:8000/seller/products
+2025-07-07 21:29:12,807 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer whatsapp-1234567890'}
+2025-07-07 21:29:12,808 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1043b2210>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-07 21:29:12,808 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1043b2210>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-07 21:29:12,808 - nlp.command_router - INFO - Simulated response for get_inventory: {"products": [{"name": "Rice", "price": 50, "stock": 100}, {"name": "Wheat", "price": 40, "stock": 75}, {"name": "Sugar", "price": 45, "stock": 60}, {"name": "\u091a\u093e\u0935\u0932", "price": 50, "stock": 100}, {"name": "\u0917\u0947\u0939\u0942\u0902", "price": 40, "stock": 75}, {"name": "\u091a\u0940\u0928\u0940", "price": 45, "stock": 60}]}
+2025-07-07 21:29:12,808 - nlp.multilingual_handler - INFO - Detected language: hi for message: मेरे टॉप १० ग्राहकों की जानकारी दिखाओ जो इस महीने सबसे ज़्यादा खरीदारी कर रहे हैं।
+2025-07-07 21:29:12,810 - nlp.multilingual_handler - INFO - Hindi intent recognized: unknown
+2025-07-07 21:29:33,266 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-07 21:29:33,266 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-07 21:29:33,268 - __main__ - INFO - Test Command Router started - Testing API integration
+2025-07-07 21:29:33,269 - __main__ - INFO - Testing against backend server: http://127.0.0.1:8000
+2025-07-07 21:29:33,269 - __main__ - INFO - 
+==================================================
+Testing command: 'Show my inventory'
+==================================================
+2025-07-07 21:29:33,269 - nlp.multilingual_handler - INFO - Detected language: en for message: Show my inventory
+2025-07-07 21:29:33,269 - nlp.intent_handler - INFO - Raw command: Show my inventory
+2025-07-07 21:29:33,269 - nlp.intent_handler - INFO - Normalized command: show my inventory
+2025-07-07 21:29:33,269 - nlp.intent_handler - INFO - Language detection: en
+2025-07-07 21:29:33,269 - nlp.intent_handler - INFO - Recognized intent: get_inventory, entities: {}
+2025-07-07 21:29:33,269 - nlp.multilingual_handler - INFO - English intent recognized: get_inventory
+2025-07-07 21:29:33,269 - __main__ - INFO - Parsed result: {"intent": "get_inventory", "entities": {}, "language": "en", "raw_text": "Show my inventory", "normalized_text": "show my inventory"}
+2025-07-07 21:29:33,269 - nlp.command_router - INFO - API Request: GET http://127.0.0.1:8000/seller/products
+2025-07-07 21:29:33,269 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json'}
+2025-07-07 21:29:33,273 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1042a02f0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-07 21:29:33,273 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1042a02f0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-07 21:29:33,274 - nlp.command_router - INFO - Simulated response for get_inventory: {"products": [{"name": "Rice", "price": 50, "stock": 100}, {"name": "Wheat", "price": 40, "stock": 75}, {"name": "Sugar", "price": 45, "stock": 60}, {"name": "\u091a\u093e\u0935\u0932", "price": 50, "stock": 100}, {"name": "\u0917\u0947\u0939\u0942\u0902", "price": 40, "stock": 75}, {"name": "\u091a\u0940\u0928\u0940", "price": 45, "stock": 60}]}
+2025-07-07 21:29:33,274 - __main__ - INFO - Final response: "Current inventory:\n1. Rice – ₹50 – 100 qty\n2. Wheat – ₹40 – 75 qty\n3. Sugar – ₹45 – 60 qty\n4. चावल – ₹50 – 100 qty\n5. गेहूं – ₹40 – 75 qty\n6. चीनी – ₹45 – 60 qty"
+2025-07-07 21:29:33,274 - __main__ - INFO - 
+==================================================
+Testing command: 'Add new product Rice 50rs 20qty'
+==================================================
+2025-07-07 21:29:33,274 - nlp.multilingual_handler - INFO - Detected language: en for message: Add new product Rice 50rs 20qty
+2025-07-07 21:29:33,274 - nlp.intent_handler - INFO - Raw command: Add new product Rice 50rs 20qty
+2025-07-07 21:29:33,274 - nlp.intent_handler - INFO - Normalized command: ऐड new product rice 50rs 20qty
+2025-07-07 21:29:33,274 - nlp.intent_handler - INFO - Language detection: hi
+2025-07-07 21:29:33,278 - nlp.intent_handler - WARNING - No intent matched for message: Add new product Rice 50rs 20qty
+2025-07-07 21:29:33,278 - nlp.multilingual_handler - INFO - English intent recognized: unknown
+2025-07-07 21:29:33,278 - __main__ - INFO - Parsed result: {"intent": "unknown", "entities": {}, "raw_text": "Add new product Rice 50rs 20qty", "normalized_text": "ऐड new product rice 50rs 20qty", "language": "en"}
+2025-07-07 21:29:33,278 - __main__ - INFO - Final response: "Sorry, I couldn't understand that command."
+2025-07-07 21:29:33,278 - __main__ - INFO - 
+==================================================
+Testing command: 'Update Sugar stock to 50'
+==================================================
+2025-07-07 21:29:33,278 - nlp.multilingual_handler - INFO - Detected language: en for message: Update Sugar stock to 50
+2025-07-07 21:29:33,278 - nlp.intent_handler - INFO - Raw command: Update Sugar stock to 50
+2025-07-07 21:29:33,278 - nlp.intent_handler - INFO - Normalized command: अपडेट sugar स्टॉक को 50
+2025-07-07 21:29:33,278 - nlp.intent_handler - INFO - Language detection: hi
+2025-07-07 21:29:33,278 - nlp.intent_handler - WARNING - No intent matched for message: Update Sugar stock to 50
+2025-07-07 21:29:33,278 - nlp.multilingual_handler - INFO - English intent recognized: unknown
+2025-07-07 21:29:33,278 - __main__ - INFO - Parsed result: {"intent": "unknown", "entities": {}, "raw_text": "Update Sugar stock to 50", "normalized_text": "अपडेट sugar स्टॉक को 50", "language": "en"}
+2025-07-07 21:29:33,278 - __main__ - INFO - Final response: "Sorry, I couldn't understand that command."
+2025-07-07 21:29:33,278 - __main__ - INFO - 
+==================================================
+Testing command: 'Show low stock items'
+==================================================
+2025-07-07 21:29:33,278 - nlp.multilingual_handler - INFO - Detected language: en for message: Show low stock items
+2025-07-07 21:29:33,278 - nlp.intent_handler - INFO - Raw command: Show low stock items
+2025-07-07 21:29:33,278 - nlp.intent_handler - INFO - Normalized command: show low स्टॉक items
+2025-07-07 21:29:33,278 - nlp.intent_handler - INFO - Language detection: hi
+2025-07-07 21:29:33,278 - nlp.intent_handler - WARNING - No intent matched for message: Show low stock items
+2025-07-07 21:29:33,278 - nlp.multilingual_handler - INFO - English intent recognized: unknown
+2025-07-07 21:29:33,278 - __main__ - INFO - Parsed result: {"intent": "unknown", "entities": {}, "raw_text": "Show low stock items", "normalized_text": "show low स्टॉक items", "language": "en"}
+2025-07-07 21:29:33,278 - __main__ - INFO - Final response: "Sorry, I couldn't understand that command."
+2025-07-07 21:29:33,278 - __main__ - INFO - 
+==================================================
+Testing command: 'Get today's report'
+==================================================
+2025-07-07 21:29:33,278 - nlp.multilingual_handler - INFO - Detected language: en for message: Get today's report
+2025-07-07 21:29:33,278 - nlp.intent_handler - INFO - Raw command: Get today's report
+2025-07-07 21:29:33,278 - nlp.intent_handler - INFO - Normalized command: get today's रिपोर्ट
+2025-07-07 21:29:33,278 - nlp.intent_handler - INFO - Language detection: hi
+2025-07-07 21:29:33,278 - nlp.intent_handler - WARNING - No intent matched for message: Get today's report
+2025-07-07 21:29:33,278 - nlp.multilingual_handler - INFO - English intent recognized: unknown
+2025-07-07 21:29:33,278 - __main__ - INFO - Parsed result: {"intent": "unknown", "entities": {}, "raw_text": "Get today's report", "normalized_text": "get today's रिपोर्ट", "language": "en"}
+2025-07-07 21:29:33,278 - __main__ - INFO - Final response: "Sorry, I couldn't understand that command."
+2025-07-07 21:29:33,278 - __main__ - INFO - 
+==================================================
+Testing command: 'View recent orders'
+==================================================
+2025-07-07 21:29:33,279 - nlp.multilingual_handler - INFO - Detected language: en for message: View recent orders
+2025-07-07 21:29:33,279 - nlp.intent_handler - INFO - Raw command: View recent orders
+2025-07-07 21:29:33,279 - nlp.intent_handler - INFO - Normalized command: view recent orders
+2025-07-07 21:29:33,279 - nlp.intent_handler - INFO - Language detection: en
+2025-07-07 21:29:33,279 - nlp.intent_handler - INFO - Recognized intent: get_orders, entities: {'range': 'recent'}
+2025-07-07 21:29:33,279 - nlp.multilingual_handler - INFO - English intent recognized: get_orders
+2025-07-07 21:29:33,279 - __main__ - INFO - Parsed result: {"intent": "get_orders", "entities": {"range": "recent"}, "language": "en", "raw_text": "View recent orders", "normalized_text": "view recent orders"}
+2025-07-07 21:29:33,279 - nlp.command_router - INFO - API Request: GET http://127.0.0.1:8000/seller/orders
+2025-07-07 21:29:33,279 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json'}
+2025-07-07 21:29:33,279 - nlp.command_router - INFO - Query Params: {'range': 'recent'}
+2025-07-07 21:29:33,280 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/orders?range=recent (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1042a47d0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-07 21:29:33,280 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/orders?range=recent (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1042a47d0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-07 21:29:33,280 - nlp.command_router - INFO - Simulated response for get_orders: {"orders": [{"id": "ORD001", "status": "Delivered", "total": 500}, {"id": "ORD002", "status": "Processing", "total": 350}, {"id": "ORD003", "status": "Delivered", "total": 720}, {"id": "ORD004", "status": "Delivered", "total": 250}]}
+2025-07-07 21:29:33,280 - __main__ - INFO - Final response: "recent orders:\n- Order #ORD001: Delivered, Total: ₹500\n- Order #ORD002: Processing, Total: ₹350\n- Order #ORD003: Delivered, Total: ₹720\n- Order #ORD004: Delivered, Total: ₹250"
+2025-07-07 21:29:33,280 - __main__ - INFO - 
+==================================================
+Testing command: 'I want to add a new product called Wheat for 45 rupees with 30 pieces'
+==================================================
+2025-07-07 21:29:33,280 - nlp.multilingual_handler - INFO - Detected language: en for message: I want to add a new product called Wheat for 45 rupees with 30 pieces
+2025-07-07 21:29:33,280 - nlp.intent_handler - INFO - Raw command: I want to add a new product called Wheat for 45 rupees with 30 pieces
+2025-07-07 21:29:33,280 - nlp.intent_handler - INFO - Normalized command: i want को ऐड a new product called wheat के लिए 45 rupees with 30 pieces
+2025-07-07 21:29:33,280 - nlp.intent_handler - INFO - Language detection: hi
+2025-07-07 21:29:33,280 - nlp.intent_handler - WARNING - No intent matched for message: I want to add a new product called Wheat for 45 rupees with 30 pieces
+2025-07-07 21:29:33,280 - nlp.multilingual_handler - INFO - English intent recognized: unknown
+2025-07-07 21:29:33,280 - __main__ - INFO - Parsed result: {"intent": "unknown", "entities": {}, "raw_text": "I want to add a new product called Wheat for 45 rupees with 30 pieces", "normalized_text": "i want को ऐड a new product called wheat के लिए 45 rupees with 30 pieces", "language": "en"}
+2025-07-07 21:29:33,280 - __main__ - INFO - Final response: "Sorry, I couldn't understand that command."
+2025-07-07 21:29:33,280 - __main__ - INFO - 
+==================================================
+Testing command: 'मेरे प्रोडक्ट दिखाओ'
+==================================================
+2025-07-07 21:29:33,280 - nlp.multilingual_handler - INFO - Detected language: hi for message: मेरे प्रोडक्ट दिखाओ
+2025-07-07 21:29:33,283 - nlp.multilingual_handler - INFO - Hindi intent recognized: get_inventory
+2025-07-07 21:29:33,283 - __main__ - INFO - Parsed result: {"intent": "get_inventory", "entities": {}, "language": "hi"}
+2025-07-07 21:29:33,283 - nlp.command_router - INFO - API Request: GET http://127.0.0.1:8000/seller/products
+2025-07-07 21:29:33,283 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json'}
+2025-07-07 21:29:33,284 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1042a5090>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-07 21:29:33,284 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1042a5090>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-07 21:29:33,284 - nlp.command_router - INFO - Simulated response for get_inventory: {"products": [{"name": "Rice", "price": 50, "stock": 100}, {"name": "Wheat", "price": 40, "stock": 75}, {"name": "Sugar", "price": 45, "stock": 60}, {"name": "\u091a\u093e\u0935\u0932", "price": 50, "stock": 100}, {"name": "\u0917\u0947\u0939\u0942\u0902", "price": 40, "stock": 75}, {"name": "\u091a\u0940\u0928\u0940", "price": 45, "stock": 60}]}
+2025-07-07 21:29:33,284 - __main__ - INFO - Final response: "वर्तमान इन्वेंटरी:\n1. Rice – ₹50 – 100 मात्रा\n2. Wheat – ₹40 – 75 मात्रा\n3. Sugar – ₹45 – 60 मात्रा\n4. चावल – ₹50 – 100 मात्रा\n5. गेहूं – ₹40 – 75 मात्रा\n6. चीनी – ₹45 – 60 मात्रा"
+2025-07-07 21:29:33,284 - __main__ - INFO - 
+==================================================
+Testing command: 'नया प्रोडक्ट चावल 50 रुपये 20 पीस जोड़ो'
+==================================================
+2025-07-07 21:29:33,284 - nlp.multilingual_handler - INFO - Detected language: hi for message: नया प्रोडक्ट चावल 50 रुपये 20 पीस जोड़ो
+2025-07-07 21:29:33,285 - nlp.multilingual_handler - INFO - Hindi intent recognized: add_product
+2025-07-07 21:29:33,285 - __main__ - INFO - Parsed result: {"intent": "add_product", "entities": {"name": "चावल", "price": 50, "stock": 20}, "language": "hi"}
+2025-07-07 21:29:33,285 - nlp.command_router - INFO - API Request: POST http://127.0.0.1:8000/products
+2025-07-07 21:29:33,285 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json'}
+2025-07-07 21:29:33,285 - nlp.command_router - INFO - Request Data: {"product_name": "\u091a\u093e\u0935\u0932", "price": 50, "stock": 20, "description": "Added via NLP command"}
+2025-07-07 21:29:33,285 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /products (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x104299f30>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-07 21:29:33,285 - nlp.command_router - INFO - Processing add_product intent with data: {"product_name": "\u091a\u093e\u0935\u0932", "price": 50, "stock": 20, "description": "Added via NLP command"}
+2025-07-07 21:29:33,285 - nlp.command_router - INFO - Request URL: http://127.0.0.1:8000/products
+2025-07-07 21:29:33,285 - nlp.command_router - INFO - Request Method: POST
+2025-07-07 21:29:33,285 - nlp.command_router - INFO - Request Data: {"product_name": "\u091a\u093e\u0935\u0932", "price": 50, "stock": 20, "description": "Added via NLP command"}
+2025-07-07 21:29:33,285 - nlp.command_router - INFO - Response: {"error": "HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /products (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x104299f30>: Failed to establish a new connection: [Errno 61] Connection refused'))"}
+2025-07-07 21:29:33,285 - nlp.command_router - ERROR - Error adding product: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /products (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x104299f30>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-07 21:29:33,285 - __main__ - INFO - Final response: "प्रोडक्ट चावल को जोड़ने में विफल। त्रुटि: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /products (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x104299f30>: Failed to establish a new connection: [Errno 61] Connection refused'))"
+2025-07-07 21:29:33,286 - __main__ - INFO - 
+==================================================
+Testing command: 'चावल का स्टॉक 100 करो'
+==================================================
+2025-07-07 21:29:33,286 - nlp.multilingual_handler - INFO - Detected language: hi for message: चावल का स्टॉक 100 करो
+2025-07-07 21:29:33,286 - nlp.multilingual_handler - INFO - Hindi intent recognized: edit_stock
+2025-07-07 21:29:33,286 - __main__ - INFO - Parsed result: {"intent": "edit_stock", "entities": {"name": "चावल", "stock": 100}, "language": "hi"}
+2025-07-07 21:29:33,286 - nlp.command_router - INFO - API Request: POST http://127.0.0.1:8000/seller/products/update-stock
+2025-07-07 21:29:33,286 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json'}
+2025-07-07 21:29:33,286 - nlp.command_router - INFO - Request Data: {"name": "\u091a\u093e\u0935\u0932", "stock": 100}
+2025-07-07 21:29:33,286 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products/update-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10429a780>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-07 21:29:33,286 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products/update-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10429a780>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-07 21:29:33,286 - nlp.command_router - INFO - Simulated response for edit_stock: {"success": true, "product": {"name": "\u091a\u093e\u0935\u0932", "stock": 100, "id": "sim123"}}
+2025-07-07 21:29:33,286 - __main__ - INFO - Final response: "चावल का स्टॉक 100 इकाइयों में अपडेट किया गया।"
+2025-07-07 21:29:33,286 - __main__ - INFO - 
+==================================================
+Testing command: 'कम स्टॉक वाले आइटम दिखाओ'
+==================================================
+2025-07-07 21:29:33,286 - nlp.multilingual_handler - INFO - Detected language: hi for message: कम स्टॉक वाले आइटम दिखाओ
+2025-07-07 21:29:33,287 - nlp.multilingual_handler - INFO - Hindi intent recognized: get_low_stock
+2025-07-07 21:29:33,287 - __main__ - INFO - Parsed result: {"intent": "get_low_stock", "entities": {"threshold": 5}, "language": "hi"}
+2025-07-07 21:29:33,287 - nlp.command_router - INFO - Processing get_low_stock intent with threshold: 5
+2025-07-07 21:29:33,287 - nlp.command_router - INFO - API Request: POST http://127.0.0.1:8000/seller/products/low-stock
+2025-07-07 21:29:33,287 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json'}
+2025-07-07 21:29:33,287 - nlp.command_router - INFO - Request Data: {"threshold": 5}
+2025-07-07 21:29:33,287 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products/low-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1042accb0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-07 21:29:33,287 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products/low-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1042accb0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-07 21:29:33,287 - nlp.command_router - INFO - Simulated response for get_low_stock: {"products": [{"name": "Salt", "price": 20, "stock": 5}, {"name": "Tea", "price": 120, "stock": 8}, {"name": "\u0928\u092e\u0915", "price": 20, "stock": 5}, {"name": "\u091a\u093e\u092f", "price": 120, "stock": 8}]}
+2025-07-07 21:29:33,287 - __main__ - INFO - Final response: "कम स्टॉक वाले प्रोडक्ट:\n1. Salt – ₹20 – 5 मात्रा\n2. Tea – ₹120 – 8 मात्रा\n3. नमक – ₹20 – 5 मात्रा\n4. चाय – ₹120 – 8 मात्रा"
+2025-07-07 21:29:33,287 - __main__ - INFO - 
+==================================================
+Testing command: 'आज की रिपोर्ट भेजो'
+==================================================
+2025-07-07 21:29:33,287 - nlp.multilingual_handler - INFO - Detected language: hi for message: आज की रिपोर्ट भेजो
+2025-07-07 21:29:33,289 - nlp.multilingual_handler - INFO - Hindi intent recognized: get_report
+2025-07-07 21:29:33,289 - __main__ - INFO - Parsed result: {"intent": "get_report", "entities": {"range": "today"}, "language": "hi"}
+2025-07-07 21:29:33,289 - nlp.command_router - INFO - API Request: GET http://127.0.0.1:8000/seller/report
+2025-07-07 21:29:33,289 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json'}
+2025-07-07 21:29:33,289 - nlp.command_router - INFO - Query Params: {'range': 'today'}
+2025-07-07 21:29:33,289 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/report?range=today (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1042cc160>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-07 21:29:33,289 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/report?range=today (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1042cc160>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-07 21:29:33,289 - nlp.command_router - INFO - Simulated response for get_report: {"sales": 12500, "orders": 25, "top_product": "Rice"}
+2025-07-07 21:29:33,289 - __main__ - INFO - Final response: "आज के लिए बिक्री रिपोर्ट:\nआज की बिक्री: ₹12500\nऑर्डर: 25\nटॉप प्रोडक्ट: Rice"
+2025-07-07 21:29:33,289 - __main__ - INFO - 
+==================================================
+Testing command: 'मुझे चीनी का स्टॉक 75 करना है'
+==================================================
+2025-07-07 21:29:33,289 - nlp.multilingual_handler - INFO - Detected language: hi for message: मुझे चीनी का स्टॉक 75 करना है
+2025-07-07 21:29:33,290 - nlp.multilingual_handler - INFO - Hindi intent recognized: edit_stock
+2025-07-07 21:29:33,290 - __main__ - INFO - Parsed result: {"intent": "edit_stock", "entities": {"name": "चीनी", "stock": 75}, "language": "hi"}
+2025-07-07 21:29:33,290 - nlp.command_router - INFO - API Request: POST http://127.0.0.1:8000/seller/products/update-stock
+2025-07-07 21:29:33,290 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json'}
+2025-07-07 21:29:33,290 - nlp.command_router - INFO - Request Data: {"name": "\u091a\u0940\u0928\u0940", "stock": 75}
+2025-07-07 21:29:33,290 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products/update-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1042cc8d0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-07 21:29:33,290 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products/update-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1042cc8d0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-07 21:29:33,290 - nlp.command_router - INFO - Simulated response for edit_stock: {"success": true, "product": {"name": "\u091a\u0940\u0928\u0940", "stock": 75, "id": "sim123"}}
+2025-07-07 21:29:33,290 - __main__ - INFO - Final response: "चीनी का स्टॉक 75 इकाइयों में अपडेट किया गया।"
+2025-07-07 21:46:22,692 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-07 21:46:22,693 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-07 21:46:22,723 - nlp.multilingual_handler - INFO - Detected language: en for message: Show my inventory
+2025-07-07 21:46:22,724 - nlp.intent_handler - INFO - Raw command: Show my inventory
+2025-07-07 21:46:22,724 - nlp.intent_handler - INFO - Normalized command: show my inventory
+2025-07-07 21:46:22,724 - nlp.intent_handler - INFO - Language detection: en
+2025-07-07 21:46:22,724 - nlp.intent_handler - INFO - Recognized intent: get_inventory, entities: {}
+2025-07-07 21:46:22,724 - nlp.multilingual_handler - INFO - English intent recognized: get_inventory
+2025-07-07 21:46:22,724 - __main__ - INFO - Message: 'Show my inventory'
+2025-07-07 21:46:22,724 - __main__ - INFO - Expected: {"intent": "get_inventory", "entities": {}, "language": "en"}
+2025-07-07 21:46:22,724 - __main__ - INFO - Actual: {"intent": "get_inventory", "entities": {}, "language": "en", "raw_text": "Show my inventory", "normalized_text": "show my inventory"}
+2025-07-07 21:46:22,726 - nlp.multilingual_handler - INFO - Detected language: hi for message: मेरे प्रोडक्ट दिखाओ
+2025-07-07 21:46:22,729 - nlp.multilingual_handler - INFO - Hindi intent recognized: get_inventory
+2025-07-07 21:46:22,729 - __main__ - INFO - Message: 'मेरे प्रोडक्ट दिखाओ'
+2025-07-07 21:46:22,729 - __main__ - INFO - Expected: {"intent": "get_inventory", "entities": {}, "language": "hi"}
+2025-07-07 21:46:22,729 - __main__ - INFO - Actual: {"intent": "get_inventory", "entities": {}, "language": "hi"}
+2025-07-07 21:46:22,729 - nlp.multilingual_handler - INFO - Detected language: hi for message: Add नया product चावल 50rs
+2025-07-07 21:46:22,731 - nlp.multilingual_handler - INFO - Hindi intent recognized: unknown
+2025-07-07 21:46:22,731 - __main__ - INFO - Message: 'Add नया product चावल 50rs'
+2025-07-07 21:46:22,731 - __main__ - INFO - Expected: {"intent": "add_product", "entities": {"product_name": "चावल", "price": "50"}, "language": "en"}
+2025-07-07 21:46:22,731 - __main__ - INFO - Actual: {"intent": "unknown", "entities": {}, "language": "hi"}
+2025-07-07 21:46:22,731 - nlp.multilingual_handler - INFO - Detected language: hi for message: नया प्रोडक्ट दाल₹ 100 रुपये 50 पीस जोड़ो
+2025-07-07 21:46:22,731 - nlp.multilingual_handler - INFO - Hindi intent recognized: add_product
+2025-07-07 21:46:22,731 - __main__ - INFO - Message: 'नया प्रोडक्ट दाल₹ 100 रुपये 50 पीस जोड़ो'
+2025-07-07 21:46:22,731 - __main__ - INFO - Expected: {"intent": "add_product", "entities": {"product_name": "दाल₹", "price": "100", "quantity": "50"}, "language": "hi"}
+2025-07-07 21:46:22,731 - __main__ - INFO - Actual: {"intent": "add_product", "entities": {"name": "दाल₹", "price": 100, "stock": 50}, "language": "hi"}
+2025-07-07 21:47:28,446 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-07 21:47:28,446 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-07 21:47:28,478 - __main__ - INFO - Message: 'Show my inventory'
+2025-07-07 21:47:28,478 - __main__ - INFO - Expected: {"intent": "get_inventory", "entities": {}, "language": "en"}
+2025-07-07 21:47:28,478 - __main__ - INFO - Actual: {"intent": "get_inventory", "entities": {}, "language": "en"}
+2025-07-07 21:47:28,478 - __main__ - INFO - Message: 'Add new product Rice 50rs 20qty'
+2025-07-07 21:47:28,478 - __main__ - INFO - Expected: {"intent": "add_product", "entities": {"product_name": "Rice", "price": "50", "quantity": "20"}, "language": "en"}
+2025-07-07 21:47:28,478 - __main__ - INFO - Actual: {"intent": "add_product", "entities": {"product_name": "Rice", "price": "50", "quantity": "20"}, "language": "en"}
+2025-07-07 21:47:28,478 - __main__ - INFO - Message: 'Edit stock of Rice to 100'
+2025-07-07 21:47:28,478 - __main__ - INFO - Expected: {"intent": "edit_stock", "entities": {"product_name": "Rice", "quantity": "100"}, "language": "en"}
+2025-07-07 21:47:28,478 - __main__ - INFO - Actual: {"intent": "edit_stock", "entities": {"product_name": "Rice", "quantity": "100"}, "language": "en"}
+2025-07-07 21:47:28,478 - __main__ - INFO - Message: 'Show low stock items'
+2025-07-07 21:47:28,478 - __main__ - INFO - Expected: {"intent": "get_low_stock", "entities": {}, "language": "en"}
+2025-07-07 21:47:28,478 - __main__ - INFO - Actual: {"intent": "get_low_stock", "entities": {}, "language": "en"}
+2025-07-07 21:47:28,478 - __main__ - INFO - Message: 'Send today's report'
+2025-07-07 21:47:28,478 - __main__ - INFO - Expected: {"intent": "get_report", "entities": {"time_period": "today"}, "language": "en"}
+2025-07-07 21:47:28,478 - __main__ - INFO - Actual: {"intent": "get_report", "entities": {"time_period": "today"}, "language": "en"}
+2025-07-07 21:47:28,479 - __main__ - INFO - Message: 'Search for rice'
+2025-07-07 21:47:28,479 - __main__ - INFO - Expected: {"intent": "search_product", "entities": {"product_name": "rice"}, "language": "en"}
+2025-07-07 21:47:28,479 - __main__ - INFO - Actual: {"intent": "search_product", "entities": {"product_name": "rice"}, "language": "en"}
+2025-07-07 21:47:28,479 - __main__ - INFO - Message: 'Is salt available?'
+2025-07-07 21:47:28,479 - __main__ - INFO - Expected: {"intent": "search_product", "entities": {"product_name": "salt"}, "language": "en"}
+2025-07-07 21:47:28,479 - __main__ - INFO - Actual: {"intent": "search_product", "entities": {"product_name": "salt"}, "language": "en"}
+2025-07-07 21:47:28,479 - __main__ - INFO - Message: 'मेरे प्रोडक्ट दिखाओ'
+2025-07-07 21:47:28,479 - __main__ - INFO - Expected: {"intent": "get_inventory", "entities": {}, "language": "hi"}
+2025-07-07 21:47:28,479 - __main__ - INFO - Actual: {"intent": "get_inventory", "entities": {}, "language": "hi"}
+2025-07-07 21:47:28,479 - __main__ - INFO - Message: 'नया प्रोडक्ट चावल 50 रुपये 20 पीस जोड़ो'
+2025-07-07 21:47:28,479 - __main__ - INFO - Expected: {"intent": "add_product", "entities": {"product_name": "चावल", "price": "50", "quantity": "20"}, "language": "hi"}
+2025-07-07 21:47:28,479 - __main__ - INFO - Actual: {"intent": "add_product", "entities": {"product_name": "चावल", "price": "50", "quantity": "20"}, "language": "hi"}
+2025-07-07 21:47:28,479 - __main__ - INFO - Message: 'चावल का स्टॉक 100 करो'
+2025-07-07 21:47:28,479 - __main__ - INFO - Expected: {"intent": "edit_stock", "entities": {"product_name": "चावल", "quantity": "100"}, "language": "hi"}
+2025-07-07 21:47:28,479 - __main__ - INFO - Actual: {"intent": "edit_stock", "entities": {"product_name": "चावल", "quantity": "100"}, "language": "hi"}
+2025-07-07 21:47:28,479 - __main__ - INFO - Message: 'कम स्टॉक वाले आइटम दिखाओ'
+2025-07-07 21:47:28,479 - __main__ - INFO - Expected: {"intent": "get_low_stock", "entities": {}, "language": "hi"}
+2025-07-07 21:47:28,479 - __main__ - INFO - Actual: {"intent": "get_low_stock", "entities": {}, "language": "hi"}
+2025-07-07 21:47:28,479 - __main__ - INFO - Message: 'आज की रिपोर्ट भेजो'
+2025-07-07 21:47:28,479 - __main__ - INFO - Expected: {"intent": "get_report", "entities": {"time_period": "आज"}, "language": "hi"}
+2025-07-07 21:47:28,479 - __main__ - INFO - Actual: {"intent": "get_report", "entities": {"time_period": "आज"}, "language": "hi"}
+2025-07-07 21:47:28,479 - __main__ - INFO - Message: 'चावल सर्च करो'
+2025-07-07 21:47:28,479 - __main__ - INFO - Expected: {"intent": "search_product", "entities": {"product_name": "चावल"}, "language": "hi"}
+2025-07-07 21:47:28,479 - __main__ - INFO - Actual: {"intent": "search_product", "entities": {"product_name": "चावल"}, "language": "hi"}
+2025-07-07 21:47:28,480 - __main__ - INFO - Message: 'नमक है क्या स्टॉक में?'
+2025-07-07 21:47:28,480 - __main__ - INFO - Expected: {"intent": "search_product", "entities": {"product_name": "नमक"}, "language": "hi"}
+2025-07-07 21:47:28,480 - __main__ - INFO - Actual: {"intent": "search_product", "entities": {"product_name": "नमक"}, "language": "hi"}
+2025-07-07 21:47:28,480 - __main__ - INFO - Message: 'Add नया product चावल 50rs'
+2025-07-07 21:47:28,480 - __main__ - INFO - Expected: {"intent": "add_product", "entities": {"product_name": "चावल", "price": "50"}, "language": "en"}
+2025-07-07 21:47:28,480 - __main__ - INFO - Actual: {"intent": "add_product", "entities": {"product_name": "चावल", "price": "50"}, "language": "en"}
+2025-07-07 21:47:28,482 - __main__ - INFO - Message: 'चावल का stock update करो to 75'
+2025-07-07 21:47:28,482 - __main__ - INFO - Expected: {"intent": "edit_stock", "entities": {"product_name": "चावल", "quantity": "75"}, "language": "hi"}
+2025-07-07 21:47:28,482 - __main__ - INFO - Actual: {"intent": "edit_stock", "entities": {"product_name": "चावल", "quantity": "75"}, "language": "hi"}
+2025-07-07 21:47:28,482 - __main__ - INFO - Message: 'नया प्रोडक्ट दाल₹ 100 रुपये 50 पीस जोड़ो'
+2025-07-07 21:47:28,482 - __main__ - INFO - Expected: {"intent": "add_product", "entities": {"product_name": "दाल₹", "price": "100", "quantity": "50"}, "language": "hi"}
+2025-07-07 21:47:28,482 - __main__ - INFO - Actual: {"intent": "add_product", "entities": {"product_name": "दाल₹", "price": "100", "quantity": "50"}, "language": "hi"}
+2025-07-07 21:47:28,482 - __main__ - INFO - Message: 'Add new product Masālā ₹150 30qty'
+2025-07-07 21:47:28,482 - __main__ - INFO - Expected: {"intent": "add_product", "entities": {"product_name": "Masālā", "price": "150", "quantity": "30"}, "language": "en"}
+2025-07-07 21:47:28,482 - __main__ - INFO - Actual: {"intent": "add_product", "entities": {"product_name": "Masālā", "price": "150", "quantity": "30"}, "language": "en"}
+2025-07-07 21:47:38,111 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-07 21:47:38,112 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-07 21:47:38,138 - __main__ - INFO - Processing message from 1234567890: 'Show my inventory'
+2025-07-07 21:47:38,138 - nlp.multilingual_handler - INFO - Detected language: en for message: Show my inventory
+2025-07-07 21:47:38,139 - nlp.intent_handler - INFO - Raw command: Show my inventory
+2025-07-07 21:47:38,139 - nlp.intent_handler - INFO - Normalized command: show my inventory
+2025-07-07 21:47:38,139 - nlp.intent_handler - INFO - Language detection: en
+2025-07-07 21:47:38,139 - nlp.intent_handler - INFO - Recognized intent: get_inventory, entities: {}
+2025-07-07 21:47:38,139 - nlp.multilingual_handler - INFO - English intent recognized: get_inventory
+2025-07-07 21:47:38,139 - __main__ - INFO - Parsed result: {"intent": "get_inventory", "entities": {}, "language": "en", "raw_text": "Show my inventory", "normalized_text": "show my inventory"}
+2025-07-07 21:47:38,139 - nlp.command_router - INFO - API Request: GET http://127.0.0.1:8000/seller/products
+2025-07-07 21:47:38,139 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer whatsapp-1234567890'}
+2025-07-07 21:47:38,143 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x102a9ef90>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-07 21:47:38,143 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x102a9ef90>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-07 21:47:38,143 - nlp.command_router - INFO - Simulated response for get_inventory: {"products": [{"name": "Rice", "price": 50, "stock": 100}, {"name": "Wheat", "price": 40, "stock": 75}, {"name": "Sugar", "price": 45, "stock": 60}, {"name": "\u091a\u093e\u0935\u0932", "price": 50, "stock": 100}, {"name": "\u0917\u0947\u0939\u0942\u0902", "price": 40, "stock": 75}, {"name": "\u091a\u0940\u0928\u0940", "price": 45, "stock": 60}]}
+2025-07-07 21:47:38,143 - __main__ - INFO - Response: Current inventory:
+1. Rice – ₹50 – 100 qty
+2. Wheat – ₹40 – 75 qty
+3. Sugar – ₹45 – 60 qty
+4. चावल – ₹50 – 100 qty
+5. गेहूं – ₹40 – 75 qty
+6. चीनी – ₹45 – 60 qty
+2025-07-07 21:47:38,145 - __main__ - INFO - Processing message from 1234567890: 'मेरा इन्वेंटरी दिखाओ'
+2025-07-07 21:47:38,145 - nlp.multilingual_handler - INFO - Detected language: hi for message: मेरा इन्वेंटरी दिखाओ
+2025-07-07 21:47:38,148 - nlp.multilingual_handler - INFO - Hindi intent recognized: get_inventory
+2025-07-07 21:47:38,148 - __main__ - INFO - Parsed result: {"intent": "get_inventory", "entities": {}, "language": "hi"}
+2025-07-07 21:47:38,148 - nlp.command_router - INFO - API Request: GET http://127.0.0.1:8000/seller/products
+2025-07-07 21:47:38,148 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer whatsapp-1234567890'}
+2025-07-07 21:47:38,149 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x102b10a50>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-07 21:47:38,149 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x102b10a50>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-07 21:47:38,149 - nlp.command_router - INFO - Simulated response for get_inventory: {"products": [{"name": "Rice", "price": 50, "stock": 100}, {"name": "Wheat", "price": 40, "stock": 75}, {"name": "Sugar", "price": 45, "stock": 60}, {"name": "\u091a\u093e\u0935\u0932", "price": 50, "stock": 100}, {"name": "\u0917\u0947\u0939\u0942\u0902", "price": 40, "stock": 75}, {"name": "\u091a\u0940\u0928\u0940", "price": 45, "stock": 60}]}
+2025-07-07 21:47:38,149 - __main__ - INFO - Response: वर्तमान इन्वेंटरी:
+1. Rice – ₹50 – 100 मात्रा
+2. Wheat – ₹40 – 75 मात्रा
+3. Sugar – ₹45 – 60 मात्रा
+4. चावल – ₹50 – 100 मात्रा
+5. गेहूं – ₹40 – 75 मात्रा
+6. चीनी – ₹45 – 60 मात्रा
+2025-07-07 21:47:38,149 - __main__ - INFO - Processing message from 1234567890: 'Hello there'
+2025-07-07 21:47:38,149 - nlp.multilingual_handler - INFO - Detected language: en for message: Hello there
+2025-07-07 21:47:38,149 - nlp.intent_handler - INFO - Raw command: Hello there
+2025-07-07 21:47:38,149 - nlp.intent_handler - INFO - Normalized command: hello there
+2025-07-07 21:47:38,149 - nlp.intent_handler - INFO - Language detection: en
+2025-07-07 21:47:38,155 - nlp.intent_handler - WARNING - No intent matched for message: Hello there
+2025-07-07 21:47:38,155 - nlp.multilingual_handler - INFO - English intent recognized: unknown
+2025-07-07 21:47:38,155 - __main__ - INFO - Parsed result: {"intent": "unknown", "entities": {}, "raw_text": "Hello there", "normalized_text": "hello there", "language": "en"}
+2025-07-07 21:47:38,155 - __main__ - INFO - Response: Sorry, I couldn't understand that command.
+2025-07-07 21:48:31,276 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-07 21:48:31,277 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-07 21:48:31,304 - __main__ - INFO - Processing message from 1234567890: 'Show my inventory'
+2025-07-07 21:48:31,304 - __main__ - INFO - Parsed result: {"intent": "get_inventory", "entities": {}, "language": "en"}
+2025-07-07 21:48:31,304 - __main__ - INFO - Response: Mock response for get_inventory
+2025-07-07 21:48:31,304 - __main__ - INFO - Processing message from 1234567890: 'Show low stock items'
+2025-07-07 21:48:31,304 - __main__ - INFO - Parsed result: {"intent": "get_low_stock", "entities": {}, "language": "en"}
+2025-07-07 21:48:31,304 - __main__ - INFO - Response: Mock response for get_low_stock
+2025-07-07 21:48:31,304 - __main__ - INFO - Processing message from 1234567890: 'Search for rice'
+2025-07-07 21:48:31,305 - __main__ - INFO - Parsed result: {"intent": "search_product", "entities": {}, "language": "en"}
+2025-07-07 21:48:31,305 - __main__ - INFO - Response: Mock response for search_product
+2025-07-07 21:48:31,305 - __main__ - INFO - Processing message from 1234567890: 'मेरा इन्वेंटरी दिखाओ'
+2025-07-07 21:48:31,305 - __main__ - INFO - Parsed result: {"intent": "get_inventory", "entities": {}, "language": "hi"}
+2025-07-07 21:48:31,305 - __main__ - INFO - Response: Mock response for get_inventory in Hindi
+2025-07-07 21:48:31,305 - __main__ - INFO - Processing message from 1234567890: 'कम स्टॉक वाले आइटम दिखाओ'
+2025-07-07 21:48:31,305 - __main__ - INFO - Parsed result: {"intent": "get_low_stock", "entities": {}, "language": "hi"}
+2025-07-07 21:48:31,305 - __main__ - INFO - Response: Mock response for get_low_stock in Hindi
+2025-07-07 21:48:31,305 - __main__ - INFO - Processing message from 1234567890: 'चावल सर्च करो'
+2025-07-07 21:48:31,305 - __main__ - INFO - Parsed result: {"intent": "search_product", "entities": {}, "language": "hi"}
+2025-07-07 21:48:31,305 - __main__ - INFO - Response: Mock response for search_product in Hindi
+2025-07-07 21:48:31,305 - __main__ - INFO - Processing message from 1234567890: 'Hello there'
+2025-07-07 21:48:31,305 - __main__ - INFO - Parsed result: {"intent": "unknown", "entities": {}, "language": "en"}
+2025-07-07 21:48:31,305 - __main__ - INFO - Response: I don't understand that command
+2025-07-07 21:48:43,104 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-07 21:48:43,105 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-07 21:48:43,132 - __main__ - INFO - Command response loop started
+2025-07-07 21:48:43,132 - __main__ - INFO - Processing message from 1234567890: 'Show my inventory'
+2025-07-07 21:48:43,132 - __main__ - INFO - Parsed result: {"intent": "get_inventory", "entities": {}, "language": "en"}
+2025-07-07 21:48:43,132 - __main__ - INFO - Response: Here is your inventory: Item 1, Item 2, Item 3
+2025-07-07 21:48:43,132 - __main__ - INFO - Processed message from 1234567890: 'Show my inventory'
+2025-07-07 21:48:43,237 - __main__ - INFO - Processing message from 1234567890: 'Invalid command'
+2025-07-07 21:48:43,237 - __main__ - ERROR - Error processing message: Test error
+2025-07-07 21:48:43,341 - __main__ - INFO - Processing message from 1234567890: 'Search for rice'
+2025-07-07 21:48:43,341 - __main__ - INFO - Parsed result: {"intent": "search_product", "entities": {"product_name": "rice"}, "language": "en"}
+2025-07-07 21:48:43,341 - __main__ - INFO - Response: Rice is in stock: 50 units
+2025-07-07 21:48:43,341 - __main__ - INFO - Processed message from 1234567890: 'Search for rice'
+2025-07-07 21:48:43,447 - __main__ - INFO - Command response loop started
+2025-07-07 21:48:43,447 - __main__ - INFO - Processing message from 1234567890: 'Show my inventory'
+2025-07-07 21:48:43,447 - __main__ - INFO - Parsed result: {"intent": "get_inventory", "entities": {}, "language": "en"}
+2025-07-07 21:48:43,447 - __main__ - INFO - Response: Here is your inventory: Item 1, Item 2, Item 3
+2025-07-07 21:48:43,447 - __main__ - INFO - Processed message from 1234567890: 'Show my inventory'
+2025-07-07 21:48:43,548 - __main__ - INFO - Processing message from 1234567890: 'मेरा इन्वेंटरी दिखाओ'
+2025-07-07 21:48:43,548 - __main__ - INFO - Parsed result: {"intent": "get_inventory", "entities": {}, "language": "hi"}
+2025-07-07 21:48:43,548 - __main__ - INFO - Response: आपका इन्वेंटरी: आइटम 1, आइटम 2, आइटम 3
+2025-07-07 21:48:43,549 - __main__ - INFO - Processed message from 1234567890: 'मेरा इन्वेंटरी दिखाओ'
+2025-07-07 21:48:43,654 - __main__ - INFO - Command response loop started
+2025-07-07 21:48:43,654 - __main__ - INFO - Processing message from 1234567890: 'Show my inventory'
+2025-07-07 21:48:43,654 - __main__ - INFO - Parsed result: {"intent": "get_inventory", "entities": {}, "language": "en"}
+2025-07-07 21:48:43,654 - __main__ - INFO - Response: Here is your inventory: Item 1, Item 2, Item 3
+2025-07-07 21:48:43,654 - __main__ - INFO - Processed message from 1234567890: 'Show my inventory'
+2025-07-07 21:48:43,759 - __main__ - INFO - Processing message from 1234567890: 'Show low stock items'
+2025-07-07 21:48:43,759 - __main__ - INFO - Parsed result: {"intent": "get_low_stock", "entities": {}, "language": "en"}
+2025-07-07 21:48:43,759 - __main__ - INFO - Response: Low stock items: Item 2
+2025-07-07 21:48:43,759 - __main__ - INFO - Processed message from 1234567890: 'Show low stock items'
+2025-07-07 21:48:43,864 - __main__ - INFO - Processing message from 1234567890: 'Search for rice'
+2025-07-07 21:48:43,864 - __main__ - INFO - Parsed result: {"intent": "search_product", "entities": {"product_name": "rice"}, "language": "en"}
+2025-07-07 21:48:43,864 - __main__ - INFO - Response: Rice is in stock: 50 units
+2025-07-07 21:48:43,864 - __main__ - INFO - Processed message from 1234567890: 'Search for rice'
+2025-07-07 21:48:43,966 - __main__ - INFO - Command response loop started
+2025-07-07 21:48:43,966 - __main__ - INFO - Processing message from 1234567890: 'Show my inventory'
+2025-07-07 21:48:43,967 - __main__ - INFO - Parsed result: {"intent": "get_inventory", "entities": {}, "language": "en"}
+2025-07-07 21:48:43,967 - __main__ - INFO - Response: Here is your inventory: Item 1, Item 2, Item 3
+2025-07-07 21:48:43,967 - __main__ - INFO - Processed message from 1234567890: 'Show my inventory'
+2025-07-07 21:48:54,378 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-07 21:48:54,378 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-07 21:48:54,407 - __main__ - INFO - Processing message from 1234567890: 'Show my inventory'
+2025-07-07 21:48:54,407 - __main__ - ERROR - Error processing webhook payload: Test error
+2025-07-07 21:48:54,407 - __main__ - INFO - Processing message from 1234567890: 'Show my inventory'
+2025-07-07 21:48:54,407 - __main__ - INFO - Parsed result: {"intent": "get_inventory", "entities": {}, "language": "en"}
+2025-07-07 21:48:54,407 - __main__ - INFO - Response: Here is your inventory: Item 1, Item 2, Item 3
+2025-07-07 21:48:54,408 - __main__ - INFO - Processing message from 1234567890: 'Show my inventory'
+2025-07-07 21:48:54,408 - __main__ - INFO - Parsed result: {"intent": "get_inventory", "entities": {}, "language": "en"}
+2025-07-07 21:48:54,408 - __main__ - INFO - Response: Here is your inventory: Item 1, Item 2, Item 3
+2025-07-07 21:48:54,408 - __main__ - INFO - Processing message from 1234567890: 'Show low stock items'
+2025-07-07 21:48:54,408 - __main__ - INFO - Parsed result: {"intent": "get_low_stock", "entities": {}, "language": "en"}
+2025-07-07 21:48:54,408 - __main__ - INFO - Response: Low stock items: Item 2
+2025-07-07 21:48:54,408 - __main__ - INFO - Processing message from 1234567890: 'Show my inventory'
+2025-07-07 21:48:54,408 - __main__ - INFO - Parsed result: {"intent": "get_inventory", "entities": {}, "language": "en"}
+2025-07-07 21:48:54,408 - __main__ - INFO - Response: Here is your inventory: Item 1, Item 2, Item 3
+2025-07-07 21:49:03,809 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-07 21:49:03,809 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-07 21:49:03,811 - __main__ - INFO - Test Command Router started - Testing API integration
+2025-07-07 21:49:03,811 - __main__ - INFO - Testing against backend server: http://127.0.0.1:8000
+2025-07-07 21:49:03,811 - __main__ - INFO - 
+==================================================
+Testing command: 'Show my inventory'
+==================================================
+2025-07-07 21:49:03,811 - nlp.multilingual_handler - INFO - Detected language: en for message: Show my inventory
+2025-07-07 21:49:03,812 - nlp.intent_handler - INFO - Raw command: Show my inventory
+2025-07-07 21:49:03,812 - nlp.intent_handler - INFO - Normalized command: show my inventory
+2025-07-07 21:49:03,812 - nlp.intent_handler - INFO - Language detection: en
+2025-07-07 21:49:03,812 - nlp.intent_handler - INFO - Recognized intent: get_inventory, entities: {}
+2025-07-07 21:49:03,812 - nlp.multilingual_handler - INFO - English intent recognized: get_inventory
+2025-07-07 21:49:03,812 - __main__ - INFO - Parsed result: {"intent": "get_inventory", "entities": {}, "language": "en", "raw_text": "Show my inventory", "normalized_text": "show my inventory"}
+2025-07-07 21:49:03,812 - nlp.command_router - INFO - API Request: GET http://127.0.0.1:8000/seller/products
+2025-07-07 21:49:03,812 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json'}
+2025-07-07 21:49:03,817 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1060d81a0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-07 21:49:03,817 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1060d81a0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-07 21:49:03,817 - nlp.command_router - INFO - Simulated response for get_inventory: {"products": [{"name": "Rice", "price": 50, "stock": 100}, {"name": "Wheat", "price": 40, "stock": 75}, {"name": "Sugar", "price": 45, "stock": 60}, {"name": "\u091a\u093e\u0935\u0932", "price": 50, "stock": 100}, {"name": "\u0917\u0947\u0939\u0942\u0902", "price": 40, "stock": 75}, {"name": "\u091a\u0940\u0928\u0940", "price": 45, "stock": 60}]}
+2025-07-07 21:49:03,817 - __main__ - INFO - Final response: "Current inventory:\n1. Rice – ₹50 – 100 qty\n2. Wheat – ₹40 – 75 qty\n3. Sugar – ₹45 – 60 qty\n4. चावल – ₹50 – 100 qty\n5. गेहूं – ₹40 – 75 qty\n6. चीनी – ₹45 – 60 qty"
+2025-07-07 21:49:03,817 - __main__ - INFO - 
+==================================================
+Testing command: 'Add new product Rice 50rs 20qty'
+==================================================
+2025-07-07 21:49:03,817 - nlp.multilingual_handler - INFO - Detected language: en for message: Add new product Rice 50rs 20qty
+2025-07-07 21:49:03,817 - nlp.intent_handler - INFO - Raw command: Add new product Rice 50rs 20qty
+2025-07-07 21:49:03,817 - nlp.intent_handler - INFO - Normalized command: ऐड new product rice 50rs 20qty
+2025-07-07 21:49:03,817 - nlp.intent_handler - INFO - Language detection: hi
+2025-07-07 21:49:03,821 - nlp.intent_handler - WARNING - No intent matched for message: Add new product Rice 50rs 20qty
+2025-07-07 21:49:03,821 - nlp.multilingual_handler - INFO - English intent recognized: unknown
+2025-07-07 21:49:03,821 - __main__ - INFO - Parsed result: {"intent": "unknown", "entities": {}, "raw_text": "Add new product Rice 50rs 20qty", "normalized_text": "ऐड new product rice 50rs 20qty", "language": "en"}
+2025-07-07 21:49:03,821 - __main__ - INFO - Final response: "Sorry, I couldn't understand that command."
+2025-07-07 21:49:03,821 - __main__ - INFO - 
+==================================================
+Testing command: 'Update Sugar stock to 50'
+==================================================
+2025-07-07 21:49:03,821 - nlp.multilingual_handler - INFO - Detected language: en for message: Update Sugar stock to 50
+2025-07-07 21:49:03,821 - nlp.intent_handler - INFO - Raw command: Update Sugar stock to 50
+2025-07-07 21:49:03,821 - nlp.intent_handler - INFO - Normalized command: अपडेट sugar स्टॉक को 50
+2025-07-07 21:49:03,821 - nlp.intent_handler - INFO - Language detection: hi
+2025-07-07 21:49:03,821 - nlp.intent_handler - WARNING - No intent matched for message: Update Sugar stock to 50
+2025-07-07 21:49:03,821 - nlp.multilingual_handler - INFO - English intent recognized: unknown
+2025-07-07 21:49:03,821 - __main__ - INFO - Parsed result: {"intent": "unknown", "entities": {}, "raw_text": "Update Sugar stock to 50", "normalized_text": "अपडेट sugar स्टॉक को 50", "language": "en"}
+2025-07-07 21:49:03,821 - __main__ - INFO - Final response: "Sorry, I couldn't understand that command."
+2025-07-07 21:49:03,821 - __main__ - INFO - 
+==================================================
+Testing command: 'Show low stock items'
+==================================================
+2025-07-07 21:49:03,821 - nlp.multilingual_handler - INFO - Detected language: en for message: Show low stock items
+2025-07-07 21:49:03,821 - nlp.intent_handler - INFO - Raw command: Show low stock items
+2025-07-07 21:49:03,821 - nlp.intent_handler - INFO - Normalized command: show low स्टॉक items
+2025-07-07 21:49:03,821 - nlp.intent_handler - INFO - Language detection: hi
+2025-07-07 21:49:03,822 - nlp.intent_handler - WARNING - No intent matched for message: Show low stock items
+2025-07-07 21:49:03,822 - nlp.multilingual_handler - INFO - English intent recognized: unknown
+2025-07-07 21:49:03,822 - __main__ - INFO - Parsed result: {"intent": "unknown", "entities": {}, "raw_text": "Show low stock items", "normalized_text": "show low स्टॉक items", "language": "en"}
+2025-07-07 21:49:03,822 - __main__ - INFO - Final response: "Sorry, I couldn't understand that command."
+2025-07-07 21:49:03,822 - __main__ - INFO - 
+==================================================
+Testing command: 'Get today's report'
+==================================================
+2025-07-07 21:49:03,822 - nlp.multilingual_handler - INFO - Detected language: en for message: Get today's report
+2025-07-07 21:49:03,822 - nlp.intent_handler - INFO - Raw command: Get today's report
+2025-07-07 21:49:03,822 - nlp.intent_handler - INFO - Normalized command: get today's रिपोर्ट
+2025-07-07 21:49:03,822 - nlp.intent_handler - INFO - Language detection: hi
+2025-07-07 21:49:03,822 - nlp.intent_handler - WARNING - No intent matched for message: Get today's report
+2025-07-07 21:49:03,822 - nlp.multilingual_handler - INFO - English intent recognized: unknown
+2025-07-07 21:49:03,822 - __main__ - INFO - Parsed result: {"intent": "unknown", "entities": {}, "raw_text": "Get today's report", "normalized_text": "get today's रिपोर्ट", "language": "en"}
+2025-07-07 21:49:03,822 - __main__ - INFO - Final response: "Sorry, I couldn't understand that command."
+2025-07-07 21:49:03,822 - __main__ - INFO - 
+==================================================
+Testing command: 'View recent orders'
+==================================================
+2025-07-07 21:49:03,822 - nlp.multilingual_handler - INFO - Detected language: en for message: View recent orders
+2025-07-07 21:49:03,822 - nlp.intent_handler - INFO - Raw command: View recent orders
+2025-07-07 21:49:03,822 - nlp.intent_handler - INFO - Normalized command: view recent orders
+2025-07-07 21:49:03,822 - nlp.intent_handler - INFO - Language detection: en
+2025-07-07 21:49:03,822 - nlp.intent_handler - INFO - Recognized intent: get_orders, entities: {'range': 'recent'}
+2025-07-07 21:49:03,822 - nlp.multilingual_handler - INFO - English intent recognized: get_orders
+2025-07-07 21:49:03,822 - __main__ - INFO - Parsed result: {"intent": "get_orders", "entities": {"range": "recent"}, "language": "en", "raw_text": "View recent orders", "normalized_text": "view recent orders"}
+2025-07-07 21:49:03,822 - nlp.command_router - INFO - API Request: GET http://127.0.0.1:8000/seller/orders
+2025-07-07 21:49:03,822 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json'}
+2025-07-07 21:49:03,822 - nlp.command_router - INFO - Query Params: {'range': 'recent'}
+2025-07-07 21:49:03,823 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/orders?range=recent (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1060e07d0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-07 21:49:03,823 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/orders?range=recent (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1060e07d0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-07 21:49:03,823 - nlp.command_router - INFO - Simulated response for get_orders: {"orders": [{"id": "ORD001", "status": "Delivered", "total": 500}, {"id": "ORD002", "status": "Processing", "total": 350}, {"id": "ORD003", "status": "Delivered", "total": 720}, {"id": "ORD004", "status": "Delivered", "total": 250}]}
+2025-07-07 21:49:03,823 - __main__ - INFO - Final response: "recent orders:\n- Order #ORD001: Delivered, Total: ₹500\n- Order #ORD002: Processing, Total: ₹350\n- Order #ORD003: Delivered, Total: ₹720\n- Order #ORD004: Delivered, Total: ₹250"
+2025-07-07 21:49:03,823 - __main__ - INFO - 
+==================================================
+Testing command: 'I want to add a new product called Wheat for 45 rupees with 30 pieces'
+==================================================
+2025-07-07 21:49:03,823 - nlp.multilingual_handler - INFO - Detected language: en for message: I want to add a new product called Wheat for 45 rupees with 30 pieces
+2025-07-07 21:49:03,823 - nlp.intent_handler - INFO - Raw command: I want to add a new product called Wheat for 45 rupees with 30 pieces
+2025-07-07 21:49:03,823 - nlp.intent_handler - INFO - Normalized command: i want को ऐड a new product called wheat के लिए 45 rupees with 30 pieces
+2025-07-07 21:49:03,823 - nlp.intent_handler - INFO - Language detection: hi
+2025-07-07 21:49:03,823 - nlp.intent_handler - WARNING - No intent matched for message: I want to add a new product called Wheat for 45 rupees with 30 pieces
+2025-07-07 21:49:03,823 - nlp.multilingual_handler - INFO - English intent recognized: unknown
+2025-07-07 21:49:03,823 - __main__ - INFO - Parsed result: {"intent": "unknown", "entities": {}, "raw_text": "I want to add a new product called Wheat for 45 rupees with 30 pieces", "normalized_text": "i want को ऐड a new product called wheat के लिए 45 rupees with 30 pieces", "language": "en"}
+2025-07-07 21:49:03,823 - __main__ - INFO - Final response: "Sorry, I couldn't understand that command."
+2025-07-07 21:49:03,823 - __main__ - INFO - 
+==================================================
+Testing command: 'मेरे प्रोडक्ट दिखाओ'
+==================================================
+2025-07-07 21:49:03,823 - nlp.multilingual_handler - INFO - Detected language: hi for message: मेरे प्रोडक्ट दिखाओ
+2025-07-07 21:49:03,826 - nlp.multilingual_handler - INFO - Hindi intent recognized: get_inventory
+2025-07-07 21:49:03,826 - __main__ - INFO - Parsed result: {"intent": "get_inventory", "entities": {}, "language": "hi"}
+2025-07-07 21:49:03,826 - nlp.command_router - INFO - API Request: GET http://127.0.0.1:8000/seller/products
+2025-07-07 21:49:03,827 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json'}
+2025-07-07 21:49:03,827 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1060e1090>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-07 21:49:03,827 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1060e1090>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-07 21:49:03,827 - nlp.command_router - INFO - Simulated response for get_inventory: {"products": [{"name": "Rice", "price": 50, "stock": 100}, {"name": "Wheat", "price": 40, "stock": 75}, {"name": "Sugar", "price": 45, "stock": 60}, {"name": "\u091a\u093e\u0935\u0932", "price": 50, "stock": 100}, {"name": "\u0917\u0947\u0939\u0942\u0902", "price": 40, "stock": 75}, {"name": "\u091a\u0940\u0928\u0940", "price": 45, "stock": 60}]}
+2025-07-07 21:49:03,828 - __main__ - INFO - Final response: "वर्तमान इन्वेंटरी:\n1. Rice – ₹50 – 100 मात्रा\n2. Wheat – ₹40 – 75 मात्रा\n3. Sugar – ₹45 – 60 मात्रा\n4. चावल – ₹50 – 100 मात्रा\n5. गेहूं – ₹40 – 75 मात्रा\n6. चीनी – ₹45 – 60 मात्रा"
+2025-07-07 21:49:03,828 - __main__ - INFO - 
+==================================================
+Testing command: 'नया प्रोडक्ट चावल 50 रुपये 20 पीस जोड़ो'
+==================================================
+2025-07-07 21:49:03,828 - nlp.multilingual_handler - INFO - Detected language: hi for message: नया प्रोडक्ट चावल 50 रुपये 20 पीस जोड़ो
+2025-07-07 21:49:03,828 - nlp.multilingual_handler - INFO - Hindi intent recognized: add_product
+2025-07-07 21:49:03,828 - __main__ - INFO - Parsed result: {"intent": "add_product", "entities": {"name": "चावल", "price": 50, "stock": 20}, "language": "hi"}
+2025-07-07 21:49:03,828 - nlp.command_router - INFO - API Request: POST http://127.0.0.1:8000/products
+2025-07-07 21:49:03,828 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json'}
+2025-07-07 21:49:03,828 - nlp.command_router - INFO - Request Data: {"product_name": "\u091a\u093e\u0935\u0932", "price": 50, "stock": 20, "description": "Added via NLP command"}
+2025-07-07 21:49:03,829 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /products (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1060cdf30>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-07 21:49:03,829 - nlp.command_router - INFO - Processing add_product intent with data: {"product_name": "\u091a\u093e\u0935\u0932", "price": 50, "stock": 20, "description": "Added via NLP command"}
+2025-07-07 21:49:03,829 - nlp.command_router - INFO - Request URL: http://127.0.0.1:8000/products
+2025-07-07 21:49:03,829 - nlp.command_router - INFO - Request Method: POST
+2025-07-07 21:49:03,829 - nlp.command_router - INFO - Request Data: {"product_name": "\u091a\u093e\u0935\u0932", "price": 50, "stock": 20, "description": "Added via NLP command"}
+2025-07-07 21:49:03,829 - nlp.command_router - INFO - Response: {"error": "HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /products (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1060cdf30>: Failed to establish a new connection: [Errno 61] Connection refused'))"}
+2025-07-07 21:49:03,829 - nlp.command_router - ERROR - Error adding product: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /products (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1060cdf30>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-07 21:49:03,829 - __main__ - INFO - Final response: "प्रोडक्ट चावल को जोड़ने में विफल। त्रुटि: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /products (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1060cdf30>: Failed to establish a new connection: [Errno 61] Connection refused'))"
+2025-07-07 21:49:03,829 - __main__ - INFO - 
+==================================================
+Testing command: 'चावल का स्टॉक 100 करो'
+==================================================
+2025-07-07 21:49:03,829 - nlp.multilingual_handler - INFO - Detected language: hi for message: चावल का स्टॉक 100 करो
+2025-07-07 21:49:03,829 - nlp.multilingual_handler - INFO - Hindi intent recognized: edit_stock
+2025-07-07 21:49:03,829 - __main__ - INFO - Parsed result: {"intent": "edit_stock", "entities": {"name": "चावल", "stock": 100}, "language": "hi"}
+2025-07-07 21:49:03,829 - nlp.command_router - INFO - API Request: POST http://127.0.0.1:8000/seller/products/update-stock
+2025-07-07 21:49:03,829 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json'}
+2025-07-07 21:49:03,829 - nlp.command_router - INFO - Request Data: {"name": "\u091a\u093e\u0935\u0932", "stock": 100}
+2025-07-07 21:49:03,830 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products/update-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1060ce780>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-07 21:49:03,830 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products/update-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1060ce780>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-07 21:49:03,830 - nlp.command_router - INFO - Simulated response for edit_stock: {"success": true, "product": {"name": "\u091a\u093e\u0935\u0932", "stock": 100, "id": "sim123"}}
+2025-07-07 21:49:03,830 - __main__ - INFO - Final response: "चावल का स्टॉक 100 इकाइयों में अपडेट किया गया।"
+2025-07-07 21:49:03,830 - __main__ - INFO - 
+==================================================
+Testing command: 'कम स्टॉक वाले आइटम दिखाओ'
+==================================================
+2025-07-07 21:49:03,830 - nlp.multilingual_handler - INFO - Detected language: hi for message: कम स्टॉक वाले आइटम दिखाओ
+2025-07-07 21:49:03,830 - nlp.multilingual_handler - INFO - Hindi intent recognized: get_low_stock
+2025-07-07 21:49:03,830 - __main__ - INFO - Parsed result: {"intent": "get_low_stock", "entities": {"threshold": 5}, "language": "hi"}
+2025-07-07 21:49:03,830 - nlp.command_router - INFO - Processing get_low_stock intent with threshold: 5
+2025-07-07 21:49:03,831 - nlp.command_router - INFO - API Request: POST http://127.0.0.1:8000/seller/products/low-stock
+2025-07-07 21:49:03,831 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json'}
+2025-07-07 21:49:03,831 - nlp.command_router - INFO - Request Data: {"threshold": 5}
+2025-07-07 21:49:03,831 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products/low-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1060e8cb0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-07 21:49:03,831 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products/low-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1060e8cb0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-07 21:49:03,831 - nlp.command_router - INFO - Simulated response for get_low_stock: {"products": [{"name": "Salt", "price": 20, "stock": 5}, {"name": "Tea", "price": 120, "stock": 8}, {"name": "\u0928\u092e\u0915", "price": 20, "stock": 5}, {"name": "\u091a\u093e\u092f", "price": 120, "stock": 8}]}
+2025-07-07 21:49:03,831 - __main__ - INFO - Final response: "कम स्टॉक वाले प्रोडक्ट:\n1. Salt – ₹20 – 5 मात्रा\n2. Tea – ₹120 – 8 मात्रा\n3. नमक – ₹20 – 5 मात्रा\n4. चाय – ₹120 – 8 मात्रा"
+2025-07-07 21:49:03,831 - __main__ - INFO - 
+==================================================
+Testing command: 'आज की रिपोर्ट भेजो'
+==================================================
+2025-07-07 21:49:03,831 - nlp.multilingual_handler - INFO - Detected language: hi for message: आज की रिपोर्ट भेजो
+2025-07-07 21:49:03,833 - nlp.multilingual_handler - INFO - Hindi intent recognized: get_report
+2025-07-07 21:49:03,833 - __main__ - INFO - Parsed result: {"intent": "get_report", "entities": {"range": "today"}, "language": "hi"}
+2025-07-07 21:49:03,833 - nlp.command_router - INFO - API Request: GET http://127.0.0.1:8000/seller/report
+2025-07-07 21:49:03,833 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json'}
+2025-07-07 21:49:03,833 - nlp.command_router - INFO - Query Params: {'range': 'today'}
+2025-07-07 21:49:03,833 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/report?range=today (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10610c160>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-07 21:49:03,833 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/report?range=today (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10610c160>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-07 21:49:03,834 - nlp.command_router - INFO - Simulated response for get_report: {"sales": 12500, "orders": 25, "top_product": "Rice"}
+2025-07-07 21:49:03,834 - __main__ - INFO - Final response: "आज के लिए बिक्री रिपोर्ट:\nआज की बिक्री: ₹12500\nऑर्डर: 25\nटॉप प्रोडक्ट: Rice"
+2025-07-07 21:49:03,834 - __main__ - INFO - 
+==================================================
+Testing command: 'मुझे चीनी का स्टॉक 75 करना है'
+==================================================
+2025-07-07 21:49:03,834 - nlp.multilingual_handler - INFO - Detected language: hi for message: मुझे चीनी का स्टॉक 75 करना है
+2025-07-07 21:49:03,834 - nlp.multilingual_handler - INFO - Hindi intent recognized: edit_stock
+2025-07-07 21:49:03,834 - __main__ - INFO - Parsed result: {"intent": "edit_stock", "entities": {"name": "चीनी", "stock": 75}, "language": "hi"}
+2025-07-07 21:49:03,834 - nlp.command_router - INFO - API Request: POST http://127.0.0.1:8000/seller/products/update-stock
+2025-07-07 21:49:03,834 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json'}
+2025-07-07 21:49:03,834 - nlp.command_router - INFO - Request Data: {"name": "\u091a\u0940\u0928\u0940", "stock": 75}
+2025-07-07 21:49:03,834 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products/update-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10610c8d0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-07 21:49:03,834 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products/update-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10610c8d0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-07 21:49:03,834 - nlp.command_router - INFO - Simulated response for edit_stock: {"success": true, "product": {"name": "\u091a\u0940\u0928\u0940", "stock": 75, "id": "sim123"}}
+2025-07-07 21:49:03,835 - __main__ - INFO - Final response: "चीनी का स्टॉक 75 इकाइयों में अपडेट किया गया।"
+2025-07-08 00:15:17,938 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-08 00:15:17,938 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-08 00:15:26,677 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-08 00:15:26,677 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-08 00:15:26,679 - __main__ - INFO - Testing command: 'Update stock of Sugar to 15qty'
+2025-07-08 00:15:26,679 - nlp.multilingual_handler - INFO - Detected language: en for message: Update stock of Sugar to 15qty
+2025-07-08 00:15:26,679 - nlp.intent_handler - INFO - Raw command: Update stock of Sugar to 15qty
+2025-07-08 00:15:26,679 - nlp.intent_handler - INFO - Normalized command: अपडेट स्टॉक का sugar को 15qty
+2025-07-08 00:15:26,680 - nlp.intent_handler - INFO - Language detection: hi
+2025-07-08 00:15:26,683 - nlp.intent_handler - WARNING - No intent matched for message: Update stock of Sugar to 15qty
+2025-07-08 00:15:26,683 - nlp.multilingual_handler - INFO - English intent recognized: unknown
+2025-07-08 00:15:26,683 - __main__ - INFO - Parsed result: {
+  "intent": "unknown",
+  "entities": {},
+  "raw_text": "Update stock of Sugar to 15qty",
+  "normalized_text": "\u0905\u092a\u0921\u0947\u091f \u0938\u094d\u091f\u0949\u0915 \u0915\u093e sugar \u0915\u094b 15qty",
+  "language": "en"
+}
+2025-07-08 00:15:26,683 - __main__ - ERROR - Expected intent 'edit_stock', got 'unknown'
+2025-07-08 00:15:26,684 - __main__ - INFO - Testing Hindi command: 'चीनी का स्टॉक 15 करो'
+2025-07-08 00:15:26,684 - nlp.multilingual_handler - INFO - Detected language: hi for message: चीनी का स्टॉक 15 करो
+2025-07-08 00:15:26,685 - nlp.multilingual_handler - INFO - Hindi intent recognized: edit_stock
+2025-07-08 00:15:26,685 - __main__ - INFO - Parsed result: {
+  "intent": "edit_stock",
+  "entities": {
+    "name": "\u091a\u0940\u0928\u0940",
+    "stock": 15
+  },
+  "language": "hi"
+}
+2025-07-08 00:15:26,685 - __main__ - INFO - Extracted entities: name='चीनी', stock=15
+2025-07-08 00:15:26,685 - nlp.command_router - INFO - API Request: POST http://127.0.0.1:8000/seller/products/update-stock
+2025-07-08 00:15:26,685 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json'}
+2025-07-08 00:15:26,685 - nlp.command_router - INFO - Request Data: {"name": "\u091a\u0940\u0928\u0940", "stock": 15}
+2025-07-08 00:15:26,690 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products/update-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1029ac6e0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-08 00:15:26,690 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products/update-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1029ac6e0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-08 00:15:26,690 - nlp.command_router - INFO - Simulated response for edit_stock: {"success": true, "product": {"name": "\u091a\u0940\u0928\u0940", "stock": 15, "id": "sim123"}}
+2025-07-08 00:15:26,690 - __main__ - INFO - API Response: चीनी का स्टॉक 15 इकाइयों में अपडेट किया गया।
+2025-07-08 00:15:26,690 - __main__ - INFO - Testing mixed language command: 'चीनी का स्टॉक बदलो 5 किलो'
+2025-07-08 00:15:26,694 - __main__ - INFO - Extracted result: {
+  "stock": 5,
+  "name": "चीनी"
+}
+2025-07-08 00:15:26,694 - __main__ - INFO - Extraction successful: name='चीनी', stock=5
+2025-07-08 00:15:26,694 - __main__ - INFO - Testing mixed language command: 'आलू स्टॉक अपडेट करें 10 किलो'
+2025-07-08 00:15:26,694 - __main__ - INFO - Extracted result: {
+  "stock": 10,
+  "name": "आलू"
+}
+2025-07-08 00:15:26,694 - __main__ - INFO - Extraction successful: name='आलू', stock=10
+2025-07-08 00:15:26,694 - __main__ - INFO - Testing mixed language command: 'बदलें स्टॉक साबुन 3'
+2025-07-08 00:15:26,694 - __main__ - INFO - Extracted result: {
+  "stock": 3,
+  "name": "साबुन"
+}
+2025-07-08 00:15:26,694 - __main__ - INFO - Extraction successful: name='साबुन', stock=3
+2025-07-08 00:15:26,694 - __main__ - INFO - Testing mixed language command: 'Update stock of आलू to 10 किलो'
+2025-07-08 00:15:26,694 - __main__ - INFO - Extracted result: {
+  "stock": 10,
+  "name": "आलू"
+}
+2025-07-08 00:15:26,694 - __main__ - INFO - Extraction successful: name='आलू', stock=10
+2025-07-08 00:15:26,694 - nlp.multilingual_handler - INFO - Detected language: en for message: Update stock of Sugar to -5
+2025-07-08 00:15:26,694 - nlp.intent_handler - INFO - Raw command: Update stock of Sugar to -5
+2025-07-08 00:15:26,694 - nlp.intent_handler - INFO - Normalized command: अपडेट स्टॉक का sugar को -5
+2025-07-08 00:15:26,694 - nlp.intent_handler - INFO - Language detection: hi
+2025-07-08 00:15:26,695 - nlp.intent_handler - WARNING - No intent matched for message: Update stock of Sugar to -5
+2025-07-08 00:15:26,695 - nlp.multilingual_handler - INFO - English intent recognized: unknown
+2025-07-08 00:15:26,695 - nlp.multilingual_handler - INFO - Detected language: en for message: Update stock of Sugar to -5
+2025-07-08 00:15:26,695 - nlp.intent_handler - INFO - Raw command: Update stock of Sugar to -5
+2025-07-08 00:15:26,695 - nlp.intent_handler - INFO - Normalized command: अपडेट स्टॉक का sugar को -5
+2025-07-08 00:15:26,695 - nlp.intent_handler - INFO - Language detection: hi
+2025-07-08 00:15:26,695 - nlp.intent_handler - WARNING - No intent matched for message: Update stock of Sugar to -5
+2025-07-08 00:15:26,695 - nlp.multilingual_handler - INFO - English intent recognized: unknown
+2025-07-08 00:16:15,789 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-08 00:16:15,790 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-08 00:16:15,799 - __main__ - INFO - Testing command: 'Update stock of Sugar to 15qty'
+2025-07-08 00:16:15,799 - nlp.multilingual_handler - INFO - Detected language: en for message: Update stock of Sugar to 15qty
+2025-07-08 00:16:15,799 - nlp.intent_handler - INFO - Raw command: Update stock of Sugar to 15qty
+2025-07-08 00:16:15,799 - nlp.intent_handler - INFO - Normalized command: अपडेट स्टॉक का sugar को 15qty
+2025-07-08 00:16:15,799 - nlp.intent_handler - INFO - Language detection: hi
+2025-07-08 00:16:15,804 - nlp.intent_handler - WARNING - No intent matched for message: Update stock of Sugar to 15qty
+2025-07-08 00:16:15,804 - nlp.multilingual_handler - INFO - English intent recognized: unknown
+2025-07-08 00:16:15,804 - __main__ - INFO - Parsed result: {
+  "intent": "unknown",
+  "entities": {},
+  "raw_text": "Update stock of Sugar to 15qty",
+  "normalized_text": "\u0905\u092a\u0921\u0947\u091f \u0938\u094d\u091f\u0949\u0915 \u0915\u093e sugar \u0915\u094b 15qty",
+  "language": "en"
+}
+2025-07-08 00:16:15,804 - __main__ - ERROR - Expected intent 'edit_stock', got 'unknown'
+2025-07-08 00:16:15,804 - __main__ - INFO - Testing Hindi command: 'चीनी का स्टॉक 15 करो'
+2025-07-08 00:16:15,804 - nlp.multilingual_handler - INFO - Detected language: hi for message: चीनी का स्टॉक 15 करो
+2025-07-08 00:16:15,805 - nlp.multilingual_handler - INFO - Hindi intent recognized: edit_stock
+2025-07-08 00:16:15,805 - __main__ - INFO - Parsed result: {
+  "intent": "edit_stock",
+  "entities": {
+    "name": "\u091a\u0940\u0928\u0940",
+    "stock": 15
+  },
+  "language": "hi"
+}
+2025-07-08 00:16:15,805 - __main__ - INFO - Extracted entities: name='चीनी', stock=15
+2025-07-08 00:16:15,805 - nlp.command_router - INFO - API Request: POST http://127.0.0.1:8000/seller/products/update-stock
+2025-07-08 00:16:15,805 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json'}
+2025-07-08 00:16:15,805 - nlp.command_router - INFO - Request Data: {"name": "\u091a\u0940\u0928\u0940", "stock": 15}
+2025-07-08 00:16:15,810 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products/update-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x106140830>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-08 00:16:15,810 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products/update-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x106140830>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-08 00:16:15,810 - nlp.command_router - INFO - Simulated response for edit_stock: {"success": true, "product": {"name": "\u091a\u0940\u0928\u0940", "stock": 15, "id": "sim123"}}
+2025-07-08 00:16:15,811 - __main__ - INFO - API Response: चीनी का स्टॉक 15 इकाइयों में अपडेट किया गया।
+2025-07-08 00:16:15,811 - __main__ - INFO - Testing mixed language command: 'चीनी का स्टॉक बदलो 5 किलो'
+2025-07-08 00:16:15,814 - __main__ - INFO - Extracted result: {
+  "stock": 5,
+  "name": "चीनी"
+}
+2025-07-08 00:16:15,815 - __main__ - INFO - Extraction successful: name='चीनी', stock=5
+2025-07-08 00:16:15,815 - __main__ - INFO - Testing mixed language command: 'आलू स्टॉक अपडेट करें 10 किलो'
+2025-07-08 00:16:15,815 - __main__ - INFO - Extracted result: {
+  "stock": 10,
+  "name": "आलू"
+}
+2025-07-08 00:16:15,815 - __main__ - INFO - Extraction successful: name='आलू', stock=10
+2025-07-08 00:16:15,815 - __main__ - INFO - Testing mixed language command: 'बदलें स्टॉक साबुन 3'
+2025-07-08 00:16:15,815 - __main__ - INFO - Extracted result: {
+  "stock": 3,
+  "name": "साबुन"
+}
+2025-07-08 00:16:15,815 - __main__ - INFO - Extraction successful: name='साबुन', stock=3
+2025-07-08 00:16:15,815 - __main__ - INFO - Testing mixed language command: 'Update stock of आलू to 10 किलो'
+2025-07-08 00:16:15,815 - __main__ - INFO - Extracted result: {
+  "stock": 10,
+  "name": "आलू"
+}
+2025-07-08 00:16:15,815 - __main__ - INFO - Extraction successful: name='आलू', stock=10
+2025-07-08 00:16:15,815 - nlp.multilingual_handler - INFO - Detected language: en for message: Update stock of Sugar to -5
+2025-07-08 00:16:15,815 - nlp.intent_handler - INFO - Raw command: Update stock of Sugar to -5
+2025-07-08 00:16:15,815 - nlp.intent_handler - INFO - Normalized command: update stock of sugar to -5
+2025-07-08 00:16:15,815 - nlp.intent_handler - INFO - Language detection: en
+2025-07-08 00:16:15,815 - nlp.intent_handler - INFO - Recognized intent: edit_stock, entities: {'name': 'sugar', 'stock': -5}
+2025-07-08 00:16:15,815 - nlp.multilingual_handler - INFO - English intent recognized: edit_stock
+2025-07-08 00:16:15,815 - nlp.command_router - INFO - API Request: POST http://127.0.0.1:8000/seller/products/update-stock
+2025-07-08 00:16:15,815 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json'}
+2025-07-08 00:16:15,815 - nlp.command_router - INFO - Request Data: {"name": "sugar", "stock": -5}
+2025-07-08 00:16:15,816 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products/update-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10612ca50>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-08 00:16:15,816 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products/update-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10612ca50>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-08 00:16:15,816 - nlp.command_router - INFO - Simulated response for edit_stock: {"error": "Quantity cannot be negative"}
+2025-07-08 00:16:15,816 - nlp.multilingual_handler - INFO - Detected language: en for message: Update stock of Sugar to -5
+2025-07-08 00:16:15,816 - nlp.intent_handler - INFO - Raw command: Update stock of Sugar to -5
+2025-07-08 00:16:15,816 - nlp.intent_handler - INFO - Normalized command: update stock of sugar to -5
+2025-07-08 00:16:15,816 - nlp.intent_handler - INFO - Language detection: en
+2025-07-08 00:16:15,816 - nlp.intent_handler - INFO - Recognized intent: edit_stock, entities: {'name': 'sugar', 'stock': -5}
+2025-07-08 00:16:15,816 - nlp.multilingual_handler - INFO - English intent recognized: edit_stock
+2025-07-08 00:16:27,635 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-08 00:16:27,635 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-08 00:16:37,117 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-08 00:16:37,117 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-08 00:16:47,923 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-08 00:16:47,923 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-08 00:16:47,925 - __main__ - INFO - Testing command: 'Update stock of Sugar to 15qty'
+2025-07-08 00:16:47,925 - nlp.multilingual_handler - INFO - Detected language: en for message: Update stock of Sugar to 15qty
+2025-07-08 00:16:47,925 - nlp.intent_handler - INFO - Raw command: Update stock of Sugar to 15qty
+2025-07-08 00:16:47,925 - nlp.intent_handler - INFO - Normalized command: अपडेट स्टॉक का sugar को 15qty
+2025-07-08 00:16:47,925 - nlp.intent_handler - INFO - Language detection: hi
+2025-07-08 00:16:47,929 - nlp.intent_handler - WARNING - No intent matched for message: Update stock of Sugar to 15qty
+2025-07-08 00:16:47,929 - nlp.multilingual_handler - INFO - English intent recognized: unknown
+2025-07-08 00:16:47,929 - __main__ - INFO - Parsed result: {
+  "intent": "unknown",
+  "entities": {},
+  "raw_text": "Update stock of Sugar to 15qty",
+  "normalized_text": "\u0905\u092a\u0921\u0947\u091f \u0938\u094d\u091f\u0949\u0915 \u0915\u093e sugar \u0915\u094b 15qty",
+  "language": "en"
+}
+2025-07-08 00:16:47,929 - __main__ - ERROR - Expected intent 'edit_stock', got 'unknown'
+2025-07-08 00:16:47,929 - __main__ - INFO - Testing Hindi command: 'चीनी का स्टॉक 15 करो'
+2025-07-08 00:16:47,929 - nlp.multilingual_handler - INFO - Detected language: hi for message: चीनी का स्टॉक 15 करो
+2025-07-08 00:16:47,931 - nlp.multilingual_handler - INFO - Hindi intent recognized: edit_stock
+2025-07-08 00:16:47,931 - __main__ - INFO - Parsed result: {
+  "intent": "edit_stock",
+  "entities": {
+    "name": "\u091a\u0940\u0928\u0940",
+    "stock": 15
+  },
+  "language": "hi"
+}
+2025-07-08 00:16:47,931 - __main__ - INFO - Extracted entities: name='चीनी', stock=15
+2025-07-08 00:16:47,931 - nlp.command_router - INFO - API Request: POST http://127.0.0.1:8000/seller/products/update-stock
+2025-07-08 00:16:47,931 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json'}
+2025-07-08 00:16:47,931 - nlp.command_router - INFO - Request Data: {"name": "\u091a\u0940\u0928\u0940", "stock": 15}
+2025-07-08 00:16:47,936 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products/update-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x106514830>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-08 00:16:47,936 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products/update-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x106514830>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-08 00:16:47,936 - nlp.command_router - INFO - Simulated response for edit_stock: {"success": true, "product": {"name": "\u091a\u0940\u0928\u0940", "stock": 15, "id": "sim123"}}
+2025-07-08 00:16:47,936 - __main__ - INFO - API Response: चीनी का स्टॉक 15 इकाइयों में अपडेट किया गया।
+2025-07-08 00:16:47,936 - __main__ - INFO - Testing mixed language command: 'चीनी का स्टॉक बदलो 5 किलो'
+2025-07-08 00:16:47,940 - __main__ - INFO - Extracted result: {
+  "stock": 5,
+  "name": "चीनी"
+}
+2025-07-08 00:16:47,940 - __main__ - INFO - Extraction successful: name='चीनी', stock=5
+2025-07-08 00:16:47,940 - __main__ - INFO - Testing mixed language command: 'आलू स्टॉक अपडेट करें 10 किलो'
+2025-07-08 00:16:47,940 - __main__ - INFO - Extracted result: {
+  "stock": 10,
+  "name": "आलू"
+}
+2025-07-08 00:16:47,940 - __main__ - INFO - Extraction successful: name='आलू', stock=10
+2025-07-08 00:16:47,940 - __main__ - INFO - Testing mixed language command: 'बदलें स्टॉक साबुन 3'
+2025-07-08 00:16:47,940 - __main__ - INFO - Extracted result: {
+  "stock": 3,
+  "name": "साबुन"
+}
+2025-07-08 00:16:47,940 - __main__ - INFO - Extraction successful: name='साबुन', stock=3
+2025-07-08 00:16:47,940 - __main__ - INFO - Testing mixed language command: 'Update stock of आलू to 10 किलो'
+2025-07-08 00:16:47,940 - __main__ - INFO - Extracted result: {
+  "stock": 10,
+  "name": "आलू"
+}
+2025-07-08 00:16:47,940 - __main__ - INFO - Extraction successful: name='आलू', stock=10
+2025-07-08 00:16:47,940 - nlp.multilingual_handler - INFO - Detected language: en for message: Update stock of Sugar to -5
+2025-07-08 00:16:47,940 - nlp.intent_handler - INFO - Raw command: Update stock of Sugar to -5
+2025-07-08 00:16:47,940 - nlp.intent_handler - INFO - Normalized command: update stock of sugar to -5
+2025-07-08 00:16:47,940 - nlp.intent_handler - INFO - Language detection: en
+2025-07-08 00:16:47,940 - nlp.intent_handler - INFO - Recognized intent: edit_stock, entities: {'name': 'sugar', 'stock': -5}
+2025-07-08 00:16:47,940 - nlp.multilingual_handler - INFO - English intent recognized: edit_stock
+2025-07-08 00:16:47,940 - nlp.command_router - INFO - API Request: POST http://127.0.0.1:8000/seller/products/update-stock
+2025-07-08 00:16:47,940 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json'}
+2025-07-08 00:16:47,941 - nlp.command_router - INFO - Request Data: {"name": "sugar", "stock": -5}
+2025-07-08 00:16:47,941 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products/update-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10651ca50>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-08 00:16:47,941 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products/update-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10651ca50>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-08 00:16:47,941 - nlp.command_router - INFO - Simulated response for edit_stock: {"error": "Quantity cannot be negative"}
+2025-07-08 00:16:47,941 - nlp.multilingual_handler - INFO - Detected language: en for message: Update stock of Sugar to -5
+2025-07-08 00:16:47,942 - nlp.intent_handler - INFO - Raw command: Update stock of Sugar to -5
+2025-07-08 00:16:47,942 - nlp.intent_handler - INFO - Normalized command: update stock of sugar to -5
+2025-07-08 00:16:47,942 - nlp.intent_handler - INFO - Language detection: en
+2025-07-08 00:16:47,942 - nlp.intent_handler - INFO - Recognized intent: edit_stock, entities: {'name': 'sugar', 'stock': -5}
+2025-07-08 00:16:47,942 - nlp.multilingual_handler - INFO - English intent recognized: edit_stock
+2025-07-08 00:16:48,042 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-08 00:16:48,042 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-08 00:16:48,147 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-08 00:16:48,148 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-08 00:17:05,585 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-08 00:17:05,591 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-08 00:17:15,508 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-08 00:17:15,508 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-08 00:17:36,012 - test_suite - INFO - Running all tests...
+2025-07-08 00:17:36,013 - test_suite - INFO - Testing language detection...
+2025-07-08 00:17:36,013 - test_suite - INFO - Language detection accuracy: 0.33
+2025-07-08 00:17:36,013 - test_suite - INFO - Testing intent recognition...
+2025-07-08 00:17:36,013 - test_suite - INFO - Intent recognition accuracy: 0.17
+2025-07-08 00:17:36,013 - test_suite - INFO - Testing entity extraction...
+2025-07-08 00:17:36,013 - test_suite - INFO - Entity extraction accuracy: 0.33
+2025-07-08 00:17:36,013 - test_suite - INFO - Testing end-to-end processing...
+2025-07-08 00:17:36,013 - test_suite - INFO - End-to-end success rate: 1.00
+2025-07-08 00:17:36,013 - test_suite - INFO - Testing edge cases...
+2025-07-08 00:17:36,013 - test_suite - INFO - Edge case robustness: 1.00
+2025-07-08 00:17:36,013 - test_suite - INFO - Generating test reports...
+2025-07-08 00:17:36,543 - test_suite - INFO - Reports generated in test_results/ directory
+2025-07-08 00:17:46,433 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-08 00:17:46,433 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-08 00:18:12,854 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-08 00:18:12,855 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-08 00:18:36,881 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-08 00:18:36,881 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-08 00:18:58,123 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-08 00:18:58,123 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-08 00:19:07,863 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-08 00:19:07,863 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-08 00:19:07,865 - __main__ - INFO - Testing command: 'Update stock of Sugar to 15qty'
+2025-07-08 00:19:07,865 - nlp.multilingual_handler - INFO - Detected language: en for message: Update stock of Sugar to 15qty
+2025-07-08 00:19:07,866 - nlp.intent_handler - INFO - Raw command: Update stock of Sugar to 15qty
+2025-07-08 00:19:07,866 - nlp.intent_handler - INFO - Normalized command: अपडेट स्टॉक का sugar को 15qty
+2025-07-08 00:19:07,866 - nlp.intent_handler - INFO - Language detection: hi
+2025-07-08 00:19:07,869 - nlp.intent_handler - WARNING - No intent matched for message: Update stock of Sugar to 15qty
+2025-07-08 00:19:07,870 - nlp.multilingual_handler - INFO - English intent recognized: unknown
+2025-07-08 00:19:07,870 - __main__ - INFO - Parsed result: {
+  "intent": "unknown",
+  "entities": {},
+  "raw_text": "Update stock of Sugar to 15qty",
+  "normalized_text": "\u0905\u092a\u0921\u0947\u091f \u0938\u094d\u091f\u0949\u0915 \u0915\u093e sugar \u0915\u094b 15qty",
+  "language": "en"
+}
+2025-07-08 00:19:07,870 - __main__ - ERROR - Expected intent 'edit_stock', got 'unknown'
+2025-07-08 00:19:07,870 - __main__ - INFO - Testing Hindi command: 'चीनी का स्टॉक 15 करो'
+2025-07-08 00:19:07,870 - nlp.multilingual_handler - INFO - Detected language: hi for message: चीनी का स्टॉक 15 करो
+2025-07-08 00:19:07,871 - nlp.multilingual_handler - INFO - Hindi intent recognized: edit_stock
+2025-07-08 00:19:07,871 - __main__ - INFO - Parsed result: {
+  "intent": "edit_stock",
+  "entities": {
+    "name": "\u091a\u0940\u0928\u0940",
+    "stock": 15
+  },
+  "language": "hi"
+}
+2025-07-08 00:19:07,871 - __main__ - INFO - Extracted entities: name='चीनी', stock=15
+2025-07-08 00:19:07,871 - nlp.command_router - INFO - API Request: POST http://127.0.0.1:8000/seller/products/update-stock
+2025-07-08 00:19:07,871 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json'}
+2025-07-08 00:19:07,871 - nlp.command_router - INFO - Request Data: {"name": "\u091a\u0940\u0928\u0940", "stock": 15}
+2025-07-08 00:19:07,876 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products/update-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x102078830>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-08 00:19:07,876 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products/update-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x102078830>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-08 00:19:07,876 - nlp.command_router - INFO - Simulated response for edit_stock: {"success": true, "product": {"name": "\u091a\u0940\u0928\u0940", "stock": 15, "id": "sim123"}}
+2025-07-08 00:19:07,876 - __main__ - INFO - API Response: चीनी का स्टॉक 15 इकाइयों में अपडेट किया गया।
+2025-07-08 00:19:07,876 - __main__ - INFO - Testing mixed language command: 'चीनी का स्टॉक बदलो 5 किलो'
+2025-07-08 00:19:07,880 - __main__ - INFO - Extracted result: {
+  "stock": 5,
+  "name": "चीनी"
+}
+2025-07-08 00:19:07,880 - __main__ - INFO - Extraction successful: name='चीनी', stock=5
+2025-07-08 00:19:07,880 - __main__ - INFO - Testing mixed language command: 'आलू स्टॉक अपडेट करें 10 किलो'
+2025-07-08 00:19:07,880 - __main__ - INFO - Extracted result: {
+  "stock": 10,
+  "name": "आलू"
+}
+2025-07-08 00:19:07,880 - __main__ - INFO - Extraction successful: name='आलू', stock=10
+2025-07-08 00:19:07,880 - __main__ - INFO - Testing mixed language command: 'बदलें स्टॉक साबुन 3'
+2025-07-08 00:19:07,880 - __main__ - INFO - Extracted result: {
+  "stock": 3,
+  "name": "साबुन"
+}
+2025-07-08 00:19:07,880 - __main__ - INFO - Extraction successful: name='साबुन', stock=3
+2025-07-08 00:19:07,880 - __main__ - INFO - Testing mixed language command: 'Update stock of आलू to 10 किलो'
+2025-07-08 00:19:07,880 - __main__ - INFO - Extracted result: {
+  "stock": 10,
+  "name": "आलू"
+}
+2025-07-08 00:19:07,880 - __main__ - INFO - Extraction successful: name='आलू', stock=10
+2025-07-08 00:19:07,880 - nlp.multilingual_handler - INFO - Detected language: en for message: Update stock of Sugar to -5
+2025-07-08 00:19:07,880 - nlp.intent_handler - INFO - Raw command: Update stock of Sugar to -5
+2025-07-08 00:19:07,880 - nlp.intent_handler - INFO - Normalized command: update stock of sugar to -5
+2025-07-08 00:19:07,880 - nlp.intent_handler - INFO - Language detection: en
+2025-07-08 00:19:07,881 - nlp.intent_handler - INFO - Recognized intent: edit_stock, entities: {'name': 'sugar', 'stock': -5}
+2025-07-08 00:19:07,881 - nlp.multilingual_handler - INFO - English intent recognized: edit_stock
+2025-07-08 00:19:07,881 - nlp.command_router - INFO - API Request: POST http://127.0.0.1:8000/seller/products/update-stock
+2025-07-08 00:19:07,881 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json'}
+2025-07-08 00:19:07,881 - nlp.command_router - INFO - Request Data: {"name": "sugar", "stock": -5}
+2025-07-08 00:19:07,881 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products/update-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x102080a50>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-08 00:19:07,881 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products/update-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x102080a50>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-08 00:19:07,881 - nlp.command_router - INFO - Simulated response for edit_stock: {"error": "Quantity cannot be negative"}
+2025-07-08 00:19:07,881 - nlp.multilingual_handler - INFO - Detected language: en for message: Update stock of Sugar to -5
+2025-07-08 00:19:07,882 - nlp.intent_handler - INFO - Raw command: Update stock of Sugar to -5
+2025-07-08 00:19:07,882 - nlp.intent_handler - INFO - Normalized command: update stock of sugar to -5
+2025-07-08 00:19:07,882 - nlp.intent_handler - INFO - Language detection: en
+2025-07-08 00:19:07,882 - nlp.intent_handler - INFO - Recognized intent: edit_stock, entities: {'name': 'sugar', 'stock': -5}
+2025-07-08 00:19:07,882 - nlp.multilingual_handler - INFO - English intent recognized: edit_stock
+2025-07-08 00:19:07,982 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-08 00:19:07,982 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-08 00:19:08,089 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-08 00:19:08,089 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-08 00:19:30,975 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-08 00:19:30,976 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-08 00:19:30,980 - __main__ - INFO - Testing command: 'Update stock of Sugar to 15qty'
+2025-07-08 00:19:30,980 - nlp.multilingual_handler - INFO - Detected language: en for message: Update stock of Sugar to 15qty
+2025-07-08 00:19:30,981 - nlp.intent_handler - INFO - Raw command: Update stock of Sugar to 15qty
+2025-07-08 00:19:30,981 - nlp.intent_handler - INFO - Normalized command: अपडेट स्टॉक का sugar को 15qty
+2025-07-08 00:19:30,981 - nlp.intent_handler - INFO - Language detection: hi
+2025-07-08 00:19:30,987 - nlp.intent_handler - WARNING - No intent matched for message: Update stock of Sugar to 15qty
+2025-07-08 00:19:30,987 - nlp.multilingual_handler - INFO - English intent recognized: unknown
+2025-07-08 00:19:30,987 - __main__ - INFO - Parsed result: {
+  "intent": "unknown",
+  "entities": {},
+  "raw_text": "Update stock of Sugar to 15qty",
+  "normalized_text": "\u0905\u092a\u0921\u0947\u091f \u0938\u094d\u091f\u0949\u0915 \u0915\u093e sugar \u0915\u094b 15qty",
+  "language": "en"
+}
+2025-07-08 00:19:30,987 - __main__ - ERROR - Expected intent 'edit_stock', got 'unknown'
+2025-07-08 00:19:30,987 - __main__ - INFO - Testing Hindi command: 'चीनी का स्टॉक 15 करो'
+2025-07-08 00:19:30,987 - nlp.multilingual_handler - INFO - Detected language: hi for message: चीनी का स्टॉक 15 करो
+2025-07-08 00:19:30,992 - nlp.multilingual_handler - INFO - Hindi intent recognized: edit_stock
+2025-07-08 00:19:30,992 - __main__ - INFO - Parsed result: {
+  "intent": "edit_stock",
+  "entities": {
+    "name": "\u091a\u0940\u0928\u0940",
+    "stock": 15
+  },
+  "language": "hi"
+}
+2025-07-08 00:19:30,992 - __main__ - INFO - Extracted entities: name='चीनी', stock=15
+2025-07-08 00:19:30,992 - nlp.command_router - INFO - API Request: POST http://127.0.0.1:8000/seller/products/update-stock
+2025-07-08 00:19:30,993 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json'}
+2025-07-08 00:19:30,993 - nlp.command_router - INFO - Request Data: {"name": "\u091a\u0940\u0928\u0940", "stock": 15}
+2025-07-08 00:19:31,016 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products/update-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x102248830>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-08 00:19:31,016 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products/update-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x102248830>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-08 00:19:31,016 - nlp.command_router - INFO - Simulated response for edit_stock: {"success": true, "product": {"name": "\u091a\u0940\u0928\u0940", "stock": 15, "id": "sim123"}}
+2025-07-08 00:19:31,016 - __main__ - INFO - API Response: चीनी का स्टॉक 15 इकाइयों में अपडेट किया गया।
+2025-07-08 00:19:31,016 - __main__ - INFO - Testing mixed language command: 'चीनी का स्टॉक बदलो 5 किलो'
+2025-07-08 00:19:31,026 - __main__ - INFO - Extracted result: {
+  "stock": 5,
+  "name": "चीनी"
+}
+2025-07-08 00:19:31,026 - __main__ - INFO - Extraction successful: name='चीनी', stock=5
+2025-07-08 00:19:31,026 - __main__ - INFO - Testing mixed language command: 'आलू स्टॉक अपडेट करें 10 किलो'
+2025-07-08 00:19:31,026 - __main__ - INFO - Extracted result: {
+  "stock": 10,
+  "name": "आलू"
+}
+2025-07-08 00:19:31,026 - __main__ - INFO - Extraction successful: name='आलू', stock=10
+2025-07-08 00:19:31,026 - __main__ - INFO - Testing mixed language command: 'बदलें स्टॉक साबुन 3'
+2025-07-08 00:19:31,026 - __main__ - INFO - Extracted result: {
+  "stock": 3,
+  "name": "साबुन"
+}
+2025-07-08 00:19:31,026 - __main__ - INFO - Extraction successful: name='साबुन', stock=3
+2025-07-08 00:19:31,026 - __main__ - INFO - Testing mixed language command: 'Update stock of आलू to 10 किलो'
+2025-07-08 00:19:31,026 - __main__ - INFO - Extracted result: {
+  "stock": 10,
+  "name": "आलू"
+}
+2025-07-08 00:19:31,026 - __main__ - INFO - Extraction successful: name='आलू', stock=10
+2025-07-08 00:19:31,026 - nlp.multilingual_handler - INFO - Detected language: en for message: Update stock of Sugar to -5
+2025-07-08 00:19:31,026 - nlp.intent_handler - INFO - Raw command: Update stock of Sugar to -5
+2025-07-08 00:19:31,026 - nlp.intent_handler - INFO - Normalized command: update stock of sugar to -5
+2025-07-08 00:19:31,026 - nlp.intent_handler - INFO - Language detection: en
+2025-07-08 00:19:31,027 - nlp.intent_handler - INFO - Recognized intent: edit_stock, entities: {'name': 'sugar', 'stock': -5}
+2025-07-08 00:19:31,027 - nlp.multilingual_handler - INFO - English intent recognized: edit_stock
+2025-07-08 00:19:31,027 - nlp.command_router - INFO - API Request: POST http://127.0.0.1:8000/seller/products/update-stock
+2025-07-08 00:19:31,027 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json'}
+2025-07-08 00:19:31,027 - nlp.command_router - INFO - Request Data: {"name": "sugar", "stock": -5}
+2025-07-08 00:19:31,028 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products/update-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x102254a50>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-08 00:19:31,028 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products/update-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x102254a50>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-08 00:19:31,028 - nlp.command_router - INFO - Simulated response for edit_stock: {"error": "Quantity cannot be negative"}
+2025-07-08 00:19:31,029 - nlp.multilingual_handler - INFO - Detected language: en for message: Update stock of Sugar to -5
+2025-07-08 00:19:31,029 - nlp.intent_handler - INFO - Raw command: Update stock of Sugar to -5
+2025-07-08 00:19:31,029 - nlp.intent_handler - INFO - Normalized command: update stock of sugar to -5
+2025-07-08 00:19:31,029 - nlp.intent_handler - INFO - Language detection: en
+2025-07-08 00:19:31,029 - nlp.intent_handler - INFO - Recognized intent: edit_stock, entities: {'name': 'sugar', 'stock': -5}
+2025-07-08 00:19:31,029 - nlp.multilingual_handler - INFO - English intent recognized: edit_stock
+2025-07-08 00:19:31,156 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-08 00:19:31,156 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-08 00:19:31,276 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-08 00:19:31,276 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-08 00:19:31,393 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-08 00:19:31,393 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-08 09:25:17,588 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-08 09:25:17,589 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-08 09:25:41,307 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-08 09:25:41,307 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-08 15:18:24,066 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-08 15:18:24,067 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-08 15:32:12,723 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-08 15:32:12,723 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-08 15:34:44,834 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-08 15:34:44,834 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-08 15:37:41,553 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-08 15:37:41,553 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-08 15:38:55,430 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-08 15:38:55,430 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-08 15:41:40,502 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-08 15:41:40,502 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-08 15:47:18,483 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-08 15:47:18,491 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-08 15:49:37,443 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-08 15:49:37,444 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-08 15:49:40,509 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-08 15:49:40,509 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-08 15:51:56,888 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-08 15:51:56,890 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-08 16:01:29,490 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-08 16:01:29,490 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-08 16:02:52,746 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-08 16:02:52,747 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-08 16:03:07,408 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-08 16:03:07,408 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-08 16:03:22,014 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-08 16:03:22,014 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-08 16:03:36,591 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-08 16:03:36,591 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-08 16:03:50,944 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-08 16:03:50,945 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-08 16:04:07,912 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-08 16:04:07,912 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log

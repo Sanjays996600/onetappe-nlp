@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chart Test - Firefox Compatibility</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      color: #2b6cb0;
+      text-align: center;
+    }
+    .chart-container {
+      width: 100%;
+      height: 400px;
+      margin: 20px 0;
+      background-color: #f7fafc;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    .controls {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+    select {
+      padding: 8px 12px;
+      border-radius: 4px;
+      border: 1px solid #e2e8f0;
+      background-color: #f7fafc;
+      font-size: 0.9rem;
+      color: #2d3748;
+    }
+    .browser-info {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: #4a5568;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Chart Test - Firefox Compatibility</h1>
+    
+    <div class="controls">
+      <div>
+        <label for="chart-type">Chart Type:</label>
+        <select id="chart-type">
+          <option value="bar">Bar Chart</option>
+          <option value="line">Line Chart</option>
+          <option value="pie">Pie Chart</option>
+        </select>
+      </div>
+    </div>
+    
+    <div class="chart-container" id="chart-container">
+      <canvas id="chart-canvas"></canvas>
+    </div>
+    
+    <div class="browser-info" id="browser-info"></div>
+  </div>
+
+  <script>
+    // Display browser information
+    document.getElementById('browser-info').textContent = 
+      `Browser: ${navigator.userAgent}`;
+    
+    // Sample data
+    const data = {
+      labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+      datasets: [{
+        label: 'Sales',
+        data: [65, 59, 80, 81, 56, 95, 40],
+        backgroundColor: ['#4299e1', '#4299e1', '#4299e1', '#4299e1', '#4299e1', '#4299e1', '#4299e1'],
+        borderColor: '#2b6cb0',
+        borderWidth: 1
+      }]
+    };
+    
+    // Get elements
+    const canvas = document.getElementById('chart-canvas');
+    const container = document.getElementById('chart-container');
+    const chartTypeSelect = document.getElementById('chart-type');
+    
+    // Set canvas dimensions
+    function setCanvasDimensions() {
+      // Set canvas style dimensions
+      canvas.style.width = '100%';
+      canvas.style.height = '100%';
+      
+      // Set actual canvas dimensions based on its display size
+      const dpr = window.devicePixelRatio || 1;
+      const rect = canvas.getBoundingClientRect();
+      
+      // Ensure we have valid dimensions (Firefox issue)
+      const chartWidth = rect.width > 0 ? rect.width : container.clientWidth;
+      const chartHeight = rect.height > 0 ? rect.height : container.clientHeight;
+      
+      canvas.width = chartWidth * dpr;
+      canvas.height = chartHeight * dpr;
+      
+      return { width: chartWidth, height: chartHeight, dpr };
+    }
+    
+    // Draw chart
+    function drawChart(type) {
+      const ctx = canvas.getContext('2d');
+      
+      // Clear previous chart
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      
+      // Set dimensions
+      const { width, height, dpr } = setCanvasDimensions();
+      
+      // Scale context
+      ctx.scale(dpr, dpr);
+      
+      // Draw chart based on type
+      if (type === 'bar') {
+        drawBarChart(ctx, data, width, height);
+      } else if (type === 'line') {
+        drawLineChart(ctx, data, width, height);
+      } else if (type === 'pie') {
+        drawPieChart(ctx, data, Math.min(width, height) / 2);
+      }
+    }
+    
+    // Bar chart drawing function
+    function drawBarChart(ctx, data, width, height) {
+      const padding = 40;
+      const chartWidth = width - (padding * 2);
+      const chartHeight = height - (padding * 2);
+      const barWidth = chartWidth / data.labels.length;
+      
+      // Find max value for scaling
+      const maxValue = Math.max(...data.datasets[0].data);
+      const scale = chartHeight / maxValue;
+      
+      // Draw axes
+      ctx.beginPath();
+      ctx.moveTo(padding, padding);
+      ctx.lineTo(padding, height - padding);
+      ctx.lineTo(width - padding, height - padding);
+      ctx.strokeStyle = '#333';
+      ctx.stroke();
+      
+      // Draw bars
+      data.labels.forEach((label, index) => {
+        const value = data.datasets[0].data[index];
+        const barHeight = value * scale;
+        const x = padding + (index * barWidth) + (barWidth * 0.1);
+        const y = height - padding - barHeight;
+        
+        // Draw bar
+        ctx.fillStyle = data.datasets[0].backgroundColor[index] || '#4299e1';
+        ctx.fillRect(x, y, barWidth * 0.8, barHeight);
+        
+        // Draw label
+        ctx.fillStyle = '#333';
+        ctx.font = '12px Arial';
+        ctx.textAlign = 'center';
+        ctx.fillText(label, x + (barWidth * 0.4), height - padding + 20);
+        
+        // Draw value
+        ctx.fillText(value.toString(), x + (barWidth * 0.4), y - 10);
+      });
+    }
+    
+    // Line chart drawing function
+    function drawLineChart(ctx, data, width, height) {
+      const padding = 40;
+      const chartWidth = width - (padding * 2);
+      const chartHeight = height - (padding * 2);
+      
+      // Find max value for scaling
+      const maxValue = Math.max(...data.datasets[0].data);
+      const scale = chartHeight / maxValue;
+      
+      // Draw axes
+      ctx.beginPath();
+      ctx.moveTo(padding, padding);
+      ctx.lineTo(padding, height - padding);
+      ctx.lineTo(width - padding, height - padding);
+      ctx.strokeStyle = '#333';
+      ctx.stroke();
+      
+      // Draw line
+      ctx.beginPath();
+      const pointWidth = chartWidth / (data.labels.length - 1);
+      
+      data.datasets[0].data.forEach((value, index) => {
+        const x = padding + (index * pointWidth);
+        const y = height - padding - (value * scale);
+        
+        if (index === 0) {
+          ctx.moveTo(x, y);
+        } else {
+          ctx.lineTo(x, y);
+        }
+        
+        // Draw point
+        ctx.fillStyle = '#4299e1';
+        ctx.beginPath();
+        ctx.arc(x, y, 4, 0, Math.PI * 2);
+        ctx.fill();
+        
+        // Draw label
+        ctx.fillStyle = '#333';
+        ctx.font = '12px Arial';
+        ctx.textAlign = 'center';
+        ctx.fillText(data.labels[index], x, height - padding + 20);
+      });
+      
+      ctx.strokeStyle = '#4299e1';
+      ctx.lineWidth = 2;
+      ctx.stroke();
+    }
+    
+    // Pie chart drawing function
+    function drawPieChart(ctx, data, radius) {
+      const centerX = ctx.canvas.width / (2 * window.devicePixelRatio);
+      const centerY = ctx.canvas.height / (2 * window.devicePixelRatio);
+      
+      let total = data.datasets[0].data.reduce((sum, value) => sum + value, 0);
+      let startAngle = 0;
+      
+      data.datasets[0].data.forEach((value, index) => {
+        const sliceAngle = (2 * Math.PI * value) / total;
+        
+        // Draw slice
+        ctx.beginPath();
+        ctx.moveTo(centerX, centerY);
+        ctx.arc(centerX, centerY, radius, startAngle, startAngle + sliceAngle);
+        ctx.closePath();
+        ctx.fillStyle = data.datasets[0].backgroundColor[index] || `hsl(${index * 30}, 70%, 60%)`;
+        ctx.fill();
+        
+        // Draw label
+        const labelAngle = startAngle + (sliceAngle / 2);
+        const labelX = centerX + (radius * 0.7 * Math.cos(labelAngle));
+        const labelY = centerY + (radius * 0.7 * Math.sin(labelAngle));
+        
+        ctx.fillStyle = '#fff';
+        ctx.font = '12px Arial';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText(data.labels[index], labelX, labelY);
+        
+        startAngle += sliceAngle;
+      });
+    }
+    
+    // Handle chart type change
+    chartTypeSelect.addEventListener('change', () => {
+      drawChart(chartTypeSelect.value);
+    });
+    
+    // Handle window resize
+    window.addEventListener('resize', () => {
+      drawChart(chartTypeSelect.value);
+    });
+    
+    // Initial draw
+    drawChart('bar');
+    
+    // Setup ResizeObserver for responsive behavior
+    // This is especially important for Firefox which has issues with canvas resizing
+    if (window.ResizeObserver) {
+      const resizeObserver = new ResizeObserver(() => {
+        drawChart(chartTypeSelect.value);
+      });
+      
+      resizeObserver.observe(container);
+    }
+  </script>
+</body>
+</html>

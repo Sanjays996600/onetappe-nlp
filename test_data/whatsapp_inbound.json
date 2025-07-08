@@ -1,0 +1,412 @@
+{
+  "test_cases": [
+    {
+      "id": "en_inventory_1",
+      "language": "en",
+      "message": "Show my inventory",
+      "expected_intent": "get_inventory",
+      "expected_entities": {},
+      "expected_response_contains": ["inventory", "items", "products", "stock"]
+    },
+    {
+      "id": "en_low_stock_1",
+      "language": "en",
+      "message": "Show low stock items",
+      "expected_intent": "get_low_stock",
+      "expected_entities": {},
+      "expected_response_contains": ["low stock", "running low", "restock"]
+    },
+    {
+      "id": "en_add_product_1",
+      "language": "en",
+      "message": "Add new product Rice 50rs 20qty",
+      "expected_intent": "add_product",
+      "expected_entities": {
+        "product_name": "Rice",
+        "price": "50",
+        "quantity": "20"
+      },
+      "expected_response_contains": ["added", "product", "Rice", "successfully"]
+    },
+    {
+      "id": "en_edit_stock_1",
+      "language": "en",
+      "message": "Edit stock of Rice to 100",
+      "expected_intent": "edit_stock",
+      "expected_entities": {
+        "product_name": "Rice",
+        "quantity": "100"
+      },
+      "expected_response_contains": ["updated", "stock", "Rice", "100"]
+    },
+    {
+      "id": "en_search_product_1",
+      "language": "en",
+      "message": "Search for rice",
+      "expected_intent": "search_product",
+      "expected_entities": {
+        "product_name": "rice"
+      },
+      "expected_response_contains": ["found", "rice", "stock"]
+    },
+    {
+      "id": "en_search_product_2",
+      "language": "en",
+      "message": "Is salt available?",
+      "expected_intent": "search_product",
+      "expected_entities": {
+        "product_name": "salt"
+      },
+      "expected_response_contains": ["salt", "available", "stock"]
+    },
+    {
+      "id": "en_report_1",
+      "language": "en",
+      "message": "Send today's report",
+      "expected_intent": "get_report",
+      "expected_entities": {
+        "time_period": "today"
+      },
+      "expected_response_contains": ["report", "today", "sales"]
+    },
+    {
+      "id": "hi_inventory_1",
+      "language": "hi",
+      "message": "मेरे प्रोडक्ट दिखाओ",
+      "expected_intent": "get_inventory",
+      "expected_entities": {},
+      "expected_response_contains": ["इन्वेंटरी", "आइटम", "प्रोडक्ट", "स्टॉक"]
+    },
+    {
+      "id": "hi_low_stock_1",
+      "language": "hi",
+      "message": "कम स्टॉक वाले आइटम दिखाओ",
+      "expected_intent": "get_low_stock",
+      "expected_entities": {},
+      "expected_response_contains": ["कम स्टॉक", "स्टॉक कम", "खत्म हो रहा"]
+    },
+    {
+      "id": "hi_add_product_1",
+      "language": "hi",
+      "message": "नया प्रोडक्ट चावल 50 रुपये 20 पीस जोड़ो",
+      "expected_intent": "add_product",
+      "expected_entities": {
+        "product_name": "चावल",
+        "price": "50",
+        "quantity": "20"
+      },
+      "expected_response_contains": ["जोड़ा", "प्रोडक्ट", "चावल", "सफलतापूर्वक"]
+    },
+    {
+      "id": "hi_edit_stock_1",
+      "language": "hi",
+      "message": "चावल का स्टॉक 100 करो",
+      "expected_intent": "edit_stock",
+      "expected_entities": {
+        "product_name": "चावल",
+        "quantity": "100"
+      },
+      "expected_response_contains": ["अपडेट", "स्टॉक", "चावल", "100"]
+    },
+    {
+      "id": "hi_search_product_1",
+      "language": "hi",
+      "message": "चावल सर्च करो",
+      "expected_intent": "search_product",
+      "expected_entities": {
+        "product_name": "चावल"
+      },
+      "expected_response_contains": ["मिला", "चावल", "स्टॉक"]
+    },
+    {
+      "id": "hi_search_product_2",
+      "language": "hi",
+      "message": "नमक है क्या स्टॉक में?",
+      "expected_intent": "search_product",
+      "expected_entities": {
+        "product_name": "नमक"
+      },
+      "expected_response_contains": ["नमक", "उपलब्ध", "स्टॉक"]
+    },
+    {
+      "id": "hi_report_1",
+      "language": "hi",
+      "message": "आज की रिपोर्ट भेजो",
+      "expected_intent": "get_report",
+      "expected_entities": {
+        "time_period": "आज"
+      },
+      "expected_response_contains": ["रिपोर्ट", "आज", "बिक्री"]
+    },
+    {
+      "id": "mixed_add_product_1",
+      "language": "mixed",
+      "message": "Add नया product चावल 50rs",
+      "expected_intent": "add_product",
+      "expected_entities": {
+        "product_name": "चावल",
+        "price": "50"
+      },
+      "expected_response_contains": ["added", "product", "चावल", "successfully"]
+    },
+    {
+      "id": "mixed_edit_stock_1",
+      "language": "mixed",
+      "message": "चावल का stock update करो to 75",
+      "expected_intent": "edit_stock",
+      "expected_entities": {
+        "product_name": "चावल",
+        "quantity": "75"
+      },
+      "expected_response_contains": ["अपडेट", "स्टॉक", "चावल", "75"]
+    },
+    {
+      "id": "unicode_add_product_1",
+      "language": "hi",
+      "message": "नया प्रोडक्ट दाल₹ 100 रुपये 50 पीस जोड़ो",
+      "expected_intent": "add_product",
+      "expected_entities": {
+        "product_name": "दाल₹",
+        "price": "100",
+        "quantity": "50"
+      },
+      "expected_response_contains": ["जोड़ा", "प्रोडक्ट", "दाल", "सफलतापूर्वक"]
+    },
+    {
+      "id": "unicode_add_product_2",
+      "language": "en",
+      "message": "Add new product Masālā ₹150 30qty",
+      "expected_intent": "add_product",
+      "expected_entities": {
+        "product_name": "Masālā",
+        "price": "150",
+        "quantity": "30"
+      },
+      "expected_response_contains": ["added", "product", "Masālā", "successfully"]
+    },
+    {
+      "id": "unknown_command_1",
+      "language": "en",
+      "message": "Hello there",
+      "expected_intent": "unknown",
+      "expected_entities": {},
+      "expected_response_contains": ["don't understand", "help", "commands"]
+    },
+    {
+      "id": "unknown_command_2",
+      "language": "hi",
+      "message": "नमस्ते",
+      "expected_intent": "unknown",
+      "expected_entities": {},
+      "expected_response_contains": ["समझ नहीं", "मदद", "कमांड"]
+    }
+  ],
+  "webhook_payloads": [
+    {
+      "id": "webhook_single_message",
+      "description": "Webhook payload with a single message",
+      "payload": {
+        "object": "whatsapp_business_account",
+        "entry": [
+          {
+            "id": "123456789",
+            "changes": [
+              {
+                "value": {
+                  "messaging_product": "whatsapp",
+                  "metadata": {
+                    "display_phone_number": "9876543210",
+                    "phone_number_id": "987654321098765"
+                  },
+                  "contacts": [
+                    {
+                      "profile": {
+                        "name": "Test User"
+                      },
+                      "wa_id": "1234567890"
+                    }
+                  ],
+                  "messages": [
+                    {
+                      "from": "1234567890",
+                      "id": "wamid.abcdefghijklmnopqrstuvwxyz",
+                      "timestamp": "1623456789",
+                      "text": {
+                        "body": "Show my inventory"
+                      },
+                      "type": "text"
+                    }
+                  ]
+                },
+                "field": "messages"
+              }
+            ]
+          }
+        ]
+      },
+      "expected_response": {
+        "status": "success",
+        "responses": [
+          {
+            "to": "1234567890",
+            "response_contains": ["inventory", "items", "products", "stock"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "webhook_multiple_messages",
+      "description": "Webhook payload with multiple messages",
+      "payload": {
+        "object": "whatsapp_business_account",
+        "entry": [
+          {
+            "id": "123456789",
+            "changes": [
+              {
+                "value": {
+                  "messaging_product": "whatsapp",
+                  "metadata": {
+                    "display_phone_number": "9876543210",
+                    "phone_number_id": "987654321098765"
+                  },
+                  "contacts": [
+                    {
+                      "profile": {
+                        "name": "Test User"
+                      },
+                      "wa_id": "1234567890"
+                    }
+                  ],
+                  "messages": [
+                    {
+                      "from": "1234567890",
+                      "id": "wamid.abcdefghijklmnopqrstuvwxyz1",
+                      "timestamp": "1623456789",
+                      "text": {
+                        "body": "Show my inventory"
+                      },
+                      "type": "text"
+                    },
+                    {
+                      "from": "1234567890",
+                      "id": "wamid.abcdefghijklmnopqrstuvwxyz2",
+                      "timestamp": "1623456790",
+                      "text": {
+                        "body": "Show low stock items"
+                      },
+                      "type": "text"
+                    }
+                  ]
+                },
+                "field": "messages"
+              }
+            ]
+          }
+        ]
+      },
+      "expected_response": {
+        "status": "success",
+        "responses": [
+          {
+            "to": "1234567890",
+            "response_contains": ["inventory", "items", "products", "stock"]
+          },
+          {
+            "to": "1234567890",
+            "response_contains": ["low stock", "running low", "restock"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "webhook_hindi_message",
+      "description": "Webhook payload with a Hindi message",
+      "payload": {
+        "object": "whatsapp_business_account",
+        "entry": [
+          {
+            "id": "123456789",
+            "changes": [
+              {
+                "value": {
+                  "messaging_product": "whatsapp",
+                  "metadata": {
+                    "display_phone_number": "9876543210",
+                    "phone_number_id": "987654321098765"
+                  },
+                  "contacts": [
+                    {
+                      "profile": {
+                        "name": "Test User"
+                      },
+                      "wa_id": "1234567890"
+                    }
+                  ],
+                  "messages": [
+                    {
+                      "from": "1234567890",
+                      "id": "wamid.abcdefghijklmnopqrstuvwxyz",
+                      "timestamp": "1623456789",
+                      "text": {
+                        "body": "मेरे प्रोडक्ट दिखाओ"
+                      },
+                      "type": "text"
+                    }
+                  ]
+                },
+                "field": "messages"
+              }
+            ]
+          }
+        ]
+      },
+      "expected_response": {
+        "status": "success",
+        "responses": [
+          {
+            "to": "1234567890",
+            "response_contains": ["इन्वेंटरी", "आइटम", "प्रोडक्ट", "स्टॉक"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "webhook_invalid_format",
+      "description": "Webhook payload with invalid format",
+      "payload": {
+        "object": "whatsapp_business_account",
+        "entry": [
+          {
+            "id": "123456789",
+            "changes": [
+              {
+                "value": {
+                  "messaging_product": "whatsapp",
+                  "metadata": {
+                    "display_phone_number": "9876543210",
+                    "phone_number_id": "987654321098765"
+                  },
+                  "contacts": [
+                    {
+                      "profile": {
+                        "name": "Test User"
+                      },
+                      "wa_id": "1234567890"
+                    }
+                  ],
+                  "messages": []
+                },
+                "field": "messages"
+              }
+            ]
+          }
+        ]
+      },
+      "expected_response": {
+        "status": "error",
+        "message": "No messages found"
+      }
+    }
+  ]
+}

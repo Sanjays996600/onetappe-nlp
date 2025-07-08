@@ -1,0 +1,2711 @@
+{
+  "language_detection": [
+    {
+      "text": "Show me my inventory",
+      "expected_language": "en",
+      "detected_language": "en",
+      "confidence": 0.9,
+      "is_correct": true,
+      "processing_time": 9.5367431640625e-07
+    },
+    {
+      "text": "Update rice stock to 50 kg",
+      "expected_language": "en",
+      "detected_language": "en",
+      "confidence": 0.9,
+      "is_correct": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Generate sales report for last week",
+      "expected_language": "en",
+      "detected_language": "en",
+      "confidence": 0.9,
+      "is_correct": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "What products are running low on stock?",
+      "expected_language": "en",
+      "detected_language": "en",
+      "confidence": 0.9,
+      "is_correct": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Search for wheat flour in my inventory",
+      "expected_language": "en",
+      "detected_language": "en",
+      "confidence": 0.9,
+      "is_correct": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "मेरा इन्वेंटरी दिखाओ",
+      "expected_language": "hi",
+      "detected_language": "en",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "चावल का स्टॉक 50 किलो अपडेट करें",
+      "expected_language": "hi",
+      "detected_language": "en",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "पिछले हफ्ते की बिक्री रिपोर्ट जनरेट करें",
+      "expected_language": "hi",
+      "detected_language": "en",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "कौन से प्रोडक्ट्स कम स्टॉक में हैं?",
+      "expected_language": "hi",
+      "detected_language": "en",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "मेरे इन्वेंटरी में गेहूं का आटा खोजें",
+      "expected_language": "hi",
+      "detected_language": "en",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Show मेरा inventory",
+      "expected_language": "mixed",
+      "detected_language": "en",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Update चावल stock to 50 kg",
+      "expected_language": "mixed",
+      "detected_language": "en",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Generate पिछले हफ्ते की sales report",
+      "expected_language": "mixed",
+      "detected_language": "en",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Which प्रोडक्ट्स are low on stock?",
+      "expected_language": "mixed",
+      "detected_language": "en",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Search for गेहूं का आटा in my inventory",
+      "expected_language": "mixed",
+      "detected_language": "en",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    }
+  ],
+  "intent_recognition": [
+    {
+      "text": "Show me my inventory",
+      "language": "english",
+      "expected_intent": "get_inventory",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": true,
+      "processing_time": 1.1920928955078125e-06
+    },
+    {
+      "text": "What's in my inventory?",
+      "language": "english",
+      "expected_intent": "get_inventory",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": true,
+      "processing_time": 9.5367431640625e-07
+    },
+    {
+      "text": "List all my products",
+      "language": "english",
+      "expected_intent": "get_inventory",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Display my current stock",
+      "language": "english",
+      "expected_intent": "get_inventory",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "What products do I have?",
+      "language": "english",
+      "expected_intent": "get_inventory",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Show low stock items",
+      "language": "english",
+      "expected_intent": "get_low_stock",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 9.5367431640625e-07
+    },
+    {
+      "text": "Which products are running low?",
+      "language": "english",
+      "expected_intent": "get_low_stock",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 1.1920928955078125e-06
+    },
+    {
+      "text": "List products with low inventory",
+      "language": "english",
+      "expected_intent": "get_low_stock",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Display items that need restocking",
+      "language": "english",
+      "expected_intent": "get_low_stock",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "What's running out of stock?",
+      "language": "english",
+      "expected_intent": "get_low_stock",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Generate sales report for last week",
+      "language": "english",
+      "expected_intent": "get_report",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 1.1920928955078125e-06
+    },
+    {
+      "text": "Show me the report for this month",
+      "language": "english",
+      "expected_intent": "get_report",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Get sales data for January",
+      "language": "english",
+      "expected_intent": "get_report",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "I need a report for Q1",
+      "language": "english",
+      "expected_intent": "get_report",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Show performance report for last 30 days",
+      "language": "english",
+      "expected_intent": "get_report",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Update rice stock to 50 kg",
+      "language": "english",
+      "expected_intent": "edit_stock",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Change sugar inventory to 100 packets",
+      "language": "english",
+      "expected_intent": "edit_stock",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Set wheat quantity to 75 kg",
+      "language": "english",
+      "expected_intent": "edit_stock",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Modify dal stock to 30 kg",
+      "language": "english",
+      "expected_intent": "edit_stock",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Update oil inventory to 45 liters",
+      "language": "english",
+      "expected_intent": "edit_stock",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Show my recent orders",
+      "language": "english",
+      "expected_intent": "get_orders",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Display orders from last week",
+      "language": "english",
+      "expected_intent": "get_orders",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "List all pending orders",
+      "language": "english",
+      "expected_intent": "get_orders",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Get completed orders for this month",
+      "language": "english",
+      "expected_intent": "get_orders",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Show orders from January 1st",
+      "language": "english",
+      "expected_intent": "get_orders",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Search for rice products",
+      "language": "english",
+      "expected_intent": "search_product",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 1.1920928955078125e-06
+    },
+    {
+      "text": "Find items with sugar",
+      "language": "english",
+      "expected_intent": "search_product",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Look up wheat flour",
+      "language": "english",
+      "expected_intent": "search_product",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Search inventory for dal",
+      "language": "english",
+      "expected_intent": "search_product",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Find products with oil",
+      "language": "english",
+      "expected_intent": "search_product",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "मेरा इन्वेंटरी दिखाओ",
+      "language": "hindi",
+      "expected_intent": "get_inventory",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "मेरे पास क्या स्टॉक है?",
+      "language": "hindi",
+      "expected_intent": "get_inventory",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": true,
+      "processing_time": 9.5367431640625e-07
+    },
+    {
+      "text": "सभी प्रोडक्ट्स की लिस्ट दिखाओ",
+      "language": "hindi",
+      "expected_intent": "get_inventory",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "वर्तमान स्टॉक दिखाएं",
+      "language": "hindi",
+      "expected_intent": "get_inventory",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "मेरे पास कौन से प्रोडक्ट्स हैं?",
+      "language": "hindi",
+      "expected_intent": "get_inventory",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "कम स्टॉक वाले आइटम दिखाओ",
+      "language": "hindi",
+      "expected_intent": "get_low_stock",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 9.5367431640625e-07
+    },
+    {
+      "text": "कौन से प्रोडक्ट्स कम हो रहे हैं?",
+      "language": "hindi",
+      "expected_intent": "get_low_stock",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "कम इन्वेंटरी वाले प्रोडक्ट्स की सूची",
+      "language": "hindi",
+      "expected_intent": "get_low_stock",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "वे आइटम दिखाएं जिन्हें रीस्टॉक करने की आवश्यकता है",
+      "language": "hindi",
+      "expected_intent": "get_low_stock",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "क्या स्टॉक से बाहर हो रहा है?",
+      "language": "hindi",
+      "expected_intent": "get_low_stock",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 9.5367431640625e-07
+    },
+    {
+      "text": "पिछले हफ्ते की बिक्री रिपोर्ट जनरेट करें",
+      "language": "hindi",
+      "expected_intent": "get_report",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "इस महीने की रिपोर्ट दिखाएं",
+      "language": "hindi",
+      "expected_intent": "get_report",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "जनवरी के लिए सेल्स डेटा प्राप्त करें",
+      "language": "hindi",
+      "expected_intent": "get_report",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "मुझे Q1 के लिए एक रिपोर्ट चाहिए",
+      "language": "hindi",
+      "expected_intent": "get_report",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 9.5367431640625e-07
+    },
+    {
+      "text": "पिछले 30 दिनों के लिए परफॉरमेंस रिपोर्ट दिखाएं",
+      "language": "hindi",
+      "expected_intent": "get_report",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "चावल का स्टॉक 50 किलो अपडेट करें",
+      "language": "hindi",
+      "expected_intent": "edit_stock",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "चीनी इन्वेंटरी को 100 पैकेट में बदलें",
+      "language": "hindi",
+      "expected_intent": "edit_stock",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "गेहूं की मात्रा 75 किलो सेट करें",
+      "language": "hindi",
+      "expected_intent": "edit_stock",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "दाल स्टॉक को 30 किलो में संशोधित करें",
+      "language": "hindi",
+      "expected_intent": "edit_stock",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "तेल इन्वेंटरी को 45 लीटर अपडेट करें",
+      "language": "hindi",
+      "expected_intent": "edit_stock",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "मेरे हाल के ऑर्डर दिखाएं",
+      "language": "hindi",
+      "expected_intent": "get_orders",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 7.152557373046875e-07
+    },
+    {
+      "text": "पिछले हफ्ते के ऑर्डर दिखाएं",
+      "language": "hindi",
+      "expected_intent": "get_orders",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "सभी लंबित ऑर्डर सूचीबद्ध करें",
+      "language": "hindi",
+      "expected_intent": "get_orders",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "इस महीने के पूरे ऑर्डर प्राप्त करें",
+      "language": "hindi",
+      "expected_intent": "get_orders",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "1 जनवरी से ऑर्डर दिखाएं",
+      "language": "hindi",
+      "expected_intent": "get_orders",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "चावल प्रोडक्ट्स के लिए खोजें",
+      "language": "hindi",
+      "expected_intent": "search_product",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "चीनी वाले आइटम खोजें",
+      "language": "hindi",
+      "expected_intent": "search_product",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "गेहूं का आटा देखें",
+      "language": "hindi",
+      "expected_intent": "search_product",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 1.1920928955078125e-06
+    },
+    {
+      "text": "दाल के लिए इन्वेंटरी खोजें",
+      "language": "hindi",
+      "expected_intent": "search_product",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "तेल वाले प्रोडक्ट्स खोजें",
+      "language": "hindi",
+      "expected_intent": "search_product",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Show मेरा inventory",
+      "language": "mixed",
+      "expected_intent": "get_inventory",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "What's मेरे पास in stock?",
+      "language": "mixed",
+      "expected_intent": "get_inventory",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "List सभी products",
+      "language": "mixed",
+      "expected_intent": "get_inventory",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": true,
+      "processing_time": 9.5367431640625e-07
+    },
+    {
+      "text": "Display वर्तमान stock",
+      "language": "mixed",
+      "expected_intent": "get_inventory",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "What प्रोडक्ट्स do I have?",
+      "language": "mixed",
+      "expected_intent": "get_inventory",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Show कम stock items",
+      "language": "mixed",
+      "expected_intent": "get_low_stock",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Which प्रोडक्ट्स are running low?",
+      "language": "mixed",
+      "expected_intent": "get_low_stock",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "List कम inventory वाले products",
+      "language": "mixed",
+      "expected_intent": "get_low_stock",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 9.5367431640625e-07
+    },
+    {
+      "text": "Display items that need रीस्टॉक",
+      "language": "mixed",
+      "expected_intent": "get_low_stock",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "What's स्टॉक से बाहर हो रहा है?",
+      "language": "mixed",
+      "expected_intent": "get_low_stock",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Generate पिछले हफ्ते की sales report",
+      "language": "mixed",
+      "expected_intent": "get_report",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Show me the रिपोर्ट for this month",
+      "language": "mixed",
+      "expected_intent": "get_report",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 9.5367431640625e-07
+    },
+    {
+      "text": "Get जनवरी के लिए sales data",
+      "language": "mixed",
+      "expected_intent": "get_report",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "I need a Q1 के लिए report",
+      "language": "mixed",
+      "expected_intent": "get_report",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Show पिछले 30 दिनों के लिए performance report",
+      "language": "mixed",
+      "expected_intent": "get_report",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Update चावल stock to 50 kg",
+      "language": "mixed",
+      "expected_intent": "edit_stock",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 1.1920928955078125e-06
+    },
+    {
+      "text": "Change चीनी inventory to 100 packets",
+      "language": "mixed",
+      "expected_intent": "edit_stock",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Set गेहूं quantity to 75 kg",
+      "language": "mixed",
+      "expected_intent": "edit_stock",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Modify दाल stock to 30 kg",
+      "language": "mixed",
+      "expected_intent": "edit_stock",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Update तेल inventory to 45 liters",
+      "language": "mixed",
+      "expected_intent": "edit_stock",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Show मेरे हाल के orders",
+      "language": "mixed",
+      "expected_intent": "get_orders",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Display पिछले हफ्ते के orders",
+      "language": "mixed",
+      "expected_intent": "get_orders",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "List all लंबित orders",
+      "language": "mixed",
+      "expected_intent": "get_orders",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Get इस महीने के completed orders",
+      "language": "mixed",
+      "expected_intent": "get_orders",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Show 1 जनवरी से orders",
+      "language": "mixed",
+      "expected_intent": "get_orders",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Search for चावल products",
+      "language": "mixed",
+      "expected_intent": "search_product",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Find चीनी वाले items",
+      "language": "mixed",
+      "expected_intent": "search_product",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Look up गेहूं का आटा",
+      "language": "mixed",
+      "expected_intent": "search_product",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 9.5367431640625e-07
+    },
+    {
+      "text": "Search inventory for दाल",
+      "language": "mixed",
+      "expected_intent": "search_product",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Find तेल वाले products",
+      "language": "mixed",
+      "expected_intent": "search_product",
+      "detected_intent": "get_inventory",
+      "confidence": 0.9,
+      "is_correct": false,
+      "processing_time": 0.0
+    }
+  ],
+  "entity_extraction": [
+    {
+      "text": "Show me my inventory",
+      "language": "english",
+      "intent": "get_inventory",
+      "expected_entities": {},
+      "extracted_entities": {},
+      "all_entities_present": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "What's in my inventory?",
+      "language": "english",
+      "intent": "get_inventory",
+      "expected_entities": {},
+      "extracted_entities": {},
+      "all_entities_present": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "List all my products",
+      "language": "english",
+      "intent": "get_inventory",
+      "expected_entities": {},
+      "extracted_entities": {},
+      "all_entities_present": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Display my current stock",
+      "language": "english",
+      "intent": "get_inventory",
+      "expected_entities": {},
+      "extracted_entities": {},
+      "all_entities_present": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "What products do I have?",
+      "language": "english",
+      "intent": "get_inventory",
+      "expected_entities": {},
+      "extracted_entities": {},
+      "all_entities_present": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Show low stock items",
+      "language": "english",
+      "intent": "get_low_stock",
+      "expected_entities": {},
+      "extracted_entities": {},
+      "all_entities_present": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Which products are running low?",
+      "language": "english",
+      "intent": "get_low_stock",
+      "expected_entities": {},
+      "extracted_entities": {},
+      "all_entities_present": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "List products with low inventory",
+      "language": "english",
+      "intent": "get_low_stock",
+      "expected_entities": {},
+      "extracted_entities": {},
+      "all_entities_present": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Display items that need restocking",
+      "language": "english",
+      "intent": "get_low_stock",
+      "expected_entities": {},
+      "extracted_entities": {},
+      "all_entities_present": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "What's running out of stock?",
+      "language": "english",
+      "intent": "get_low_stock",
+      "expected_entities": {},
+      "extracted_entities": {},
+      "all_entities_present": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Generate sales report for last week",
+      "language": "english",
+      "intent": "get_report",
+      "expected_entities": {
+        "time_period": "last_week"
+      },
+      "extracted_entities": {},
+      "all_entities_present": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Show me the report for this month",
+      "language": "english",
+      "intent": "get_report",
+      "expected_entities": {
+        "time_period": "last_week"
+      },
+      "extracted_entities": {},
+      "all_entities_present": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Get sales data for January",
+      "language": "english",
+      "intent": "get_report",
+      "expected_entities": {
+        "time_period": "last_week"
+      },
+      "extracted_entities": {},
+      "all_entities_present": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "I need a report for Q1",
+      "language": "english",
+      "intent": "get_report",
+      "expected_entities": {
+        "time_period": "last_week"
+      },
+      "extracted_entities": {},
+      "all_entities_present": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Show performance report for last 30 days",
+      "language": "english",
+      "intent": "get_report",
+      "expected_entities": {
+        "time_period": "last_week"
+      },
+      "extracted_entities": {},
+      "all_entities_present": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Update rice stock to 50 kg",
+      "language": "english",
+      "intent": "edit_stock",
+      "expected_entities": {
+        "product_name": "rice",
+        "stock": 50
+      },
+      "extracted_entities": {},
+      "all_entities_present": false,
+      "processing_time": 1.1920928955078125e-06
+    },
+    {
+      "text": "Change sugar inventory to 100 packets",
+      "language": "english",
+      "intent": "edit_stock",
+      "expected_entities": {
+        "product_name": "rice",
+        "stock": 50
+      },
+      "extracted_entities": {},
+      "all_entities_present": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Set wheat quantity to 75 kg",
+      "language": "english",
+      "intent": "edit_stock",
+      "expected_entities": {
+        "product_name": "rice",
+        "stock": 50
+      },
+      "extracted_entities": {},
+      "all_entities_present": false,
+      "processing_time": 9.5367431640625e-07
+    },
+    {
+      "text": "Modify dal stock to 30 kg",
+      "language": "english",
+      "intent": "edit_stock",
+      "expected_entities": {
+        "product_name": "rice",
+        "stock": 50
+      },
+      "extracted_entities": {},
+      "all_entities_present": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Update oil inventory to 45 liters",
+      "language": "english",
+      "intent": "edit_stock",
+      "expected_entities": {
+        "product_name": "rice",
+        "stock": 50
+      },
+      "extracted_entities": {},
+      "all_entities_present": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Show my recent orders",
+      "language": "english",
+      "intent": "get_orders",
+      "expected_entities": {
+        "time_period": "recent"
+      },
+      "extracted_entities": {},
+      "all_entities_present": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Display orders from last week",
+      "language": "english",
+      "intent": "get_orders",
+      "expected_entities": {
+        "time_period": "recent"
+      },
+      "extracted_entities": {},
+      "all_entities_present": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "List all pending orders",
+      "language": "english",
+      "intent": "get_orders",
+      "expected_entities": {
+        "time_period": "recent"
+      },
+      "extracted_entities": {},
+      "all_entities_present": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Get completed orders for this month",
+      "language": "english",
+      "intent": "get_orders",
+      "expected_entities": {
+        "time_period": "recent"
+      },
+      "extracted_entities": {},
+      "all_entities_present": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Show orders from January 1st",
+      "language": "english",
+      "intent": "get_orders",
+      "expected_entities": {
+        "time_period": "recent"
+      },
+      "extracted_entities": {},
+      "all_entities_present": false,
+      "processing_time": 9.5367431640625e-07
+    },
+    {
+      "text": "Search for rice products",
+      "language": "english",
+      "intent": "search_product",
+      "expected_entities": {
+        "product_name": "rice"
+      },
+      "extracted_entities": {},
+      "all_entities_present": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Find items with sugar",
+      "language": "english",
+      "intent": "search_product",
+      "expected_entities": {
+        "product_name": "rice"
+      },
+      "extracted_entities": {},
+      "all_entities_present": false,
+      "processing_time": 9.5367431640625e-07
+    },
+    {
+      "text": "Look up wheat flour",
+      "language": "english",
+      "intent": "search_product",
+      "expected_entities": {
+        "product_name": "rice"
+      },
+      "extracted_entities": {},
+      "all_entities_present": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Search inventory for dal",
+      "language": "english",
+      "intent": "search_product",
+      "expected_entities": {
+        "product_name": "rice"
+      },
+      "extracted_entities": {},
+      "all_entities_present": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Find products with oil",
+      "language": "english",
+      "intent": "search_product",
+      "expected_entities": {
+        "product_name": "rice"
+      },
+      "extracted_entities": {},
+      "all_entities_present": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "मेरा इन्वेंटरी दिखाओ",
+      "language": "hindi",
+      "intent": "get_inventory",
+      "expected_entities": {},
+      "extracted_entities": {},
+      "all_entities_present": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "मेरे पास क्या स्टॉक है?",
+      "language": "hindi",
+      "intent": "get_inventory",
+      "expected_entities": {},
+      "extracted_entities": {},
+      "all_entities_present": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "सभी प्रोडक्ट्स की लिस्ट दिखाओ",
+      "language": "hindi",
+      "intent": "get_inventory",
+      "expected_entities": {},
+      "extracted_entities": {},
+      "all_entities_present": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "वर्तमान स्टॉक दिखाएं",
+      "language": "hindi",
+      "intent": "get_inventory",
+      "expected_entities": {},
+      "extracted_entities": {},
+      "all_entities_present": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "मेरे पास कौन से प्रोडक्ट्स हैं?",
+      "language": "hindi",
+      "intent": "get_inventory",
+      "expected_entities": {},
+      "extracted_entities": {},
+      "all_entities_present": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "कम स्टॉक वाले आइटम दिखाओ",
+      "language": "hindi",
+      "intent": "get_low_stock",
+      "expected_entities": {},
+      "extracted_entities": {},
+      "all_entities_present": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "कौन से प्रोडक्ट्स कम हो रहे हैं?",
+      "language": "hindi",
+      "intent": "get_low_stock",
+      "expected_entities": {},
+      "extracted_entities": {},
+      "all_entities_present": true,
+      "processing_time": 9.5367431640625e-07
+    },
+    {
+      "text": "कम इन्वेंटरी वाले प्रोडक्ट्स की सूची",
+      "language": "hindi",
+      "intent": "get_low_stock",
+      "expected_entities": {},
+      "extracted_entities": {},
+      "all_entities_present": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "वे आइटम दिखाएं जिन्हें रीस्टॉक करने की आवश्यकता है",
+      "language": "hindi",
+      "intent": "get_low_stock",
+      "expected_entities": {},
+      "extracted_entities": {},
+      "all_entities_present": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "क्या स्टॉक से बाहर हो रहा है?",
+      "language": "hindi",
+      "intent": "get_low_stock",
+      "expected_entities": {},
+      "extracted_entities": {},
+      "all_entities_present": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "पिछले हफ्ते की बिक्री रिपोर्ट जनरेट करें",
+      "language": "hindi",
+      "intent": "get_report",
+      "expected_entities": {
+        "time_period": "last_week"
+      },
+      "extracted_entities": {},
+      "all_entities_present": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "इस महीने की रिपोर्ट दिखाएं",
+      "language": "hindi",
+      "intent": "get_report",
+      "expected_entities": {
+        "time_period": "last_week"
+      },
+      "extracted_entities": {},
+      "all_entities_present": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "जनवरी के लिए सेल्स डेटा प्राप्त करें",
+      "language": "hindi",
+      "intent": "get_report",
+      "expected_entities": {
+        "time_period": "last_week"
+      },
+      "extracted_entities": {},
+      "all_entities_present": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "मुझे Q1 के लिए एक रिपोर्ट चाहिए",
+      "language": "hindi",
+      "intent": "get_report",
+      "expected_entities": {
+        "time_period": "last_week"
+      },
+      "extracted_entities": {},
+      "all_entities_present": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "पिछले 30 दिनों के लिए परफॉरमेंस रिपोर्ट दिखाएं",
+      "language": "hindi",
+      "intent": "get_report",
+      "expected_entities": {
+        "time_period": "last_week"
+      },
+      "extracted_entities": {},
+      "all_entities_present": false,
+      "processing_time": 7.152557373046875e-07
+    },
+    {
+      "text": "चावल का स्टॉक 50 किलो अपडेट करें",
+      "language": "hindi",
+      "intent": "edit_stock",
+      "expected_entities": {
+        "product_name": "चावल",
+        "stock": 50
+      },
+      "extracted_entities": {},
+      "all_entities_present": false,
+      "processing_time": 9.5367431640625e-07
+    },
+    {
+      "text": "चीनी इन्वेंटरी को 100 पैकेट में बदलें",
+      "language": "hindi",
+      "intent": "edit_stock",
+      "expected_entities": {
+        "product_name": "चावल",
+        "stock": 50
+      },
+      "extracted_entities": {},
+      "all_entities_present": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "गेहूं की मात्रा 75 किलो सेट करें",
+      "language": "hindi",
+      "intent": "edit_stock",
+      "expected_entities": {
+        "product_name": "चावल",
+        "stock": 50
+      },
+      "extracted_entities": {},
+      "all_entities_present": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "दाल स्टॉक को 30 किलो में संशोधित करें",
+      "language": "hindi",
+      "intent": "edit_stock",
+      "expected_entities": {
+        "product_name": "चावल",
+        "stock": 50
+      },
+      "extracted_entities": {},
+      "all_entities_present": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "तेल इन्वेंटरी को 45 लीटर अपडेट करें",
+      "language": "hindi",
+      "intent": "edit_stock",
+      "expected_entities": {
+        "product_name": "चावल",
+        "stock": 50
+      },
+      "extracted_entities": {},
+      "all_entities_present": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "मेरे हाल के ऑर्डर दिखाएं",
+      "language": "hindi",
+      "intent": "get_orders",
+      "expected_entities": {
+        "time_period": "recent"
+      },
+      "extracted_entities": {},
+      "all_entities_present": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "पिछले हफ्ते के ऑर्डर दिखाएं",
+      "language": "hindi",
+      "intent": "get_orders",
+      "expected_entities": {
+        "time_period": "recent"
+      },
+      "extracted_entities": {},
+      "all_entities_present": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "सभी लंबित ऑर्डर सूचीबद्ध करें",
+      "language": "hindi",
+      "intent": "get_orders",
+      "expected_entities": {
+        "time_period": "recent"
+      },
+      "extracted_entities": {},
+      "all_entities_present": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "इस महीने के पूरे ऑर्डर प्राप्त करें",
+      "language": "hindi",
+      "intent": "get_orders",
+      "expected_entities": {
+        "time_period": "recent"
+      },
+      "extracted_entities": {},
+      "all_entities_present": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "1 जनवरी से ऑर्डर दिखाएं",
+      "language": "hindi",
+      "intent": "get_orders",
+      "expected_entities": {
+        "time_period": "recent"
+      },
+      "extracted_entities": {},
+      "all_entities_present": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "चावल प्रोडक्ट्स के लिए खोजें",
+      "language": "hindi",
+      "intent": "search_product",
+      "expected_entities": {
+        "product_name": "चावल"
+      },
+      "extracted_entities": {},
+      "all_entities_present": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "चीनी वाले आइटम खोजें",
+      "language": "hindi",
+      "intent": "search_product",
+      "expected_entities": {
+        "product_name": "चावल"
+      },
+      "extracted_entities": {},
+      "all_entities_present": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "गेहूं का आटा देखें",
+      "language": "hindi",
+      "intent": "search_product",
+      "expected_entities": {
+        "product_name": "चावल"
+      },
+      "extracted_entities": {},
+      "all_entities_present": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "दाल के लिए इन्वेंटरी खोजें",
+      "language": "hindi",
+      "intent": "search_product",
+      "expected_entities": {
+        "product_name": "चावल"
+      },
+      "extracted_entities": {},
+      "all_entities_present": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "तेल वाले प्रोडक्ट्स खोजें",
+      "language": "hindi",
+      "intent": "search_product",
+      "expected_entities": {
+        "product_name": "चावल"
+      },
+      "extracted_entities": {},
+      "all_entities_present": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Show मेरा inventory",
+      "language": "mixed",
+      "intent": "get_inventory",
+      "expected_entities": {},
+      "extracted_entities": {},
+      "all_entities_present": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "What's मेरे पास in stock?",
+      "language": "mixed",
+      "intent": "get_inventory",
+      "expected_entities": {},
+      "extracted_entities": {},
+      "all_entities_present": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "List सभी products",
+      "language": "mixed",
+      "intent": "get_inventory",
+      "expected_entities": {},
+      "extracted_entities": {},
+      "all_entities_present": true,
+      "processing_time": 9.5367431640625e-07
+    },
+    {
+      "text": "Display वर्तमान stock",
+      "language": "mixed",
+      "intent": "get_inventory",
+      "expected_entities": {},
+      "extracted_entities": {},
+      "all_entities_present": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "What प्रोडक्ट्स do I have?",
+      "language": "mixed",
+      "intent": "get_inventory",
+      "expected_entities": {},
+      "extracted_entities": {},
+      "all_entities_present": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Show कम stock items",
+      "language": "mixed",
+      "intent": "get_low_stock",
+      "expected_entities": {},
+      "extracted_entities": {},
+      "all_entities_present": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Which प्रोडक्ट्स are running low?",
+      "language": "mixed",
+      "intent": "get_low_stock",
+      "expected_entities": {},
+      "extracted_entities": {},
+      "all_entities_present": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "List कम inventory वाले products",
+      "language": "mixed",
+      "intent": "get_low_stock",
+      "expected_entities": {},
+      "extracted_entities": {},
+      "all_entities_present": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Display items that need रीस्टॉक",
+      "language": "mixed",
+      "intent": "get_low_stock",
+      "expected_entities": {},
+      "extracted_entities": {},
+      "all_entities_present": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "What's स्टॉक से बाहर हो रहा है?",
+      "language": "mixed",
+      "intent": "get_low_stock",
+      "expected_entities": {},
+      "extracted_entities": {},
+      "all_entities_present": true,
+      "processing_time": 9.5367431640625e-07
+    },
+    {
+      "text": "Generate पिछले हफ्ते की sales report",
+      "language": "mixed",
+      "intent": "get_report",
+      "expected_entities": {
+        "time_period": "last_week"
+      },
+      "extracted_entities": {},
+      "all_entities_present": false,
+      "processing_time": 9.5367431640625e-07
+    },
+    {
+      "text": "Show me the रिपोर्ट for this month",
+      "language": "mixed",
+      "intent": "get_report",
+      "expected_entities": {
+        "time_period": "last_week"
+      },
+      "extracted_entities": {},
+      "all_entities_present": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Get जनवरी के लिए sales data",
+      "language": "mixed",
+      "intent": "get_report",
+      "expected_entities": {
+        "time_period": "last_week"
+      },
+      "extracted_entities": {},
+      "all_entities_present": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "I need a Q1 के लिए report",
+      "language": "mixed",
+      "intent": "get_report",
+      "expected_entities": {
+        "time_period": "last_week"
+      },
+      "extracted_entities": {},
+      "all_entities_present": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Show पिछले 30 दिनों के लिए performance report",
+      "language": "mixed",
+      "intent": "get_report",
+      "expected_entities": {
+        "time_period": "last_week"
+      },
+      "extracted_entities": {},
+      "all_entities_present": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Update चावल stock to 50 kg",
+      "language": "mixed",
+      "intent": "edit_stock",
+      "expected_entities": {
+        "product_name": "चावल",
+        "stock": 50
+      },
+      "extracted_entities": {},
+      "all_entities_present": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Change चीनी inventory to 100 packets",
+      "language": "mixed",
+      "intent": "edit_stock",
+      "expected_entities": {
+        "product_name": "चावल",
+        "stock": 50
+      },
+      "extracted_entities": {},
+      "all_entities_present": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Set गेहूं quantity to 75 kg",
+      "language": "mixed",
+      "intent": "edit_stock",
+      "expected_entities": {
+        "product_name": "चावल",
+        "stock": 50
+      },
+      "extracted_entities": {},
+      "all_entities_present": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Modify दाल stock to 30 kg",
+      "language": "mixed",
+      "intent": "edit_stock",
+      "expected_entities": {
+        "product_name": "चावल",
+        "stock": 50
+      },
+      "extracted_entities": {},
+      "all_entities_present": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Update तेल inventory to 45 liters",
+      "language": "mixed",
+      "intent": "edit_stock",
+      "expected_entities": {
+        "product_name": "चावल",
+        "stock": 50
+      },
+      "extracted_entities": {},
+      "all_entities_present": false,
+      "processing_time": 1.1920928955078125e-06
+    },
+    {
+      "text": "Show मेरे हाल के orders",
+      "language": "mixed",
+      "intent": "get_orders",
+      "expected_entities": {
+        "time_period": "recent"
+      },
+      "extracted_entities": {},
+      "all_entities_present": false,
+      "processing_time": 9.5367431640625e-07
+    },
+    {
+      "text": "Display पिछले हफ्ते के orders",
+      "language": "mixed",
+      "intent": "get_orders",
+      "expected_entities": {
+        "time_period": "recent"
+      },
+      "extracted_entities": {},
+      "all_entities_present": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "List all लंबित orders",
+      "language": "mixed",
+      "intent": "get_orders",
+      "expected_entities": {
+        "time_period": "recent"
+      },
+      "extracted_entities": {},
+      "all_entities_present": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Get इस महीने के completed orders",
+      "language": "mixed",
+      "intent": "get_orders",
+      "expected_entities": {
+        "time_period": "recent"
+      },
+      "extracted_entities": {},
+      "all_entities_present": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Show 1 जनवरी से orders",
+      "language": "mixed",
+      "intent": "get_orders",
+      "expected_entities": {
+        "time_period": "recent"
+      },
+      "extracted_entities": {},
+      "all_entities_present": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Search for चावल products",
+      "language": "mixed",
+      "intent": "search_product",
+      "expected_entities": {
+        "product_name": "चावल"
+      },
+      "extracted_entities": {},
+      "all_entities_present": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Find चीनी वाले items",
+      "language": "mixed",
+      "intent": "search_product",
+      "expected_entities": {
+        "product_name": "चावल"
+      },
+      "extracted_entities": {},
+      "all_entities_present": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Look up गेहूं का आटा",
+      "language": "mixed",
+      "intent": "search_product",
+      "expected_entities": {
+        "product_name": "चावल"
+      },
+      "extracted_entities": {},
+      "all_entities_present": false,
+      "processing_time": 1.1920928955078125e-06
+    },
+    {
+      "text": "Search inventory for दाल",
+      "language": "mixed",
+      "intent": "search_product",
+      "expected_entities": {
+        "product_name": "चावल"
+      },
+      "extracted_entities": {},
+      "all_entities_present": false,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Find तेल वाले products",
+      "language": "mixed",
+      "intent": "search_product",
+      "expected_entities": {
+        "product_name": "चावल"
+      },
+      "extracted_entities": {},
+      "all_entities_present": false,
+      "processing_time": 0.0
+    }
+  ],
+  "end_to_end": [
+    {
+      "text": "Show me my inventory",
+      "language": "english",
+      "intent": "get_inventory",
+      "response": "Processed: Show me my inventory",
+      "has_response": true,
+      "processing_time": 1.1920928955078125e-06
+    },
+    {
+      "text": "What's in my inventory?",
+      "language": "english",
+      "intent": "get_inventory",
+      "response": "Processed: What's in my inventory?",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "List all my products",
+      "language": "english",
+      "intent": "get_inventory",
+      "response": "Processed: List all my products",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Display my current stock",
+      "language": "english",
+      "intent": "get_inventory",
+      "response": "Processed: Display my current stock",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "What products do I have?",
+      "language": "english",
+      "intent": "get_inventory",
+      "response": "Processed: What products do I have?",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Show low stock items",
+      "language": "english",
+      "intent": "get_low_stock",
+      "response": "Processed: Show low stock items",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Which products are running low?",
+      "language": "english",
+      "intent": "get_low_stock",
+      "response": "Processed: Which products are running low?",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "List products with low inventory",
+      "language": "english",
+      "intent": "get_low_stock",
+      "response": "Processed: List products with low inventory",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Display items that need restocking",
+      "language": "english",
+      "intent": "get_low_stock",
+      "response": "Processed: Display items that need restocking",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "What's running out of stock?",
+      "language": "english",
+      "intent": "get_low_stock",
+      "response": "Processed: What's running out of stock?",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Generate sales report for last week",
+      "language": "english",
+      "intent": "get_report",
+      "response": "Processed: Generate sales report for last week",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Show me the report for this month",
+      "language": "english",
+      "intent": "get_report",
+      "response": "Processed: Show me the report for this month",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Get sales data for January",
+      "language": "english",
+      "intent": "get_report",
+      "response": "Processed: Get sales data for January",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "I need a report for Q1",
+      "language": "english",
+      "intent": "get_report",
+      "response": "Processed: I need a report for Q1",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Show performance report for last 30 days",
+      "language": "english",
+      "intent": "get_report",
+      "response": "Processed: Show performance report for last 30 days",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Update rice stock to 50 kg",
+      "language": "english",
+      "intent": "edit_stock",
+      "response": "Processed: Update rice stock to 50 kg",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Change sugar inventory to 100 packets",
+      "language": "english",
+      "intent": "edit_stock",
+      "response": "Processed: Change sugar inventory to 100 packets",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Set wheat quantity to 75 kg",
+      "language": "english",
+      "intent": "edit_stock",
+      "response": "Processed: Set wheat quantity to 75 kg",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Modify dal stock to 30 kg",
+      "language": "english",
+      "intent": "edit_stock",
+      "response": "Processed: Modify dal stock to 30 kg",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Update oil inventory to 45 liters",
+      "language": "english",
+      "intent": "edit_stock",
+      "response": "Processed: Update oil inventory to 45 liters",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Show my recent orders",
+      "language": "english",
+      "intent": "get_orders",
+      "response": "Processed: Show my recent orders",
+      "has_response": true,
+      "processing_time": 9.5367431640625e-07
+    },
+    {
+      "text": "Display orders from last week",
+      "language": "english",
+      "intent": "get_orders",
+      "response": "Processed: Display orders from last week",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "List all pending orders",
+      "language": "english",
+      "intent": "get_orders",
+      "response": "Processed: List all pending orders",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Get completed orders for this month",
+      "language": "english",
+      "intent": "get_orders",
+      "response": "Processed: Get completed orders for this month",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Show orders from January 1st",
+      "language": "english",
+      "intent": "get_orders",
+      "response": "Processed: Show orders from January 1st",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Search for rice products",
+      "language": "english",
+      "intent": "search_product",
+      "response": "Processed: Search for rice products",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Find items with sugar",
+      "language": "english",
+      "intent": "search_product",
+      "response": "Processed: Find items with sugar",
+      "has_response": true,
+      "processing_time": 9.5367431640625e-07
+    },
+    {
+      "text": "Look up wheat flour",
+      "language": "english",
+      "intent": "search_product",
+      "response": "Processed: Look up wheat flour",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Search inventory for dal",
+      "language": "english",
+      "intent": "search_product",
+      "response": "Processed: Search inventory for dal",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Find products with oil",
+      "language": "english",
+      "intent": "search_product",
+      "response": "Processed: Find products with oil",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "मेरा इन्वेंटरी दिखाओ",
+      "language": "hindi",
+      "intent": "get_inventory",
+      "response": "Processed: मेरा इन्वेंटरी दिखाओ",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "मेरे पास क्या स्टॉक है?",
+      "language": "hindi",
+      "intent": "get_inventory",
+      "response": "Processed: मेरे पास क्या स्टॉक है?",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "सभी प्रोडक्ट्स की लिस्ट दिखाओ",
+      "language": "hindi",
+      "intent": "get_inventory",
+      "response": "Processed: सभी प्रोडक्ट्स की लिस्ट दिखाओ",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "वर्तमान स्टॉक दिखाएं",
+      "language": "hindi",
+      "intent": "get_inventory",
+      "response": "Processed: वर्तमान स्टॉक दिखाएं",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "मेरे पास कौन से प्रोडक्ट्स हैं?",
+      "language": "hindi",
+      "intent": "get_inventory",
+      "response": "Processed: मेरे पास कौन से प्रोडक्ट्स हैं?",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "कम स्टॉक वाले आइटम दिखाओ",
+      "language": "hindi",
+      "intent": "get_low_stock",
+      "response": "Processed: कम स्टॉक वाले आइटम दिखाओ",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "कौन से प्रोडक्ट्स कम हो रहे हैं?",
+      "language": "hindi",
+      "intent": "get_low_stock",
+      "response": "Processed: कौन से प्रोडक्ट्स कम हो रहे हैं?",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "कम इन्वेंटरी वाले प्रोडक्ट्स की सूची",
+      "language": "hindi",
+      "intent": "get_low_stock",
+      "response": "Processed: कम इन्वेंटरी वाले प्रोडक्ट्स की सूची",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "वे आइटम दिखाएं जिन्हें रीस्टॉक करने की आवश्यकता है",
+      "language": "hindi",
+      "intent": "get_low_stock",
+      "response": "Processed: वे आइटम दिखाएं जिन्हें रीस्टॉक करने की आवश्यकता है",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "क्या स्टॉक से बाहर हो रहा है?",
+      "language": "hindi",
+      "intent": "get_low_stock",
+      "response": "Processed: क्या स्टॉक से बाहर हो रहा है?",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "पिछले हफ्ते की बिक्री रिपोर्ट जनरेट करें",
+      "language": "hindi",
+      "intent": "get_report",
+      "response": "Processed: पिछले हफ्ते की बिक्री रिपोर्ट जनरेट करें",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "इस महीने की रिपोर्ट दिखाएं",
+      "language": "hindi",
+      "intent": "get_report",
+      "response": "Processed: इस महीने की रिपोर्ट दिखाएं",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "जनवरी के लिए सेल्स डेटा प्राप्त करें",
+      "language": "hindi",
+      "intent": "get_report",
+      "response": "Processed: जनवरी के लिए सेल्स डेटा प्राप्त करें",
+      "has_response": true,
+      "processing_time": 9.5367431640625e-07
+    },
+    {
+      "text": "मुझे Q1 के लिए एक रिपोर्ट चाहिए",
+      "language": "hindi",
+      "intent": "get_report",
+      "response": "Processed: मुझे Q1 के लिए एक रिपोर्ट चाहिए",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "पिछले 30 दिनों के लिए परफॉरमेंस रिपोर्ट दिखाएं",
+      "language": "hindi",
+      "intent": "get_report",
+      "response": "Processed: पिछले 30 दिनों के लिए परफॉरमेंस रिपोर्ट दिखाएं",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "चावल का स्टॉक 50 किलो अपडेट करें",
+      "language": "hindi",
+      "intent": "edit_stock",
+      "response": "Processed: चावल का स्टॉक 50 किलो अपडेट करें",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "चीनी इन्वेंटरी को 100 पैकेट में बदलें",
+      "language": "hindi",
+      "intent": "edit_stock",
+      "response": "Processed: चीनी इन्वेंटरी को 100 पैकेट में बदलें",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "गेहूं की मात्रा 75 किलो सेट करें",
+      "language": "hindi",
+      "intent": "edit_stock",
+      "response": "Processed: गेहूं की मात्रा 75 किलो सेट करें",
+      "has_response": true,
+      "processing_time": 9.5367431640625e-07
+    },
+    {
+      "text": "दाल स्टॉक को 30 किलो में संशोधित करें",
+      "language": "hindi",
+      "intent": "edit_stock",
+      "response": "Processed: दाल स्टॉक को 30 किलो में संशोधित करें",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "तेल इन्वेंटरी को 45 लीटर अपडेट करें",
+      "language": "hindi",
+      "intent": "edit_stock",
+      "response": "Processed: तेल इन्वेंटरी को 45 लीटर अपडेट करें",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "मेरे हाल के ऑर्डर दिखाएं",
+      "language": "hindi",
+      "intent": "get_orders",
+      "response": "Processed: मेरे हाल के ऑर्डर दिखाएं",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "पिछले हफ्ते के ऑर्डर दिखाएं",
+      "language": "hindi",
+      "intent": "get_orders",
+      "response": "Processed: पिछले हफ्ते के ऑर्डर दिखाएं",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "सभी लंबित ऑर्डर सूचीबद्ध करें",
+      "language": "hindi",
+      "intent": "get_orders",
+      "response": "Processed: सभी लंबित ऑर्डर सूचीबद्ध करें",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "इस महीने के पूरे ऑर्डर प्राप्त करें",
+      "language": "hindi",
+      "intent": "get_orders",
+      "response": "Processed: इस महीने के पूरे ऑर्डर प्राप्त करें",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "1 जनवरी से ऑर्डर दिखाएं",
+      "language": "hindi",
+      "intent": "get_orders",
+      "response": "Processed: 1 जनवरी से ऑर्डर दिखाएं",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "चावल प्रोडक्ट्स के लिए खोजें",
+      "language": "hindi",
+      "intent": "search_product",
+      "response": "Processed: चावल प्रोडक्ट्स के लिए खोजें",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "चीनी वाले आइटम खोजें",
+      "language": "hindi",
+      "intent": "search_product",
+      "response": "Processed: चीनी वाले आइटम खोजें",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "गेहूं का आटा देखें",
+      "language": "hindi",
+      "intent": "search_product",
+      "response": "Processed: गेहूं का आटा देखें",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "दाल के लिए इन्वेंटरी खोजें",
+      "language": "hindi",
+      "intent": "search_product",
+      "response": "Processed: दाल के लिए इन्वेंटरी खोजें",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "तेल वाले प्रोडक्ट्स खोजें",
+      "language": "hindi",
+      "intent": "search_product",
+      "response": "Processed: तेल वाले प्रोडक्ट्स खोजें",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Show मेरा inventory",
+      "language": "mixed",
+      "intent": "get_inventory",
+      "response": "Processed: Show मेरा inventory",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "What's मेरे पास in stock?",
+      "language": "mixed",
+      "intent": "get_inventory",
+      "response": "Processed: What's मेरे पास in stock?",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "List सभी products",
+      "language": "mixed",
+      "intent": "get_inventory",
+      "response": "Processed: List सभी products",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Display वर्तमान stock",
+      "language": "mixed",
+      "intent": "get_inventory",
+      "response": "Processed: Display वर्तमान stock",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "What प्रोडक्ट्स do I have?",
+      "language": "mixed",
+      "intent": "get_inventory",
+      "response": "Processed: What प्रोडक्ट्स do I have?",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Show कम stock items",
+      "language": "mixed",
+      "intent": "get_low_stock",
+      "response": "Processed: Show कम stock items",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Which प्रोडक्ट्स are running low?",
+      "language": "mixed",
+      "intent": "get_low_stock",
+      "response": "Processed: Which प्रोडक्ट्स are running low?",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "List कम inventory वाले products",
+      "language": "mixed",
+      "intent": "get_low_stock",
+      "response": "Processed: List कम inventory वाले products",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Display items that need रीस्टॉक",
+      "language": "mixed",
+      "intent": "get_low_stock",
+      "response": "Processed: Display items that need रीस्टॉक",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "What's स्टॉक से बाहर हो रहा है?",
+      "language": "mixed",
+      "intent": "get_low_stock",
+      "response": "Processed: What's स्टॉक से बाहर हो रहा है?",
+      "has_response": true,
+      "processing_time": 9.5367431640625e-07
+    },
+    {
+      "text": "Generate पिछले हफ्ते की sales report",
+      "language": "mixed",
+      "intent": "get_report",
+      "response": "Processed: Generate पिछले हफ्ते की sales report",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Show me the रिपोर्ट for this month",
+      "language": "mixed",
+      "intent": "get_report",
+      "response": "Processed: Show me the रिपोर्ट for this month",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Get जनवरी के लिए sales data",
+      "language": "mixed",
+      "intent": "get_report",
+      "response": "Processed: Get जनवरी के लिए sales data",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "I need a Q1 के लिए report",
+      "language": "mixed",
+      "intent": "get_report",
+      "response": "Processed: I need a Q1 के लिए report",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Show पिछले 30 दिनों के लिए performance report",
+      "language": "mixed",
+      "intent": "get_report",
+      "response": "Processed: Show पिछले 30 दिनों के लिए performance report",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Update चावल stock to 50 kg",
+      "language": "mixed",
+      "intent": "edit_stock",
+      "response": "Processed: Update चावल stock to 50 kg",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Change चीनी inventory to 100 packets",
+      "language": "mixed",
+      "intent": "edit_stock",
+      "response": "Processed: Change चीनी inventory to 100 packets",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Set गेहूं quantity to 75 kg",
+      "language": "mixed",
+      "intent": "edit_stock",
+      "response": "Processed: Set गेहूं quantity to 75 kg",
+      "has_response": true,
+      "processing_time": 9.5367431640625e-07
+    },
+    {
+      "text": "Modify दाल stock to 30 kg",
+      "language": "mixed",
+      "intent": "edit_stock",
+      "response": "Processed: Modify दाल stock to 30 kg",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Update तेल inventory to 45 liters",
+      "language": "mixed",
+      "intent": "edit_stock",
+      "response": "Processed: Update तेल inventory to 45 liters",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Show मेरे हाल के orders",
+      "language": "mixed",
+      "intent": "get_orders",
+      "response": "Processed: Show मेरे हाल के orders",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Display पिछले हफ्ते के orders",
+      "language": "mixed",
+      "intent": "get_orders",
+      "response": "Processed: Display पिछले हफ्ते के orders",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "List all लंबित orders",
+      "language": "mixed",
+      "intent": "get_orders",
+      "response": "Processed: List all लंबित orders",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Get इस महीने के completed orders",
+      "language": "mixed",
+      "intent": "get_orders",
+      "response": "Processed: Get इस महीने के completed orders",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Show 1 जनवरी से orders",
+      "language": "mixed",
+      "intent": "get_orders",
+      "response": "Processed: Show 1 जनवरी से orders",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Search for चावल products",
+      "language": "mixed",
+      "intent": "search_product",
+      "response": "Processed: Search for चावल products",
+      "has_response": true,
+      "processing_time": 9.5367431640625e-07
+    },
+    {
+      "text": "Find चीनी वाले items",
+      "language": "mixed",
+      "intent": "search_product",
+      "response": "Processed: Find चीनी वाले items",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Look up गेहूं का आटा",
+      "language": "mixed",
+      "intent": "search_product",
+      "response": "Processed: Look up गेहूं का आटा",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Search inventory for दाल",
+      "language": "mixed",
+      "intent": "search_product",
+      "response": "Processed: Search inventory for दाल",
+      "has_response": true,
+      "processing_time": 0.0
+    },
+    {
+      "text": "Find तेल वाले products",
+      "language": "mixed",
+      "intent": "search_product",
+      "response": "Processed: Find तेल वाले products",
+      "has_response": true,
+      "processing_time": 0.0
+    }
+  ],
+  "edge_cases": [
+    {
+      "text": "",
+      "parsed_successfully": true,
+      "result": {
+        "language": "en",
+        "is_mixed_language": false,
+        "intent": "get_inventory",
+        "confidence": 0.9,
+        "entities": {}
+      },
+      "processing_time": 0.0,
+      "error": null
+    },
+    {
+      "text": "hi",
+      "parsed_successfully": true,
+      "result": {
+        "language": "en",
+        "is_mixed_language": false,
+        "intent": "get_inventory",
+        "confidence": 0.9,
+        "entities": {}
+      },
+      "processing_time": 7.152557373046875e-07,
+      "error": null
+    },
+    {
+      "text": "I need to update the stock of rice to 50 kg and also check if wheat flour is running low and then generate a sales report for the last month and also search for all products containing sugar and finally show me all pending orders from last week",
+      "parsed_successfully": true,
+      "result": {
+        "language": "en",
+        "is_mixed_language": false,
+        "intent": "get_inventory",
+        "confidence": 0.9,
+        "entities": {}
+      },
+      "processing_time": 9.5367431640625e-07,
+      "error": null
+    },
+    {
+      "text": "Update rice stock to 50 kg @#$%^",
+      "parsed_successfully": true,
+      "result": {
+        "language": "en",
+        "is_mixed_language": false,
+        "intent": "get_inventory",
+        "confidence": 0.9,
+        "entities": {}
+      },
+      "processing_time": 1.1920928955078125e-06,
+      "error": null
+    },
+    {
+      "text": "Updaet rice stok to 50 kg",
+      "parsed_successfully": true,
+      "result": {
+        "language": "en",
+        "is_mixed_language": false,
+        "intent": "get_inventory",
+        "confidence": 0.9,
+        "entities": {}
+      },
+      "processing_time": 0.0,
+      "error": null
+    },
+    {
+      "text": "चावल का stock 50kg update करें",
+      "parsed_successfully": true,
+      "result": {
+        "language": "en",
+        "is_mixed_language": false,
+        "intent": "get_inventory",
+        "confidence": 0.9,
+        "entities": {}
+      },
+      "processing_time": 0.0,
+      "error": null
+    },
+    {
+      "text": "Show products",
+      "parsed_successfully": true,
+      "result": {
+        "language": "en",
+        "is_mixed_language": false,
+        "intent": "get_inventory",
+        "confidence": 0.9,
+        "entities": {}
+      },
+      "processing_time": 0.0,
+      "error": null
+    },
+    {
+      "text": "Update rice stock and show orders",
+      "parsed_successfully": true,
+      "result": {
+        "language": "en",
+        "is_mixed_language": false,
+        "intent": "get_inventory",
+        "confidence": 0.9,
+        "entities": {}
+      },
+      "processing_time": 9.5367431640625e-07,
+      "error": null
+    }
+  ]
+}

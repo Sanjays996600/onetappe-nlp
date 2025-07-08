@@ -1,0 +1,648 @@
+2025-07-01 12:22:16,938 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-01 12:22:16,938 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/test.log
+2025-07-01 12:22:16,938 - __main__ - INFO - Test Command Router started - Testing API integration
+2025-07-01 12:22:16,938 - __main__ - INFO - Testing against backend server: http://localhost:8000
+2025-07-01 12:22:16,938 - __main__ - INFO - 
+==================================================
+Testing command: 'Show my inventory'
+==================================================
+2025-07-01 12:22:16,938 - __main__ - INFO - Parsed result: {"intent": "get_inventory", "entities": {}, "language": "en"}
+2025-07-01 12:22:16,938 - nlp.command_router - INFO - API Request: GET http://localhost:8000/seller/products
+2025-07-01 12:22:16,938 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer test_user'}
+2025-07-01 12:22:16,944 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1028bf620>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:22:16,944 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1028bf620>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:22:16,944 - nlp.command_router - INFO - Simulated response for get_inventory: {"products": [{"name": "Rice", "price": 50, "stock": 100}, {"name": "Wheat", "price": 40, "stock": 75}, {"name": "Sugar", "price": 45, "stock": 60}, {"name": "\u091a\u093e\u0935\u0932", "price": 50, "stock": 100}, {"name": "\u0917\u0947\u0939\u0942\u0902", "price": 40, "stock": 75}, {"name": "\u091a\u0940\u0928\u0940", "price": 45, "stock": 60}]}
+2025-07-01 12:22:16,944 - __main__ - INFO - Final response: "Here's your current inventory:\n- Rice: ₹50, Stock: 100\n- Wheat: ₹40, Stock: 75\n- Sugar: ₹45, Stock: 60\n- चावल: ₹50, Stock: 100\n- गेहूं: ₹40, Stock: 75\n- चीनी: ₹45, Stock: 60"
+2025-07-01 12:22:16,944 - __main__ - INFO - 
+==================================================
+Testing command: 'Add new product Rice 50rs 20qty'
+==================================================
+2025-07-01 12:22:16,945 - __main__ - INFO - Parsed result: {"intent": "add_product", "entities": {"name": "rice", "price": 50, "stock": 20}, "language": "en"}
+2025-07-01 12:22:16,945 - nlp.command_router - INFO - API Request: POST http://localhost:8000/seller/products/add
+2025-07-01 12:22:16,945 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer test_user'}
+2025-07-01 12:22:16,945 - nlp.command_router - INFO - Request Data: {"name": "rice", "price": 50, "stock": 20}
+2025-07-01 12:22:16,946 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products/add (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1029a4050>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:22:16,946 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products/add (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1029a4050>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:22:16,946 - nlp.command_router - INFO - Simulated response for add_product: {"success": true, "product": {"name": "rice", "price": 50, "stock": 20, "id": "sim123"}}
+2025-07-01 12:22:16,946 - __main__ - INFO - Final response: "Product rice added successfully with price ₹50 and stock 20."
+2025-07-01 12:22:16,946 - __main__ - INFO - 
+==================================================
+Testing command: 'Update Sugar stock to 50'
+==================================================
+2025-07-01 12:22:16,947 - __main__ - INFO - Parsed result: {"intent": "edit_stock", "entities": {"name": "sugar", "stock": 50}, "language": "en"}
+2025-07-01 12:22:16,947 - nlp.command_router - INFO - API Request: POST http://localhost:8000/seller/products/update-stock
+2025-07-01 12:22:16,947 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer test_user'}
+2025-07-01 12:22:16,947 - nlp.command_router - INFO - Request Data: {"name": "sugar", "stock": 50}
+2025-07-01 12:22:16,948 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products/update-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1029a4910>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:22:16,948 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products/update-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1029a4910>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:22:16,948 - nlp.command_router - INFO - Simulated response for edit_stock: {"success": true, "product": {"name": "sugar", "stock": 50, "id": "sim123"}}
+2025-07-01 12:22:16,948 - __main__ - INFO - Final response: "Stock updated for sugar to 50 units."
+2025-07-01 12:22:16,948 - __main__ - INFO - 
+==================================================
+Testing command: 'Show low stock items'
+==================================================
+2025-07-01 12:22:16,948 - __main__ - INFO - Parsed result: {"intent": "get_low_stock", "entities": {}, "language": "en"}
+2025-07-01 12:22:16,948 - nlp.command_router - INFO - API Request: GET http://localhost:8000/seller/products/low-stock
+2025-07-01 12:22:16,948 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer test_user'}
+2025-07-01 12:22:16,949 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products/low-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x102999810>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:22:16,949 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products/low-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x102999810>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:22:16,949 - nlp.command_router - INFO - Simulated response for get_low_stock: {"products": [{"name": "Salt", "price": 20, "stock": 5}, {"name": "Tea", "price": 120, "stock": 8}, {"name": "\u0928\u092e\u0915", "price": 20, "stock": 5}, {"name": "\u091a\u093e\u092f", "price": 120, "stock": 8}]}
+2025-07-01 12:22:16,949 - __main__ - INFO - Final response: "Products with low stock:\n- Salt: ₹20, Stock: 5\n- Tea: ₹120, Stock: 8\n- नमक: ₹20, Stock: 5\n- चाय: ₹120, Stock: 8"
+2025-07-01 12:22:16,949 - __main__ - INFO - 
+==================================================
+Testing command: 'Get today's report'
+==================================================
+2025-07-01 12:22:16,949 - __main__ - INFO - Parsed result: {"intent": "get_report", "entities": {"range": "today"}, "language": "en"}
+2025-07-01 12:22:16,949 - nlp.command_router - INFO - API Request: GET http://localhost:8000/seller/report
+2025-07-01 12:22:16,949 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer test_user'}
+2025-07-01 12:22:16,949 - nlp.command_router - INFO - Query Params: {'range': 'today'}
+2025-07-01 12:22:16,950 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/report?range=today (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10299a060>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:22:16,950 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/report?range=today (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10299a060>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:22:16,950 - nlp.command_router - INFO - Simulated response for get_report: {"sales": 12500, "orders": 25, "top_product": "Rice"}
+2025-07-01 12:22:16,950 - __main__ - INFO - Final response: "Sales report for today:\nSales for today: ₹12500\nOrders: 25\nTop product: Rice"
+2025-07-01 12:22:16,950 - __main__ - INFO - 
+==================================================
+Testing command: 'View recent orders'
+==================================================
+2025-07-01 12:22:16,951 - __main__ - INFO - Parsed result: {"intent": "get_orders", "entities": {}, "language": "en"}
+2025-07-01 12:22:16,951 - nlp.command_router - INFO - API Request: GET http://localhost:8000/seller/orders
+2025-07-01 12:22:16,951 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer test_user'}
+2025-07-01 12:22:16,951 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/orders (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1029c0050>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:22:16,951 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/orders (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1029c0050>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:22:16,951 - nlp.command_router - INFO - Simulated response for get_orders: {"orders": [{"id": "ORD001", "status": "Delivered", "total": 500}, {"id": "ORD002", "status": "Processing", "total": 350}, {"id": "ORD003", "status": "Pending", "total": 720}]}
+2025-07-01 12:22:16,951 - __main__ - INFO - Final response: "Recent orders:\n- Order #ORD001: Delivered, Total: ₹500\n- Order #ORD002: Processing, Total: ₹350\n- Order #ORD003: Pending, Total: ₹720"
+2025-07-01 12:22:16,951 - __main__ - INFO - 
+==================================================
+Testing command: 'I want to add a new product called Wheat for 45 rupees with 30 pieces'
+==================================================
+2025-07-01 12:22:16,952 - __main__ - INFO - Parsed result: {"intent": "add_product", "entities": {"name": "wheat", "price": 45, "stock": 30}, "language": "en"}
+2025-07-01 12:22:16,952 - nlp.command_router - INFO - API Request: POST http://localhost:8000/seller/products/add
+2025-07-01 12:22:16,952 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer test_user'}
+2025-07-01 12:22:16,952 - nlp.command_router - INFO - Request Data: {"name": "wheat", "price": 45, "stock": 30}
+2025-07-01 12:22:16,953 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products/add (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x102953350>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:22:16,953 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products/add (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x102953350>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:22:16,953 - nlp.command_router - INFO - Simulated response for add_product: {"success": true, "product": {"name": "wheat", "price": 45, "stock": 30, "id": "sim123"}}
+2025-07-01 12:22:16,953 - __main__ - INFO - Final response: "Product wheat added successfully with price ₹45 and stock 30."
+2025-07-01 12:22:16,953 - __main__ - INFO - 
+==================================================
+Testing command: 'मेरे प्रोडक्ट दिखाओ'
+==================================================
+2025-07-01 12:22:16,953 - __main__ - INFO - Parsed result: {"intent": "get_inventory", "entities": {}, "language": "hi"}
+2025-07-01 12:22:16,953 - nlp.command_router - INFO - API Request: GET http://localhost:8000/seller/products
+2025-07-01 12:22:16,953 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer test_user'}
+2025-07-01 12:22:16,954 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x102952f10>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:22:16,954 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x102952f10>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:22:16,954 - nlp.command_router - INFO - Simulated response for get_inventory: {"products": [{"name": "Rice", "price": 50, "stock": 100}, {"name": "Wheat", "price": 40, "stock": 75}, {"name": "Sugar", "price": 45, "stock": 60}, {"name": "\u091a\u093e\u0935\u0932", "price": 50, "stock": 100}, {"name": "\u0917\u0947\u0939\u0942\u0902", "price": 40, "stock": 75}, {"name": "\u091a\u0940\u0928\u0940", "price": 45, "stock": 60}]}
+2025-07-01 12:22:16,954 - __main__ - INFO - Final response: "आपका वर्तमान इन्वेंटरी:\n- Rice: ₹50, स्टॉक: 100\n- Wheat: ₹40, स्टॉक: 75\n- Sugar: ₹45, स्टॉक: 60\n- चावल: ₹50, स्टॉक: 100\n- गेहूं: ₹40, स्टॉक: 75\n- चीनी: ₹45, स्टॉक: 60"
+2025-07-01 12:22:16,954 - __main__ - INFO - 
+==================================================
+Testing command: 'नया प्रोडक्ट चावल 50 रुपये 20 पीस जोड़ो'
+==================================================
+2025-07-01 12:22:16,955 - __main__ - INFO - Parsed result: {"intent": "add_product", "entities": {"name": "चावल", "price": 50, "stock": 20}, "language": "hi"}
+2025-07-01 12:22:16,955 - nlp.command_router - INFO - API Request: POST http://localhost:8000/seller/products/add
+2025-07-01 12:22:16,955 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer test_user'}
+2025-07-01 12:22:16,955 - nlp.command_router - INFO - Request Data: {"name": "\u091a\u093e\u0935\u0932", "price": 50, "stock": 20}
+2025-07-01 12:22:16,956 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products/add (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x102953130>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:22:16,956 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products/add (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x102953130>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:22:16,956 - nlp.command_router - INFO - Simulated response for add_product: {"success": true, "product": {"name": "\u091a\u093e\u0935\u0932", "price": 50, "stock": 20, "id": "sim123"}}
+2025-07-01 12:22:16,956 - __main__ - INFO - Final response: "प्रोडक्ट चावल को ₹50 कीमत और 20 स्टॉक के साथ सफलतापूर्वक जोड़ा गया।"
+2025-07-01 12:22:16,956 - __main__ - INFO - 
+==================================================
+Testing command: 'चावल का स्टॉक 100 करो'
+==================================================
+2025-07-01 12:22:16,956 - __main__ - INFO - Parsed result: {"intent": "edit_stock", "entities": {"name": "चावल", "stock": 100}, "language": "hi"}
+2025-07-01 12:22:16,956 - nlp.command_router - INFO - API Request: POST http://localhost:8000/seller/products/update-stock
+2025-07-01 12:22:16,956 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer test_user'}
+2025-07-01 12:22:16,956 - nlp.command_router - INFO - Request Data: {"name": "\u091a\u093e\u0935\u0932", "stock": 100}
+2025-07-01 12:22:16,957 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products/update-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x102953460>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:22:16,957 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products/update-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x102953460>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:22:16,957 - nlp.command_router - INFO - Simulated response for edit_stock: {"success": true, "product": {"name": "\u091a\u093e\u0935\u0932", "stock": 100, "id": "sim123"}}
+2025-07-01 12:22:16,957 - __main__ - INFO - Final response: "चावल का स्टॉक 100 इकाइयों में अपडेट किया गया।"
+2025-07-01 12:22:16,957 - __main__ - INFO - 
+==================================================
+Testing command: 'कम स्टॉक वाले आइटम दिखाओ'
+==================================================
+2025-07-01 12:22:16,957 - __main__ - INFO - Parsed result: {"intent": "get_low_stock", "entities": {}, "language": "hi"}
+2025-07-01 12:22:16,957 - nlp.command_router - INFO - API Request: GET http://localhost:8000/seller/products/low-stock
+2025-07-01 12:22:16,957 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer test_user'}
+2025-07-01 12:22:16,958 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products/low-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x102952e00>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:22:16,958 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products/low-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x102952e00>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:22:16,958 - nlp.command_router - INFO - Simulated response for get_low_stock: {"products": [{"name": "Salt", "price": 20, "stock": 5}, {"name": "Tea", "price": 120, "stock": 8}, {"name": "\u0928\u092e\u0915", "price": 20, "stock": 5}, {"name": "\u091a\u093e\u092f", "price": 120, "stock": 8}]}
+2025-07-01 12:22:16,958 - __main__ - INFO - Final response: "कम स्टॉक वाले प्रोडक्ट:\n- Salt: ₹20, स्टॉक: 5\n- Tea: ₹120, स्टॉक: 8\n- नमक: ₹20, स्टॉक: 5\n- चाय: ₹120, स्टॉक: 8"
+2025-07-01 12:22:16,958 - __main__ - INFO - 
+==================================================
+Testing command: 'आज की रिपोर्ट भेजो'
+==================================================
+2025-07-01 12:22:16,958 - __main__ - INFO - Parsed result: {"intent": "get_report", "entities": {"range": "today"}, "language": "hi"}
+2025-07-01 12:22:16,958 - nlp.command_router - INFO - API Request: GET http://localhost:8000/seller/report
+2025-07-01 12:22:16,958 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer test_user'}
+2025-07-01 12:22:16,958 - nlp.command_router - INFO - Query Params: {'range': 'today'}
+2025-07-01 12:22:16,959 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/report?range=today (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1029527a0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:22:16,959 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/report?range=today (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1029527a0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:22:16,959 - nlp.command_router - INFO - Simulated response for get_report: {"sales": 12500, "orders": 25, "top_product": "Rice"}
+2025-07-01 12:22:16,959 - __main__ - INFO - Final response: "today के लिए बिक्री रिपोर्ट:\nआज की बिक्री: ₹12500\nऑर्डर: 25\nटॉप प्रोडक्ट: Rice"
+2025-07-01 12:22:16,959 - __main__ - INFO - 
+==================================================
+Testing command: 'मुझे चीनी का स्टॉक 75 करना है'
+==================================================
+2025-07-01 12:22:16,960 - __main__ - INFO - Parsed result: {"intent": "edit_stock", "entities": {"name": "चीनी", "stock": 75}, "language": "hi"}
+2025-07-01 12:22:16,960 - nlp.command_router - INFO - API Request: POST http://localhost:8000/seller/products/update-stock
+2025-07-01 12:22:16,960 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer test_user'}
+2025-07-01 12:22:16,960 - nlp.command_router - INFO - Request Data: {"name": "\u091a\u0940\u0928\u0940", "stock": 75}
+2025-07-01 12:22:16,961 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products/update-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x102952580>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:22:16,961 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products/update-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x102952580>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:22:16,961 - nlp.command_router - INFO - Simulated response for edit_stock: {"success": true, "product": {"name": "\u091a\u0940\u0928\u0940", "stock": 75, "id": "sim123"}}
+2025-07-01 12:22:16,961 - __main__ - INFO - Final response: "चीनी का स्टॉक 75 इकाइयों में अपडेट किया गया।"
+2025-07-01 12:27:08,160 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-01 12:27:08,160 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/test.log
+2025-07-01 12:27:08,161 - __main__ - INFO - Test Command Router started - Testing API integration
+2025-07-01 12:27:08,161 - __main__ - INFO - Testing against backend server: http://localhost:8000
+2025-07-01 12:27:08,161 - __main__ - INFO - 
+==================================================
+Testing command: 'Show my inventory'
+==================================================
+2025-07-01 12:27:08,161 - __main__ - INFO - Parsed result: {"intent": "get_inventory", "entities": {}, "language": "en"}
+2025-07-01 12:27:08,161 - nlp.command_router - INFO - API Request: GET http://localhost:8000/seller/products
+2025-07-01 12:27:08,161 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer test_user'}
+2025-07-01 12:27:08,167 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x104147620>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:27:08,167 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x104147620>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:27:08,167 - nlp.command_router - INFO - Simulated response for get_inventory: {"products": [{"name": "Rice", "price": 50, "stock": 100}, {"name": "Wheat", "price": 40, "stock": 75}, {"name": "Sugar", "price": 45, "stock": 60}, {"name": "\u091a\u093e\u0935\u0932", "price": 50, "stock": 100}, {"name": "\u0917\u0947\u0939\u0942\u0902", "price": 40, "stock": 75}, {"name": "\u091a\u0940\u0928\u0940", "price": 45, "stock": 60}]}
+2025-07-01 12:27:08,167 - __main__ - INFO - Final response: "Here's your current inventory:\n- Rice: ₹50, Stock: 100\n- Wheat: ₹40, Stock: 75\n- Sugar: ₹45, Stock: 60\n- चावल: ₹50, Stock: 100\n- गेहूं: ₹40, Stock: 75\n- चीनी: ₹45, Stock: 60"
+2025-07-01 12:27:08,167 - __main__ - INFO - 
+==================================================
+Testing command: 'Add new product Rice 50rs 20qty'
+==================================================
+2025-07-01 12:27:08,168 - __main__ - INFO - Parsed result: {"intent": "add_product", "entities": {"name": "rice", "price": 50, "stock": 20}, "language": "en"}
+2025-07-01 12:27:08,169 - nlp.command_router - INFO - API Request: POST http://localhost:8000/seller/products/add
+2025-07-01 12:27:08,169 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer test_user'}
+2025-07-01 12:27:08,169 - nlp.command_router - INFO - Request Data: {"name": "rice", "price": 50, "stock": 20}
+2025-07-01 12:27:08,169 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products/add (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1040fe990>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:27:08,169 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products/add (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1040fe990>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:27:08,169 - nlp.command_router - INFO - Simulated response for add_product: {"success": true, "product": {"name": "rice", "price": 50, "stock": 20, "id": "sim123"}}
+2025-07-01 12:27:08,169 - __main__ - INFO - Final response: "Product rice added successfully with price ₹50 and stock 20."
+2025-07-01 12:27:08,170 - __main__ - INFO - 
+==================================================
+Testing command: 'Update Sugar stock to 50'
+==================================================
+2025-07-01 12:27:08,170 - __main__ - INFO - Parsed result: {"intent": "edit_stock", "entities": {"name": "sugar", "stock": 50}, "language": "en"}
+2025-07-01 12:27:08,170 - nlp.command_router - INFO - API Request: POST http://localhost:8000/seller/products/update-stock
+2025-07-01 12:27:08,170 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer test_user'}
+2025-07-01 12:27:08,170 - nlp.command_router - INFO - Request Data: {"name": "sugar", "stock": 50}
+2025-07-01 12:27:08,171 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products/update-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1040fe350>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:27:08,171 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products/update-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1040fe350>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:27:08,171 - nlp.command_router - INFO - Simulated response for edit_stock: {"success": true, "product": {"name": "sugar", "stock": 50, "id": "sim123"}}
+2025-07-01 12:27:08,171 - __main__ - INFO - Final response: "Stock updated for sugar to 50 units."
+2025-07-01 12:27:08,171 - __main__ - INFO - 
+==================================================
+Testing command: 'Show low stock items'
+==================================================
+2025-07-01 12:27:08,171 - __main__ - INFO - Parsed result: {"intent": "get_low_stock", "entities": {}, "language": "en"}
+2025-07-01 12:27:08,171 - nlp.command_router - INFO - API Request: GET http://localhost:8000/seller/products/low-stock
+2025-07-01 12:27:08,171 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer test_user'}
+2025-07-01 12:27:08,172 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products/low-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10422d350>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:27:08,172 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products/low-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10422d350>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:27:08,172 - nlp.command_router - INFO - Simulated response for get_low_stock: {"products": [{"name": "Salt", "price": 20, "stock": 5}, {"name": "Tea", "price": 120, "stock": 8}, {"name": "\u0928\u092e\u0915", "price": 20, "stock": 5}, {"name": "\u091a\u093e\u092f", "price": 120, "stock": 8}]}
+2025-07-01 12:27:08,172 - __main__ - INFO - Final response: "Products with low stock:\n- Salt: ₹20, Stock: 5\n- Tea: ₹120, Stock: 8\n- नमक: ₹20, Stock: 5\n- चाय: ₹120, Stock: 8"
+2025-07-01 12:27:08,172 - __main__ - INFO - 
+==================================================
+Testing command: 'Get today's report'
+==================================================
+2025-07-01 12:27:08,172 - __main__ - INFO - Parsed result: {"intent": "get_report", "entities": {"range": "today"}, "language": "en"}
+2025-07-01 12:27:08,172 - nlp.command_router - INFO - API Request: GET http://localhost:8000/seller/report
+2025-07-01 12:27:08,172 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer test_user'}
+2025-07-01 12:27:08,172 - nlp.command_router - INFO - Query Params: {'range': 'today'}
+2025-07-01 12:27:08,173 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/report?range=today (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10422dba0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:27:08,173 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/report?range=today (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10422dba0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:27:08,173 - nlp.command_router - INFO - Simulated response for get_report: {"sales": 12500, "orders": 25, "top_product": "Rice"}
+2025-07-01 12:27:08,173 - __main__ - INFO - Final response: "Sales report for today:\nSales for today: ₹12500\nOrders: 25\nTop product: Rice"
+2025-07-01 12:27:08,173 - __main__ - INFO - 
+==================================================
+Testing command: 'View recent orders'
+==================================================
+2025-07-01 12:27:08,174 - __main__ - INFO - Parsed result: {"intent": "get_orders", "entities": {}, "language": "en"}
+2025-07-01 12:27:08,174 - nlp.command_router - INFO - API Request: GET http://localhost:8000/seller/orders
+2025-07-01 12:27:08,174 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer test_user'}
+2025-07-01 12:27:08,174 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/orders (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1041dfbf0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:27:08,175 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/orders (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1041dfbf0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:27:08,175 - nlp.command_router - INFO - Simulated response for get_orders: {"orders": [{"id": "ORD001", "status": "Delivered", "total": 500}, {"id": "ORD002", "status": "Processing", "total": 350}, {"id": "ORD003", "status": "Pending", "total": 720}]}
+2025-07-01 12:27:08,175 - __main__ - INFO - Final response: "Recent orders:\n- Order #ORD001: Delivered, Total: ₹500\n- Order #ORD002: Processing, Total: ₹350\n- Order #ORD003: Pending, Total: ₹720"
+2025-07-01 12:27:08,175 - __main__ - INFO - 
+==================================================
+Testing command: 'I want to add a new product called Wheat for 45 rupees with 30 pieces'
+==================================================
+2025-07-01 12:27:08,175 - __main__ - INFO - Parsed result: {"intent": "add_product", "entities": {"name": "wheat", "price": 45, "stock": 30}, "language": "en"}
+2025-07-01 12:27:08,175 - nlp.command_router - INFO - API Request: POST http://localhost:8000/seller/products/add
+2025-07-01 12:27:08,175 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer test_user'}
+2025-07-01 12:27:08,175 - nlp.command_router - INFO - Request Data: {"name": "wheat", "price": 45, "stock": 30}
+2025-07-01 12:27:08,178 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products/add (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1041db130>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:27:08,178 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products/add (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1041db130>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:27:08,178 - nlp.command_router - INFO - Simulated response for add_product: {"success": true, "product": {"name": "wheat", "price": 45, "stock": 30, "id": "sim123"}}
+2025-07-01 12:27:08,178 - __main__ - INFO - Final response: "Product wheat added successfully with price ₹45 and stock 30."
+2025-07-01 12:27:08,178 - __main__ - INFO - 
+==================================================
+Testing command: 'मेरे प्रोडक्ट दिखाओ'
+==================================================
+2025-07-01 12:27:08,179 - __main__ - INFO - Parsed result: {"intent": "get_inventory", "entities": {}, "language": "hi"}
+2025-07-01 12:27:08,179 - nlp.command_router - INFO - API Request: GET http://localhost:8000/seller/products
+2025-07-01 12:27:08,179 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer test_user'}
+2025-07-01 12:27:08,181 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1041db8a0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:27:08,181 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1041db8a0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:27:08,181 - nlp.command_router - INFO - Simulated response for get_inventory: {"products": [{"name": "Rice", "price": 50, "stock": 100}, {"name": "Wheat", "price": 40, "stock": 75}, {"name": "Sugar", "price": 45, "stock": 60}, {"name": "\u091a\u093e\u0935\u0932", "price": 50, "stock": 100}, {"name": "\u0917\u0947\u0939\u0942\u0902", "price": 40, "stock": 75}, {"name": "\u091a\u0940\u0928\u0940", "price": 45, "stock": 60}]}
+2025-07-01 12:27:08,181 - __main__ - INFO - Final response: "आपका वर्तमान इन्वेंटरी:\n- Rice: ₹50, स्टॉक: 100\n- Wheat: ₹40, स्टॉक: 75\n- Sugar: ₹45, स्टॉक: 60\n- चावल: ₹50, स्टॉक: 100\n- गेहूं: ₹40, स्टॉक: 75\n- चीनी: ₹45, स्टॉक: 60"
+2025-07-01 12:27:08,181 - __main__ - INFO - 
+==================================================
+Testing command: 'नया प्रोडक्ट चावल 50 रुपये 20 पीस जोड़ो'
+==================================================
+2025-07-01 12:27:08,182 - __main__ - INFO - Parsed result: {"intent": "add_product", "entities": {"name": "चावल", "price": 50, "stock": 20}, "language": "hi"}
+2025-07-01 12:27:08,182 - nlp.command_router - INFO - API Request: POST http://localhost:8000/seller/products/add
+2025-07-01 12:27:08,182 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer test_user'}
+2025-07-01 12:27:08,182 - nlp.command_router - INFO - Request Data: {"name": "\u091a\u093e\u0935\u0932", "price": 50, "stock": 20}
+2025-07-01 12:27:08,183 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products/add (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1041dbbd0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:27:08,183 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products/add (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1041dbbd0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:27:08,183 - nlp.command_router - INFO - Simulated response for add_product: {"success": true, "product": {"name": "\u091a\u093e\u0935\u0932", "price": 50, "stock": 20, "id": "sim123"}}
+2025-07-01 12:27:08,183 - __main__ - INFO - Final response: "प्रोडक्ट चावल को ₹50 कीमत और 20 स्टॉक के साथ सफलतापूर्वक जोड़ा गया।"
+2025-07-01 12:27:08,184 - __main__ - INFO - 
+==================================================
+Testing command: 'चावल का स्टॉक 100 करो'
+==================================================
+2025-07-01 12:27:08,184 - __main__ - INFO - Parsed result: {"intent": "edit_stock", "entities": {"name": "चावल", "stock": 100}, "language": "hi"}
+2025-07-01 12:27:08,184 - nlp.command_router - INFO - API Request: POST http://localhost:8000/seller/products/update-stock
+2025-07-01 12:27:08,184 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer test_user'}
+2025-07-01 12:27:08,184 - nlp.command_router - INFO - Request Data: {"name": "\u091a\u093e\u0935\u0932", "stock": 100}
+2025-07-01 12:27:08,185 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products/update-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1041dbdf0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:27:08,185 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products/update-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1041dbdf0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:27:08,185 - nlp.command_router - INFO - Simulated response for edit_stock: {"success": true, "product": {"name": "\u091a\u093e\u0935\u0932", "stock": 100, "id": "sim123"}}
+2025-07-01 12:27:08,186 - __main__ - INFO - Final response: "चावल का स्टॉक 100 इकाइयों में अपडेट किया गया।"
+2025-07-01 12:27:08,186 - __main__ - INFO - 
+==================================================
+Testing command: 'कम स्टॉक वाले आइटम दिखाओ'
+==================================================
+2025-07-01 12:27:08,186 - __main__ - INFO - Parsed result: {"intent": "get_low_stock", "entities": {}, "language": "hi"}
+2025-07-01 12:27:08,186 - nlp.command_router - INFO - API Request: GET http://localhost:8000/seller/products/low-stock
+2025-07-01 12:27:08,186 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer test_user'}
+2025-07-01 12:27:08,188 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products/low-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x104278050>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:27:08,188 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products/low-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x104278050>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:27:08,188 - nlp.command_router - INFO - Simulated response for get_low_stock: {"products": [{"name": "Salt", "price": 20, "stock": 5}, {"name": "Tea", "price": 120, "stock": 8}, {"name": "\u0928\u092e\u0915", "price": 20, "stock": 5}, {"name": "\u091a\u093e\u092f", "price": 120, "stock": 8}]}
+2025-07-01 12:27:08,188 - __main__ - INFO - Final response: "कम स्टॉक वाले प्रोडक्ट:\n- Salt: ₹20, स्टॉक: 5\n- Tea: ₹120, स्टॉक: 8\n- नमक: ₹20, स्टॉक: 5\n- चाय: ₹120, स्टॉक: 8"
+2025-07-01 12:27:08,188 - __main__ - INFO - 
+==================================================
+Testing command: 'आज की रिपोर्ट भेजो'
+==================================================
+2025-07-01 12:27:08,188 - __main__ - INFO - Parsed result: {"intent": "get_report", "entities": {"range": "today"}, "language": "hi"}
+2025-07-01 12:27:08,189 - nlp.command_router - INFO - API Request: GET http://localhost:8000/seller/report
+2025-07-01 12:27:08,189 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer test_user'}
+2025-07-01 12:27:08,189 - nlp.command_router - INFO - Query Params: {'range': 'today'}
+2025-07-01 12:27:08,190 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/report?range=today (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x104278380>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:27:08,190 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/report?range=today (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x104278380>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:27:08,190 - nlp.command_router - INFO - Simulated response for get_report: {"sales": 12500, "orders": 25, "top_product": "Rice"}
+2025-07-01 12:27:08,190 - __main__ - INFO - Final response: "today के लिए बिक्री रिपोर्ट:\nआज की बिक्री: ₹12500\nऑर्डर: 25\nटॉप प्रोडक्ट: Rice"
+2025-07-01 12:27:08,190 - __main__ - INFO - 
+==================================================
+Testing command: 'मुझे चीनी का स्टॉक 75 करना है'
+==================================================
+2025-07-01 12:27:08,191 - __main__ - INFO - Parsed result: {"intent": "edit_stock", "entities": {"name": "चीनी", "stock": 75}, "language": "hi"}
+2025-07-01 12:27:08,191 - nlp.command_router - INFO - API Request: POST http://localhost:8000/seller/products/update-stock
+2025-07-01 12:27:08,191 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer test_user'}
+2025-07-01 12:27:08,191 - nlp.command_router - INFO - Request Data: {"name": "\u091a\u0940\u0928\u0940", "stock": 75}
+2025-07-01 12:27:08,191 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products/update-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1042786b0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:27:08,192 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products/update-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1042786b0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:27:08,192 - nlp.command_router - INFO - Simulated response for edit_stock: {"success": true, "product": {"name": "\u091a\u0940\u0928\u0940", "stock": 75, "id": "sim123"}}
+2025-07-01 12:27:08,192 - __main__ - INFO - Final response: "चीनी का स्टॉक 75 इकाइयों में अपडेट किया गया।"
+2025-07-01 12:29:31,285 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-01 12:29:31,285 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/test.log
+2025-07-01 12:29:31,285 - __main__ - INFO - Test Command Router started - Testing API integration
+2025-07-01 12:29:31,285 - __main__ - INFO - Testing against backend server: http://localhost:8000
+2025-07-01 12:29:31,285 - __main__ - INFO - 
+==================================================
+Testing command: 'Show my inventory'
+==================================================
+2025-07-01 12:29:31,286 - __main__ - INFO - Parsed result: {"intent": "get_inventory", "entities": {}, "language": "en"}
+2025-07-01 12:29:31,286 - nlp.command_router - INFO - API Request: GET http://localhost:8000/seller/products
+2025-07-01 12:29:31,286 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer test_user'}
+2025-07-01 12:29:31,291 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x103def620>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:29:31,291 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x103def620>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:29:31,292 - nlp.command_router - INFO - Simulated response for get_inventory: {"products": [{"name": "Rice", "price": 50, "stock": 100}, {"name": "Wheat", "price": 40, "stock": 75}, {"name": "Sugar", "price": 45, "stock": 60}, {"name": "\u091a\u093e\u0935\u0932", "price": 50, "stock": 100}, {"name": "\u0917\u0947\u0939\u0942\u0902", "price": 40, "stock": 75}, {"name": "\u091a\u0940\u0928\u0940", "price": 45, "stock": 60}]}
+2025-07-01 12:29:31,292 - __main__ - INFO - Final response: "Here's your current inventory:\n- Rice: ₹50, Stock: 100\n- Wheat: ₹40, Stock: 75\n- Sugar: ₹45, Stock: 60\n- चावल: ₹50, Stock: 100\n- गेहूं: ₹40, Stock: 75\n- चीनी: ₹45, Stock: 60"
+2025-07-01 12:29:31,292 - __main__ - INFO - 
+==================================================
+Testing command: 'Add new product Rice 50rs 20qty'
+==================================================
+2025-07-01 12:29:31,293 - __main__ - INFO - Parsed result: {"intent": "add_product", "entities": {"name": "rice", "price": 50, "stock": 20}, "language": "en"}
+2025-07-01 12:29:31,293 - nlp.command_router - INFO - API Request: POST http://localhost:8000/seller/products/add
+2025-07-01 12:29:31,293 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer test_user'}
+2025-07-01 12:29:31,293 - nlp.command_router - INFO - Request Data: {"name": "rice", "price": 50, "stock": 20}
+2025-07-01 12:29:31,294 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products/add (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x103da6990>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:29:31,294 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products/add (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x103da6990>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:29:31,294 - nlp.command_router - INFO - Simulated response for add_product: {"success": true, "product": {"name": "rice", "price": 50, "stock": 20, "id": "sim123"}}
+2025-07-01 12:29:31,294 - __main__ - INFO - Final response: "Product rice added successfully with price ₹50 and stock 20."
+2025-07-01 12:29:31,294 - __main__ - INFO - 
+==================================================
+Testing command: 'Update Sugar stock to 50'
+==================================================
+2025-07-01 12:29:31,295 - __main__ - INFO - Parsed result: {"intent": "edit_stock", "entities": {"name": "sugar", "stock": 50}, "language": "en"}
+2025-07-01 12:29:31,295 - nlp.command_router - INFO - API Request: POST http://localhost:8000/seller/products/update-stock
+2025-07-01 12:29:31,295 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer test_user'}
+2025-07-01 12:29:31,295 - nlp.command_router - INFO - Request Data: {"name": "sugar", "stock": 50}
+2025-07-01 12:29:31,295 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products/update-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x103da6350>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:29:31,295 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products/update-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x103da6350>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:29:31,296 - nlp.command_router - INFO - Simulated response for edit_stock: {"success": true, "product": {"name": "sugar", "stock": 50, "id": "sim123"}}
+2025-07-01 12:29:31,296 - __main__ - INFO - Final response: "Stock updated for sugar to 50 units."
+2025-07-01 12:29:31,296 - __main__ - INFO - 
+==================================================
+Testing command: 'Show low stock items'
+==================================================
+2025-07-01 12:29:31,296 - __main__ - INFO - Parsed result: {"intent": "get_low_stock", "entities": {}, "language": "en"}
+2025-07-01 12:29:31,296 - nlp.command_router - INFO - API Request: GET http://localhost:8000/seller/products/low-stock
+2025-07-01 12:29:31,296 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer test_user'}
+2025-07-01 12:29:31,296 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products/low-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x104431350>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:29:31,296 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products/low-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x104431350>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:29:31,296 - nlp.command_router - INFO - Simulated response for get_low_stock: {"products": [{"name": "Salt", "price": 20, "stock": 5}, {"name": "Tea", "price": 120, "stock": 8}, {"name": "\u0928\u092e\u0915", "price": 20, "stock": 5}, {"name": "\u091a\u093e\u092f", "price": 120, "stock": 8}]}
+2025-07-01 12:29:31,296 - __main__ - INFO - Final response: "Products with low stock:\n- Salt: ₹20, Stock: 5\n- Tea: ₹120, Stock: 8\n- नमक: ₹20, Stock: 5\n- चाय: ₹120, Stock: 8"
+2025-07-01 12:29:31,296 - __main__ - INFO - 
+==================================================
+Testing command: 'Get today's report'
+==================================================
+2025-07-01 12:29:31,297 - __main__ - INFO - Parsed result: {"intent": "get_report", "entities": {"range": "today"}, "language": "en"}
+2025-07-01 12:29:31,297 - nlp.command_router - INFO - API Request: GET http://localhost:8000/seller/report
+2025-07-01 12:29:31,297 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer test_user'}
+2025-07-01 12:29:31,297 - nlp.command_router - INFO - Query Params: {'range': 'today'}
+2025-07-01 12:29:31,297 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/report?range=today (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x104431ba0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:29:31,297 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/report?range=today (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x104431ba0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:29:31,298 - nlp.command_router - INFO - Simulated response for get_report: {"sales": 12500, "orders": 25, "top_product": "Rice"}
+2025-07-01 12:29:31,298 - __main__ - INFO - Final response: "Sales report for today:\nSales for today: ₹12500\nOrders: 25\nTop product: Rice"
+2025-07-01 12:29:31,298 - __main__ - INFO - 
+==================================================
+Testing command: 'View recent orders'
+==================================================
+2025-07-01 12:29:31,298 - __main__ - INFO - Parsed result: {"intent": "get_orders", "entities": {}, "language": "en"}
+2025-07-01 12:29:31,298 - nlp.command_router - INFO - API Request: GET http://localhost:8000/seller/orders
+2025-07-01 12:29:31,298 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer test_user'}
+2025-07-01 12:29:31,299 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/orders (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1043e3bf0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:29:31,299 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/orders (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1043e3bf0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:29:31,299 - nlp.command_router - INFO - Simulated response for get_orders: {"orders": [{"id": "ORD001", "status": "Delivered", "total": 500}, {"id": "ORD002", "status": "Processing", "total": 350}, {"id": "ORD003", "status": "Pending", "total": 720}]}
+2025-07-01 12:29:31,299 - __main__ - INFO - Final response: "Recent orders:\n- Order #ORD001: Delivered, Total: ₹500\n- Order #ORD002: Processing, Total: ₹350\n- Order #ORD003: Pending, Total: ₹720"
+2025-07-01 12:29:31,299 - __main__ - INFO - 
+==================================================
+Testing command: 'I want to add a new product called Wheat for 45 rupees with 30 pieces'
+==================================================
+2025-07-01 12:29:31,299 - __main__ - INFO - Parsed result: {"intent": "add_product", "entities": {"name": "wheat", "price": 45, "stock": 30}, "language": "en"}
+2025-07-01 12:29:31,299 - nlp.command_router - INFO - API Request: POST http://localhost:8000/seller/products/add
+2025-07-01 12:29:31,299 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer test_user'}
+2025-07-01 12:29:31,299 - nlp.command_router - INFO - Request Data: {"name": "wheat", "price": 45, "stock": 30}
+2025-07-01 12:29:31,300 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products/add (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1043df130>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:29:31,300 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products/add (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1043df130>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:29:31,300 - nlp.command_router - INFO - Simulated response for add_product: {"success": true, "product": {"name": "wheat", "price": 45, "stock": 30, "id": "sim123"}}
+2025-07-01 12:29:31,300 - __main__ - INFO - Final response: "Product wheat added successfully with price ₹45 and stock 30."
+2025-07-01 12:29:31,300 - __main__ - INFO - 
+==================================================
+Testing command: 'मेरे प्रोडक्ट दिखाओ'
+==================================================
+2025-07-01 12:29:31,300 - __main__ - INFO - Parsed result: {"intent": "get_inventory", "entities": {}, "language": "hi"}
+2025-07-01 12:29:31,300 - nlp.command_router - INFO - API Request: GET http://localhost:8000/seller/products
+2025-07-01 12:29:31,300 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer test_user'}
+2025-07-01 12:29:31,301 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1043df8a0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:29:31,301 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1043df8a0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:29:31,301 - nlp.command_router - INFO - Simulated response for get_inventory: {"products": [{"name": "Rice", "price": 50, "stock": 100}, {"name": "Wheat", "price": 40, "stock": 75}, {"name": "Sugar", "price": 45, "stock": 60}, {"name": "\u091a\u093e\u0935\u0932", "price": 50, "stock": 100}, {"name": "\u0917\u0947\u0939\u0942\u0902", "price": 40, "stock": 75}, {"name": "\u091a\u0940\u0928\u0940", "price": 45, "stock": 60}]}
+2025-07-01 12:29:31,301 - __main__ - INFO - Final response: "आपका वर्तमान इन्वेंटरी:\n- Rice: ₹50, स्टॉक: 100\n- Wheat: ₹40, स्टॉक: 75\n- Sugar: ₹45, स्टॉक: 60\n- चावल: ₹50, स्टॉक: 100\n- गेहूं: ₹40, स्टॉक: 75\n- चीनी: ₹45, स्टॉक: 60"
+2025-07-01 12:29:31,301 - __main__ - INFO - 
+==================================================
+Testing command: 'नया प्रोडक्ट चावल 50 रुपये 20 पीस जोड़ो'
+==================================================
+2025-07-01 12:29:31,302 - __main__ - INFO - Parsed result: {"intent": "add_product", "entities": {"name": "चावल", "price": 50, "stock": 20}, "language": "hi"}
+2025-07-01 12:29:31,302 - nlp.command_router - INFO - API Request: POST http://localhost:8000/seller/products/add
+2025-07-01 12:29:31,302 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer test_user'}
+2025-07-01 12:29:31,302 - nlp.command_router - INFO - Request Data: {"name": "\u091a\u093e\u0935\u0932", "price": 50, "stock": 20}
+2025-07-01 12:29:31,303 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products/add (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1043dfbd0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:29:31,303 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products/add (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1043dfbd0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:29:31,303 - nlp.command_router - INFO - Simulated response for add_product: {"success": true, "product": {"name": "\u091a\u093e\u0935\u0932", "price": 50, "stock": 20, "id": "sim123"}}
+2025-07-01 12:29:31,303 - __main__ - INFO - Final response: "प्रोडक्ट चावल को ₹50 कीमत और 20 स्टॉक के साथ सफलतापूर्वक जोड़ा गया।"
+2025-07-01 12:29:31,303 - __main__ - INFO - 
+==================================================
+Testing command: 'चावल का स्टॉक 100 करो'
+==================================================
+2025-07-01 12:29:31,303 - __main__ - INFO - Parsed result: {"intent": "edit_stock", "entities": {"name": "चावल", "stock": 100}, "language": "hi"}
+2025-07-01 12:29:31,303 - nlp.command_router - INFO - API Request: POST http://localhost:8000/seller/products/update-stock
+2025-07-01 12:29:31,303 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer test_user'}
+2025-07-01 12:29:31,303 - nlp.command_router - INFO - Request Data: {"name": "\u091a\u093e\u0935\u0932", "stock": 100}
+2025-07-01 12:29:31,304 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products/update-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1043dfdf0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:29:31,304 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products/update-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1043dfdf0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:29:31,304 - nlp.command_router - INFO - Simulated response for edit_stock: {"success": true, "product": {"name": "\u091a\u093e\u0935\u0932", "stock": 100, "id": "sim123"}}
+2025-07-01 12:29:31,304 - __main__ - INFO - Final response: "चावल का स्टॉक 100 इकाइयों में अपडेट किया गया।"
+2025-07-01 12:29:31,304 - __main__ - INFO - 
+==================================================
+Testing command: 'कम स्टॉक वाले आइटम दिखाओ'
+==================================================
+2025-07-01 12:29:31,304 - __main__ - INFO - Parsed result: {"intent": "get_low_stock", "entities": {}, "language": "hi"}
+2025-07-01 12:29:31,304 - nlp.command_router - INFO - API Request: GET http://localhost:8000/seller/products/low-stock
+2025-07-01 12:29:31,304 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer test_user'}
+2025-07-01 12:29:31,305 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products/low-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10447c050>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:29:31,305 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products/low-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10447c050>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:29:31,305 - nlp.command_router - INFO - Simulated response for get_low_stock: {"products": [{"name": "Salt", "price": 20, "stock": 5}, {"name": "Tea", "price": 120, "stock": 8}, {"name": "\u0928\u092e\u0915", "price": 20, "stock": 5}, {"name": "\u091a\u093e\u092f", "price": 120, "stock": 8}]}
+2025-07-01 12:29:31,305 - __main__ - INFO - Final response: "कम स्टॉक वाले प्रोडक्ट:\n- Salt: ₹20, स्टॉक: 5\n- Tea: ₹120, स्टॉक: 8\n- नमक: ₹20, स्टॉक: 5\n- चाय: ₹120, स्टॉक: 8"
+2025-07-01 12:29:31,305 - __main__ - INFO - 
+==================================================
+Testing command: 'आज की रिपोर्ट भेजो'
+==================================================
+2025-07-01 12:29:31,305 - __main__ - INFO - Parsed result: {"intent": "get_report", "entities": {"range": "today"}, "language": "hi"}
+2025-07-01 12:29:31,305 - nlp.command_router - INFO - API Request: GET http://localhost:8000/seller/report
+2025-07-01 12:29:31,305 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer test_user'}
+2025-07-01 12:29:31,305 - nlp.command_router - INFO - Query Params: {'range': 'today'}
+2025-07-01 12:29:31,306 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/report?range=today (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10447c380>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:29:31,306 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/report?range=today (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10447c380>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:29:31,306 - nlp.command_router - INFO - Simulated response for get_report: {"sales": 12500, "orders": 25, "top_product": "Rice"}
+2025-07-01 12:29:31,306 - __main__ - INFO - Final response: "today के लिए बिक्री रिपोर्ट:\nआज की बिक्री: ₹12500\nऑर्डर: 25\nटॉप प्रोडक्ट: Rice"
+2025-07-01 12:29:31,306 - __main__ - INFO - 
+==================================================
+Testing command: 'मुझे चीनी का स्टॉक 75 करना है'
+==================================================
+2025-07-01 12:29:31,306 - __main__ - INFO - Parsed result: {"intent": "edit_stock", "entities": {"name": "चीनी", "stock": 75}, "language": "hi"}
+2025-07-01 12:29:31,306 - nlp.command_router - INFO - API Request: POST http://localhost:8000/seller/products/update-stock
+2025-07-01 12:29:31,306 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer test_user'}
+2025-07-01 12:29:31,306 - nlp.command_router - INFO - Request Data: {"name": "\u091a\u0940\u0928\u0940", "stock": 75}
+2025-07-01 12:29:31,307 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products/update-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10447c6b0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:29:31,307 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products/update-stock (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10447c6b0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:29:31,307 - nlp.command_router - INFO - Simulated response for edit_stock: {"success": true, "product": {"name": "\u091a\u0940\u0928\u0940", "stock": 75, "id": "sim123"}}
+2025-07-01 12:29:31,307 - __main__ - INFO - Final response: "चीनी का स्टॉक 75 इकाइयों में अपडेट किया गया।"
+2025-07-01 12:31:26,251 - command_router - INFO - Command Router initialized - API integration active
+2025-07-01 12:31:26,252 - command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/test.log
+2025-07-01 12:31:26,256 - command_router - INFO - API Request: POST http://localhost:8000/seller/products/add
+2025-07-01 12:31:26,256 - command_router - INFO - Headers: {'Content-Type': 'application/json'}
+2025-07-01 12:31:26,256 - command_router - INFO - Request Data: {"name": "", "price": 0, "stock": 0}
+2025-07-01 12:31:26,261 - command_router - ERROR - API request failed: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products/add (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1023c7cb0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:31:26,261 - command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products/add (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1023c7cb0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:31:26,261 - command_router - INFO - Simulated response for add_product: {"success": true, "product": {"name": "", "price": 0, "stock": 0, "id": "sim123"}}
+2025-07-01 12:31:26,261 - command_router - ERROR - Error processing command: 'name'
+2025-07-01 12:31:26,262 - command_router - INFO - API Request: GET http://localhost:8000/seller/products
+2025-07-01 12:31:26,262 - command_router - INFO - Headers: {'Content-Type': 'application/json'}
+2025-07-01 12:31:26,262 - command_router - ERROR - API request failed: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1024d4050>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:31:26,262 - command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1024d4050>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:31:26,262 - command_router - INFO - Simulated response for get_inventory: {"products": [{"name": "Rice", "price": 50, "stock": 100}, {"name": "Wheat", "price": 40, "stock": 75}, {"name": "Sugar", "price": 45, "stock": 60}, {"name": "\u091a\u093e\u0935\u0932", "price": 50, "stock": 100}, {"name": "\u0917\u0947\u0939\u0942\u0902", "price": 40, "stock": 75}, {"name": "\u091a\u0940\u0928\u0940", "price": 45, "stock": 60}]}
+2025-07-01 12:31:26,263 - command_router - INFO - API Request: POST http://localhost:8000/seller/products/add
+2025-07-01 12:31:26,263 - command_router - INFO - Headers: {'Content-Type': 'application/json'}
+2025-07-01 12:31:26,263 - command_router - INFO - Request Data: {"name": "", "price": 0, "stock": 0}
+2025-07-01 12:31:26,264 - command_router - ERROR - API request failed: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products/add (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1024d4910>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:31:26,264 - command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /seller/products/add (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1024d4910>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-01 12:31:26,264 - command_router - INFO - Simulated response for add_product: {"success": true, "product": {"name": "", "price": 0, "stock": 0, "id": "sim123"}}
+2025-07-01 12:31:26,264 - command_router - ERROR - Error processing command: 'name'
+2025-07-07 21:29:33,268 - __main__ - INFO - Test Command Router started - Testing API integration
+2025-07-07 21:29:33,269 - __main__ - INFO - Testing against backend server: http://127.0.0.1:8000
+2025-07-07 21:29:33,269 - __main__ - INFO - 
+==================================================
+Testing command: 'Show my inventory'
+==================================================
+2025-07-07 21:29:33,269 - __main__ - INFO - Parsed result: {"intent": "get_inventory", "entities": {}, "language": "en", "raw_text": "Show my inventory", "normalized_text": "show my inventory"}
+2025-07-07 21:29:33,274 - __main__ - INFO - Final response: "Current inventory:\n1. Rice – ₹50 – 100 qty\n2. Wheat – ₹40 – 75 qty\n3. Sugar – ₹45 – 60 qty\n4. चावल – ₹50 – 100 qty\n5. गेहूं – ₹40 – 75 qty\n6. चीनी – ₹45 – 60 qty"
+2025-07-07 21:29:33,274 - __main__ - INFO - 
+==================================================
+Testing command: 'Add new product Rice 50rs 20qty'
+==================================================
+2025-07-07 21:29:33,278 - __main__ - INFO - Parsed result: {"intent": "unknown", "entities": {}, "raw_text": "Add new product Rice 50rs 20qty", "normalized_text": "ऐड new product rice 50rs 20qty", "language": "en"}
+2025-07-07 21:29:33,278 - __main__ - INFO - Final response: "Sorry, I couldn't understand that command."
+2025-07-07 21:29:33,278 - __main__ - INFO - 
+==================================================
+Testing command: 'Update Sugar stock to 50'
+==================================================
+2025-07-07 21:29:33,278 - __main__ - INFO - Parsed result: {"intent": "unknown", "entities": {}, "raw_text": "Update Sugar stock to 50", "normalized_text": "अपडेट sugar स्टॉक को 50", "language": "en"}
+2025-07-07 21:29:33,278 - __main__ - INFO - Final response: "Sorry, I couldn't understand that command."
+2025-07-07 21:29:33,278 - __main__ - INFO - 
+==================================================
+Testing command: 'Show low stock items'
+==================================================
+2025-07-07 21:29:33,278 - __main__ - INFO - Parsed result: {"intent": "unknown", "entities": {}, "raw_text": "Show low stock items", "normalized_text": "show low स्टॉक items", "language": "en"}
+2025-07-07 21:29:33,278 - __main__ - INFO - Final response: "Sorry, I couldn't understand that command."
+2025-07-07 21:29:33,278 - __main__ - INFO - 
+==================================================
+Testing command: 'Get today's report'
+==================================================
+2025-07-07 21:29:33,278 - __main__ - INFO - Parsed result: {"intent": "unknown", "entities": {}, "raw_text": "Get today's report", "normalized_text": "get today's रिपोर्ट", "language": "en"}
+2025-07-07 21:29:33,278 - __main__ - INFO - Final response: "Sorry, I couldn't understand that command."
+2025-07-07 21:29:33,278 - __main__ - INFO - 
+==================================================
+Testing command: 'View recent orders'
+==================================================
+2025-07-07 21:29:33,279 - __main__ - INFO - Parsed result: {"intent": "get_orders", "entities": {"range": "recent"}, "language": "en", "raw_text": "View recent orders", "normalized_text": "view recent orders"}
+2025-07-07 21:29:33,280 - __main__ - INFO - Final response: "recent orders:\n- Order #ORD001: Delivered, Total: ₹500\n- Order #ORD002: Processing, Total: ₹350\n- Order #ORD003: Delivered, Total: ₹720\n- Order #ORD004: Delivered, Total: ₹250"
+2025-07-07 21:29:33,280 - __main__ - INFO - 
+==================================================
+Testing command: 'I want to add a new product called Wheat for 45 rupees with 30 pieces'
+==================================================
+2025-07-07 21:29:33,280 - __main__ - INFO - Parsed result: {"intent": "unknown", "entities": {}, "raw_text": "I want to add a new product called Wheat for 45 rupees with 30 pieces", "normalized_text": "i want को ऐड a new product called wheat के लिए 45 rupees with 30 pieces", "language": "en"}
+2025-07-07 21:29:33,280 - __main__ - INFO - Final response: "Sorry, I couldn't understand that command."
+2025-07-07 21:29:33,280 - __main__ - INFO - 
+==================================================
+Testing command: 'मेरे प्रोडक्ट दिखाओ'
+==================================================
+2025-07-07 21:29:33,283 - __main__ - INFO - Parsed result: {"intent": "get_inventory", "entities": {}, "language": "hi"}
+2025-07-07 21:29:33,284 - __main__ - INFO - Final response: "वर्तमान इन्वेंटरी:\n1. Rice – ₹50 – 100 मात्रा\n2. Wheat – ₹40 – 75 मात्रा\n3. Sugar – ₹45 – 60 मात्रा\n4. चावल – ₹50 – 100 मात्रा\n5. गेहूं – ₹40 – 75 मात्रा\n6. चीनी – ₹45 – 60 मात्रा"
+2025-07-07 21:29:33,284 - __main__ - INFO - 
+==================================================
+Testing command: 'नया प्रोडक्ट चावल 50 रुपये 20 पीस जोड़ो'
+==================================================
+2025-07-07 21:29:33,285 - __main__ - INFO - Parsed result: {"intent": "add_product", "entities": {"name": "चावल", "price": 50, "stock": 20}, "language": "hi"}
+2025-07-07 21:29:33,285 - __main__ - INFO - Final response: "प्रोडक्ट चावल को जोड़ने में विफल। त्रुटि: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /products (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x104299f30>: Failed to establish a new connection: [Errno 61] Connection refused'))"
+2025-07-07 21:29:33,286 - __main__ - INFO - 
+==================================================
+Testing command: 'चावल का स्टॉक 100 करो'
+==================================================
+2025-07-07 21:29:33,286 - __main__ - INFO - Parsed result: {"intent": "edit_stock", "entities": {"name": "चावल", "stock": 100}, "language": "hi"}
+2025-07-07 21:29:33,286 - __main__ - INFO - Final response: "चावल का स्टॉक 100 इकाइयों में अपडेट किया गया।"
+2025-07-07 21:29:33,286 - __main__ - INFO - 
+==================================================
+Testing command: 'कम स्टॉक वाले आइटम दिखाओ'
+==================================================
+2025-07-07 21:29:33,287 - __main__ - INFO - Parsed result: {"intent": "get_low_stock", "entities": {"threshold": 5}, "language": "hi"}
+2025-07-07 21:29:33,287 - __main__ - INFO - Final response: "कम स्टॉक वाले प्रोडक्ट:\n1. Salt – ₹20 – 5 मात्रा\n2. Tea – ₹120 – 8 मात्रा\n3. नमक – ₹20 – 5 मात्रा\n4. चाय – ₹120 – 8 मात्रा"
+2025-07-07 21:29:33,287 - __main__ - INFO - 
+==================================================
+Testing command: 'आज की रिपोर्ट भेजो'
+==================================================
+2025-07-07 21:29:33,289 - __main__ - INFO - Parsed result: {"intent": "get_report", "entities": {"range": "today"}, "language": "hi"}
+2025-07-07 21:29:33,289 - __main__ - INFO - Final response: "आज के लिए बिक्री रिपोर्ट:\nआज की बिक्री: ₹12500\nऑर्डर: 25\nटॉप प्रोडक्ट: Rice"
+2025-07-07 21:29:33,289 - __main__ - INFO - 
+==================================================
+Testing command: 'मुझे चीनी का स्टॉक 75 करना है'
+==================================================
+2025-07-07 21:29:33,290 - __main__ - INFO - Parsed result: {"intent": "edit_stock", "entities": {"name": "चीनी", "stock": 75}, "language": "hi"}
+2025-07-07 21:29:33,290 - __main__ - INFO - Final response: "चीनी का स्टॉक 75 इकाइयों में अपडेट किया गया।"
+2025-07-07 21:49:03,811 - __main__ - INFO - Test Command Router started - Testing API integration
+2025-07-07 21:49:03,811 - __main__ - INFO - Testing against backend server: http://127.0.0.1:8000
+2025-07-07 21:49:03,811 - __main__ - INFO - 
+==================================================
+Testing command: 'Show my inventory'
+==================================================
+2025-07-07 21:49:03,812 - __main__ - INFO - Parsed result: {"intent": "get_inventory", "entities": {}, "language": "en", "raw_text": "Show my inventory", "normalized_text": "show my inventory"}
+2025-07-07 21:49:03,817 - __main__ - INFO - Final response: "Current inventory:\n1. Rice – ₹50 – 100 qty\n2. Wheat – ₹40 – 75 qty\n3. Sugar – ₹45 – 60 qty\n4. चावल – ₹50 – 100 qty\n5. गेहूं – ₹40 – 75 qty\n6. चीनी – ₹45 – 60 qty"
+2025-07-07 21:49:03,817 - __main__ - INFO - 
+==================================================
+Testing command: 'Add new product Rice 50rs 20qty'
+==================================================
+2025-07-07 21:49:03,821 - __main__ - INFO - Parsed result: {"intent": "unknown", "entities": {}, "raw_text": "Add new product Rice 50rs 20qty", "normalized_text": "ऐड new product rice 50rs 20qty", "language": "en"}
+2025-07-07 21:49:03,821 - __main__ - INFO - Final response: "Sorry, I couldn't understand that command."
+2025-07-07 21:49:03,821 - __main__ - INFO - 
+==================================================
+Testing command: 'Update Sugar stock to 50'
+==================================================
+2025-07-07 21:49:03,821 - __main__ - INFO - Parsed result: {"intent": "unknown", "entities": {}, "raw_text": "Update Sugar stock to 50", "normalized_text": "अपडेट sugar स्टॉक को 50", "language": "en"}
+2025-07-07 21:49:03,821 - __main__ - INFO - Final response: "Sorry, I couldn't understand that command."
+2025-07-07 21:49:03,821 - __main__ - INFO - 
+==================================================
+Testing command: 'Show low stock items'
+==================================================
+2025-07-07 21:49:03,822 - __main__ - INFO - Parsed result: {"intent": "unknown", "entities": {}, "raw_text": "Show low stock items", "normalized_text": "show low स्टॉक items", "language": "en"}
+2025-07-07 21:49:03,822 - __main__ - INFO - Final response: "Sorry, I couldn't understand that command."
+2025-07-07 21:49:03,822 - __main__ - INFO - 
+==================================================
+Testing command: 'Get today's report'
+==================================================
+2025-07-07 21:49:03,822 - __main__ - INFO - Parsed result: {"intent": "unknown", "entities": {}, "raw_text": "Get today's report", "normalized_text": "get today's रिपोर्ट", "language": "en"}
+2025-07-07 21:49:03,822 - __main__ - INFO - Final response: "Sorry, I couldn't understand that command."
+2025-07-07 21:49:03,822 - __main__ - INFO - 
+==================================================
+Testing command: 'View recent orders'
+==================================================
+2025-07-07 21:49:03,822 - __main__ - INFO - Parsed result: {"intent": "get_orders", "entities": {"range": "recent"}, "language": "en", "raw_text": "View recent orders", "normalized_text": "view recent orders"}
+2025-07-07 21:49:03,823 - __main__ - INFO - Final response: "recent orders:\n- Order #ORD001: Delivered, Total: ₹500\n- Order #ORD002: Processing, Total: ₹350\n- Order #ORD003: Delivered, Total: ₹720\n- Order #ORD004: Delivered, Total: ₹250"
+2025-07-07 21:49:03,823 - __main__ - INFO - 
+==================================================
+Testing command: 'I want to add a new product called Wheat for 45 rupees with 30 pieces'
+==================================================
+2025-07-07 21:49:03,823 - __main__ - INFO - Parsed result: {"intent": "unknown", "entities": {}, "raw_text": "I want to add a new product called Wheat for 45 rupees with 30 pieces", "normalized_text": "i want को ऐड a new product called wheat के लिए 45 rupees with 30 pieces", "language": "en"}
+2025-07-07 21:49:03,823 - __main__ - INFO - Final response: "Sorry, I couldn't understand that command."
+2025-07-07 21:49:03,823 - __main__ - INFO - 
+==================================================
+Testing command: 'मेरे प्रोडक्ट दिखाओ'
+==================================================
+2025-07-07 21:49:03,826 - __main__ - INFO - Parsed result: {"intent": "get_inventory", "entities": {}, "language": "hi"}
+2025-07-07 21:49:03,828 - __main__ - INFO - Final response: "वर्तमान इन्वेंटरी:\n1. Rice – ₹50 – 100 मात्रा\n2. Wheat – ₹40 – 75 मात्रा\n3. Sugar – ₹45 – 60 मात्रा\n4. चावल – ₹50 – 100 मात्रा\n5. गेहूं – ₹40 – 75 मात्रा\n6. चीनी – ₹45 – 60 मात्रा"
+2025-07-07 21:49:03,828 - __main__ - INFO - 
+==================================================
+Testing command: 'नया प्रोडक्ट चावल 50 रुपये 20 पीस जोड़ो'
+==================================================
+2025-07-07 21:49:03,828 - __main__ - INFO - Parsed result: {"intent": "add_product", "entities": {"name": "चावल", "price": 50, "stock": 20}, "language": "hi"}
+2025-07-07 21:49:03,829 - __main__ - INFO - Final response: "प्रोडक्ट चावल को जोड़ने में विफल। त्रुटि: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /products (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1060cdf30>: Failed to establish a new connection: [Errno 61] Connection refused'))"
+2025-07-07 21:49:03,829 - __main__ - INFO - 
+==================================================
+Testing command: 'चावल का स्टॉक 100 करो'
+==================================================
+2025-07-07 21:49:03,829 - __main__ - INFO - Parsed result: {"intent": "edit_stock", "entities": {"name": "चावल", "stock": 100}, "language": "hi"}
+2025-07-07 21:49:03,830 - __main__ - INFO - Final response: "चावल का स्टॉक 100 इकाइयों में अपडेट किया गया।"
+2025-07-07 21:49:03,830 - __main__ - INFO - 
+==================================================
+Testing command: 'कम स्टॉक वाले आइटम दिखाओ'
+==================================================
+2025-07-07 21:49:03,830 - __main__ - INFO - Parsed result: {"intent": "get_low_stock", "entities": {"threshold": 5}, "language": "hi"}
+2025-07-07 21:49:03,831 - __main__ - INFO - Final response: "कम स्टॉक वाले प्रोडक्ट:\n1. Salt – ₹20 – 5 मात्रा\n2. Tea – ₹120 – 8 मात्रा\n3. नमक – ₹20 – 5 मात्रा\n4. चाय – ₹120 – 8 मात्रा"
+2025-07-07 21:49:03,831 - __main__ - INFO - 
+==================================================
+Testing command: 'आज की रिपोर्ट भेजो'
+==================================================
+2025-07-07 21:49:03,833 - __main__ - INFO - Parsed result: {"intent": "get_report", "entities": {"range": "today"}, "language": "hi"}
+2025-07-07 21:49:03,834 - __main__ - INFO - Final response: "आज के लिए बिक्री रिपोर्ट:\nआज की बिक्री: ₹12500\nऑर्डर: 25\nटॉप प्रोडक्ट: Rice"
+2025-07-07 21:49:03,834 - __main__ - INFO - 
+==================================================
+Testing command: 'मुझे चीनी का स्टॉक 75 करना है'
+==================================================
+2025-07-07 21:49:03,834 - __main__ - INFO - Parsed result: {"intent": "edit_stock", "entities": {"name": "चीनी", "stock": 75}, "language": "hi"}
+2025-07-07 21:49:03,835 - __main__ - INFO - Final response: "चीनी का स्टॉक 75 इकाइयों में अपडेट किया गया।"
+2025-07-08 16:00:38,553 - nlp.test_command_router - INFO - Test Command Router started - Testing API integration
+2025-07-08 16:01:00,949 - nlp.test_command_router - INFO - Test Command Router started - Testing API integration

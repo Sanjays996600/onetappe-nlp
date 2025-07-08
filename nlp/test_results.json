@@ -1,0 +1,139 @@
+{
+  "accuracy_matrix": {
+    "edit_stock": {
+      "en": {
+        "pass": 0,
+        "total": 4,
+        "rate": 0.0,
+        "status": "FAIL"
+      },
+      "hi": {
+        "pass": 0,
+        "total": 4,
+        "rate": 0.0,
+        "status": "FAIL"
+      }
+    },
+    "get_orders": {
+      "en": {
+        "pass": 2,
+        "total": 4,
+        "rate": 50.0,
+        "status": "FAIL"
+      },
+      "hi": {
+        "pass": 4,
+        "total": 4,
+        "rate": 100.0,
+        "status": "PASS"
+      }
+    },
+    "get_report": {
+      "en": {
+        "pass": 2,
+        "total": 4,
+        "rate": 50.0,
+        "status": "FAIL"
+      },
+      "hi": {
+        "pass": 3,
+        "total": 4,
+        "rate": 75.0,
+        "status": "FAIL"
+      }
+    },
+    "get_low_stock": {
+      "en": {
+        "pass": 3,
+        "total": 4,
+        "rate": 75.0,
+        "status": "FAIL"
+      },
+      "hi": {
+        "pass": 3,
+        "total": 4,
+        "rate": 75.0,
+        "status": "FAIL"
+      }
+    },
+    "search_product": {
+      "en": {
+        "pass": 4,
+        "total": 4,
+        "rate": 100.0,
+        "status": "PASS"
+      },
+      "hi": {
+        "pass": 3,
+        "total": 4,
+        "rate": 75.0,
+        "status": "FAIL"
+      }
+    }
+  },
+  "parsed_examples": {
+    "en": {
+      "get_orders": {
+        "intent": "get_orders",
+        "entities": {
+          "range": "all"
+        },
+        "language": "en"
+      },
+      "get_report": {
+        "intent": "get_report",
+        "entities": {},
+        "language": "en"
+      },
+      "get_low_stock": {
+        "intent": "get_low_stock",
+        "entities": {
+          "threshold": 5
+        },
+        "language": "en"
+      },
+      "search_product": {
+        "intent": "search_product",
+        "entities": {
+          "name": "sugar"
+        },
+        "language": "en"
+      }
+    },
+    "hi": {
+      "get_orders": {
+        "intent": "get_orders",
+        "entities": {
+          "range": "all"
+        },
+        "language": "hi"
+      },
+      "get_report": {
+        "intent": "get_report",
+        "entities": {},
+        "language": "hi"
+      },
+      "get_low_stock": {
+        "intent": "get_low_stock",
+        "entities": {
+          "threshold": 5
+        },
+        "language": "hi"
+      },
+      "search_product": {
+        "intent": "search_product",
+        "entities": {
+          "name": "चीनी"
+        },
+        "language": "hi"
+      }
+    }
+  },
+  "routing_confirmation": {
+    "edit_stock": false,
+    "get_orders": true,
+    "get_report": true,
+    "get_low_stock": true,
+    "search_product": true
+  }
+}

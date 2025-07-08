@@ -1,0 +1,12 @@
+# Core NLP libraries for future expansion
+spacy>=3.5.0
+langdetect>=1.0.9
+nltk>=3.8.1
+
+# For advanced ML/NLU capabilities
+transformers>=4.28.0
+torch>=2.0.0
+
+# For Hindi language support
+# python -m spacy download en_core_web_md  # English model
+# python -m spacy download xx_ent_wiki_sm  # Multilingual model

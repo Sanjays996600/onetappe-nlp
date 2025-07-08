@@ -1,0 +1,7 @@
+{
+  "language_detection_accuracy": 0.3333333333333333,
+  "intent_recognition_accuracy": 0.16666666666666666,
+  "entity_extraction_accuracy": 0.3333333333333333,
+  "end_to_end_success_rate": 1.0,
+  "edge_case_robustness": 1.0
+}

@@ -1,0 +1,58 @@
+Intent,Language,Test Input,Expected Output,Actual Output,Status,Bug ID
+
+# get_inventory Tests
+get_inventory,en,"Show my inventory","List of products with stock and prices",,
+get_inventory,en,"What's in my inventory","List of products with stock and prices",,
+get_inventory,hi,"मेरा इन्वेंटरी दिखाओ","List of products with stock and prices in Hindi",,
+get_inventory,hi,"मेरे प्रोडक्ट्स दिखाओ","List of products with stock and prices in Hindi",,
+
+# get_customer_data Tests
+get_customer_data,en,"Show top 5 customers","List of top 5 customers with purchase data",,
+get_customer_data,en,"Show top customers this month","List of top customers for current month",,
+get_customer_data,en,"Who are my best customers","List of top customers with purchase data",,
+get_customer_data,hi,"टॉप 5 ग्राहक दिखाओ","List of top 5 customers with purchase data in Hindi",,
+get_customer_data,hi,"इस महीने के टॉप ग्राहक दिखाओ","List of top customers for current month in Hindi",,
+get_customer_data,hi,"मेरे सबसे अच्छे ग्राहक कौन हैं","List of top customers with purchase data in Hindi",,
+
+# get_top_products Tests
+get_top_products,en,"Show top 3 products","List of top 3 products with sales data",,
+get_top_products,en,"What are my best selling products this week","List of top products for current week",,
+get_top_products,hi,"टॉप 3 प्रोडक्ट्स दिखाओ","List of top 3 products with sales data in Hindi",,
+get_top_products,hi,"इस हफ्ते के सबसे ज्यादा बिकने वाले प्रोडक्ट्स कौन से हैं","List of top products for current week in Hindi",,
+
+# get_low_stock Tests
+get_low_stock,en,"Show low stock items","List of products with stock below default threshold",,
+get_low_stock,en,"Show items with stock below 10","List of products with stock below 10",,
+get_low_stock,hi,"कम स्टॉक वाले आइटम दिखाओ","List of products with stock below default threshold in Hindi",,
+get_low_stock,hi,"10 से कम स्टॉक वाले आइटम दिखाओ","List of products with stock below 10 in Hindi",,
+
+# search_product Tests
+search_product,en,"Search for rice","Information about rice product if found",,
+search_product,en,"Do we have sugar in stock","Information about sugar product if found",,
+search_product,hi,"चावल सर्च करो","Information about rice product if found in Hindi",,
+search_product,hi,"क्या हमारे पास चीनी है","Information about sugar product if found in Hindi",,
+
+# get_report Tests
+get_report,en,"Show sales report","Sales report for default time period",,
+get_report,en,"Show sales report for last month","Sales report for last month",,
+get_report,hi,"सेल्स रिपोर्ट दिखाओ","Sales report for default time period in Hindi",,
+get_report,hi,"पिछले महीने का सेल्स रिपोर्ट दिखाओ","Sales report for last month in Hindi",,
+
+# get_orders Tests
+get_orders,en,"Show my recent orders","List of recent orders",,
+get_orders,en,"Show orders from last week","List of orders from last week",,
+get_orders,hi,"मेरे हाल के ऑर्डर दिखाओ","List of recent orders in Hindi",,
+get_orders,hi,"पिछले हफ्ते के ऑर्डर दिखाओ","List of orders from last week in Hindi",,
+
+# Edge Cases
+unknown,en,"Hello how are you","Appropriate unknown intent response",,
+unknown,hi,"नमस्ते कैसे हो","Appropriate unknown intent response in Hindi",,
+get_inventory,mixed,"Show मेरा inventory","System should detect intent and respond appropriately",,
+get_customer_data,en,"Show top hundred customers","System should handle unusual number format",,
+get_customer_data,hi,"टॉप सौ ग्राहक दिखाओ","System should handle unusual number format in Hindi",,
+
+# WhatsApp Integration Tests
+get_inventory,en,"[WhatsApp] Show my inventory","Properly formatted WhatsApp response with inventory data",,
+get_customer_data,hi,"[WhatsApp] टॉप 5 ग्राहक दिखाओ","Properly formatted WhatsApp response with customer data in Hindi",,
+unknown,en,"[WhatsApp] Hello bot","User-friendly unknown intent response via WhatsApp",,
+get_inventory,en,"[WhatsApp] Show my inventory 📦","System should handle emoji and special characters",,

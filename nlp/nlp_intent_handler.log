@@ -1,0 +1,268 @@
+2025-07-07 20:45:33,272 - multilingual_handler - INFO - Detected language: en for message: Show my products
+2025-07-07 20:45:33,273 - intent_handler - INFO - Raw command: Show my products
+2025-07-07 20:45:33,273 - intent_handler - INFO - Normalized command: show my products
+2025-07-07 20:45:33,273 - intent_handler - INFO - Language detection: en
+2025-07-07 20:45:33,273 - intent_handler - INFO - Recognized intent: get_inventory, entities: {}
+2025-07-07 20:45:33,273 - multilingual_handler - INFO - English intent recognized: get_inventory
+2025-07-07 20:45:33,273 - multilingual_handler - INFO - Detected language: en for message: View my inventory
+2025-07-07 20:45:33,273 - intent_handler - INFO - Raw command: View my inventory
+2025-07-07 20:45:33,273 - intent_handler - INFO - Normalized command: view my inventory
+2025-07-07 20:45:33,273 - intent_handler - INFO - Language detection: en
+2025-07-07 20:45:33,273 - intent_handler - INFO - Recognized intent: get_inventory, entities: {}
+2025-07-07 20:45:33,273 - multilingual_handler - INFO - English intent recognized: get_inventory
+2025-07-07 20:45:33,273 - multilingual_handler - INFO - Detected language: en for message: Send today's report
+2025-07-07 20:45:33,273 - intent_handler - INFO - Raw command: Send today's report
+2025-07-07 20:45:33,273 - intent_handler - INFO - Normalized command: send today's रिपोर्ट
+2025-07-07 20:45:33,273 - intent_handler - INFO - Language detection: hi
+2025-07-07 20:45:33,277 - intent_handler - WARNING - No intent matched for message: Send today's report
+2025-07-07 20:45:33,277 - multilingual_handler - INFO - English intent recognized: unknown
+2025-07-07 20:45:33,277 - multilingual_handler - INFO - Detected language: en for message: Get yesterday's sales report
+2025-07-07 20:45:33,277 - intent_handler - INFO - Raw command: Get yesterday's sales report
+2025-07-07 20:45:33,277 - intent_handler - INFO - Normalized command: get yesterday's sales रिपोर्ट
+2025-07-07 20:45:33,277 - intent_handler - INFO - Language detection: hi
+2025-07-07 20:45:33,277 - intent_handler - WARNING - No intent matched for message: Get yesterday's sales report
+2025-07-07 20:45:33,277 - multilingual_handler - INFO - English intent recognized: unknown
+2025-07-07 20:45:33,277 - multilingual_handler - INFO - Detected language: en for message: Show me this week's report
+2025-07-07 20:45:33,277 - intent_handler - INFO - Raw command: Show me this week's report
+2025-07-07 20:45:33,277 - intent_handler - INFO - Normalized command: show me this week's रिपोर्ट
+2025-07-07 20:45:33,277 - intent_handler - INFO - Language detection: hi
+2025-07-07 20:45:33,277 - intent_handler - INFO - Recognized intent: search_product, entities: {'name': "week's रिपोर्ट"}
+2025-07-07 20:45:33,277 - multilingual_handler - INFO - English intent recognized: search_product
+2025-07-07 20:45:33,277 - multilingual_handler - INFO - Detected language: en for message: Show low stock items
+2025-07-07 20:45:33,277 - intent_handler - INFO - Raw command: Show low stock items
+2025-07-07 20:45:33,277 - intent_handler - INFO - Normalized command: show low स्टॉक items
+2025-07-07 20:45:33,277 - intent_handler - INFO - Language detection: hi
+2025-07-07 20:45:33,277 - intent_handler - WARNING - No intent matched for message: Show low stock items
+2025-07-07 20:45:33,277 - multilingual_handler - INFO - English intent recognized: unknown
+2025-07-07 20:45:33,277 - multilingual_handler - INFO - Detected language: en for message: Which products are running low?
+2025-07-07 20:45:33,277 - intent_handler - INFO - Raw command: Which products are running low?
+2025-07-07 20:45:33,277 - intent_handler - INFO - Normalized command: which products are running low?
+2025-07-07 20:45:33,277 - intent_handler - INFO - Language detection: en
+2025-07-07 20:45:33,277 - intent_handler - INFO - Recognized intent: get_low_stock, entities: {'threshold': 5}
+2025-07-07 20:45:33,277 - multilingual_handler - INFO - English intent recognized: get_low_stock
+2025-07-07 20:45:33,277 - multilingual_handler - INFO - Detected language: en for message: Add new product Rice 50rs 20qty
+2025-07-07 20:45:33,277 - intent_handler - INFO - Raw command: Add new product Rice 50rs 20qty
+2025-07-07 20:45:33,277 - intent_handler - INFO - Normalized command: ऐड new product rice 50rs 20qty
+2025-07-07 20:45:33,277 - intent_handler - INFO - Language detection: hi
+2025-07-07 20:45:33,277 - intent_handler - WARNING - No intent matched for message: Add new product Rice 50rs 20qty
+2025-07-07 20:45:33,277 - multilingual_handler - INFO - English intent recognized: unknown
+2025-07-07 20:45:33,278 - multilingual_handler - INFO - Detected language: en for message: Add product Sugar 30 15
+2025-07-07 20:45:33,278 - intent_handler - INFO - Raw command: Add product Sugar 30 15
+2025-07-07 20:45:33,278 - intent_handler - INFO - Normalized command: ऐड product sugar 30 15
+2025-07-07 20:45:33,278 - intent_handler - INFO - Language detection: hi
+2025-07-07 20:45:33,278 - intent_handler - WARNING - No intent matched for message: Add product Sugar 30 15
+2025-07-07 20:45:33,278 - multilingual_handler - INFO - English intent recognized: unknown
+2025-07-07 20:45:33,278 - multilingual_handler - INFO - Detected language: en for message: Edit stock of Rice to 100
+2025-07-07 20:45:33,278 - intent_handler - INFO - Raw command: Edit stock of Rice to 100
+2025-07-07 20:45:33,278 - intent_handler - INFO - Normalized command: एडिट स्टॉक का rice को 100
+2025-07-07 20:45:33,278 - intent_handler - INFO - Language detection: hi
+2025-07-07 20:45:33,278 - intent_handler - WARNING - No intent matched for message: Edit stock of Rice to 100
+2025-07-07 20:45:33,278 - multilingual_handler - INFO - English intent recognized: unknown
+2025-07-07 20:45:33,278 - multilingual_handler - INFO - Detected language: en for message: Update Sugar stock to 50
+2025-07-07 20:45:33,278 - intent_handler - INFO - Raw command: Update Sugar stock to 50
+2025-07-07 20:45:33,278 - intent_handler - INFO - Normalized command: अपडेट sugar स्टॉक को 50
+2025-07-07 20:45:33,278 - intent_handler - INFO - Language detection: hi
+2025-07-07 20:45:33,278 - intent_handler - WARNING - No intent matched for message: Update Sugar stock to 50
+2025-07-07 20:45:33,278 - multilingual_handler - INFO - English intent recognized: unknown
+2025-07-07 20:45:33,278 - multilingual_handler - INFO - Detected language: en for message: Show my orders
+2025-07-07 20:45:33,278 - intent_handler - INFO - Raw command: Show my orders
+2025-07-07 20:45:33,278 - intent_handler - INFO - Normalized command: show my orders
+2025-07-07 20:45:33,278 - intent_handler - INFO - Language detection: en
+2025-07-07 20:45:33,278 - intent_handler - INFO - Recognized intent: get_orders, entities: {'range': 'all'}
+2025-07-07 20:45:33,278 - multilingual_handler - INFO - English intent recognized: get_orders
+2025-07-07 20:45:33,278 - multilingual_handler - INFO - Detected language: en for message: View recent orders
+2025-07-07 20:45:33,278 - intent_handler - INFO - Raw command: View recent orders
+2025-07-07 20:45:33,278 - intent_handler - INFO - Normalized command: view recent orders
+2025-07-07 20:45:33,278 - intent_handler - INFO - Language detection: en
+2025-07-07 20:45:33,278 - intent_handler - INFO - Recognized intent: get_orders, entities: {'range': 'recent'}
+2025-07-07 20:45:33,278 - multilingual_handler - INFO - English intent recognized: get_orders
+2025-07-07 20:45:33,278 - multilingual_handler - INFO - Detected language: hi for message: मेरे प्रोडक्ट दिखाओ
+2025-07-07 20:45:33,281 - multilingual_handler - INFO - Hindi intent recognized: get_inventory
+2025-07-07 20:45:33,281 - multilingual_handler - INFO - Detected language: hi for message: इन्वेंटरी दिखाओ
+2025-07-07 20:45:33,281 - multilingual_handler - INFO - Hindi intent recognized: get_inventory
+2025-07-07 20:45:33,281 - multilingual_handler - INFO - Detected language: hi for message: आज की रिपोर्ट भेजो
+2025-07-07 20:45:33,283 - multilingual_handler - INFO - Hindi intent recognized: get_report
+2025-07-07 20:45:33,283 - multilingual_handler - INFO - Detected language: hi for message: कल की बिक्री रिपोर्ट दिखाओ
+2025-07-07 20:45:33,283 - multilingual_handler - INFO - Hindi intent recognized: get_report
+2025-07-07 20:45:33,283 - multilingual_handler - INFO - Detected language: hi for message: कम स्टॉक वाले आइटम दिखाओ
+2025-07-07 20:45:33,283 - multilingual_handler - INFO - Hindi intent recognized: get_low_stock
+2025-07-07 20:45:33,283 - multilingual_handler - INFO - Detected language: hi for message: नया प्रोडक्ट चावल 50 रुपये 20 पीस जोड़ो
+2025-07-07 20:45:33,284 - multilingual_handler - INFO - Hindi intent recognized: add_product
+2025-07-07 20:45:33,284 - multilingual_handler - INFO - Detected language: hi for message: चावल का स्टॉक 100 करो
+2025-07-07 20:45:33,284 - multilingual_handler - INFO - Hindi intent recognized: edit_stock
+2025-07-07 20:45:33,284 - multilingual_handler - INFO - Detected language: en for message: I want to add a new product called Wheat for 45 rupees with 30 pieces
+2025-07-07 20:45:33,284 - intent_handler - INFO - Raw command: I want to add a new product called Wheat for 45 rupees with 30 pieces
+2025-07-07 20:45:33,284 - intent_handler - INFO - Normalized command: i want को ऐड a new product called wheat के लिए 45 rupees with 30 pieces
+2025-07-07 20:45:33,284 - intent_handler - INFO - Language detection: hi
+2025-07-07 20:45:33,285 - intent_handler - WARNING - No intent matched for message: I want to add a new product called Wheat for 45 rupees with 30 pieces
+2025-07-07 20:45:33,285 - multilingual_handler - INFO - English intent recognized: unknown
+2025-07-07 20:45:33,285 - multilingual_handler - INFO - Detected language: hi for message: मुझे चीनी का स्टॉक 75 करना है
+2025-07-07 20:45:33,285 - multilingual_handler - INFO - Hindi intent recognized: edit_stock
+2025-07-07 21:38:56,796 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-07 21:38:56,796 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-07 21:38:56,799 - __main__ - INFO - Processing message from 1234567890: 'Show my inventory'
+2025-07-07 21:38:56,799 - nlp.multilingual_handler - INFO - Detected language: en for message: Show my inventory
+2025-07-07 21:38:56,800 - nlp.intent_handler - INFO - Raw command: Show my inventory
+2025-07-07 21:38:56,800 - nlp.intent_handler - INFO - Normalized command: show my inventory
+2025-07-07 21:38:56,800 - nlp.intent_handler - INFO - Language detection: en
+2025-07-07 21:38:56,800 - nlp.intent_handler - INFO - Recognized intent: get_inventory, entities: {}
+2025-07-07 21:38:56,800 - nlp.multilingual_handler - INFO - English intent recognized: get_inventory
+2025-07-07 21:38:56,800 - __main__ - INFO - Parsed result: {"intent": "get_inventory", "entities": {}, "language": "en", "raw_text": "Show my inventory", "normalized_text": "show my inventory"}
+2025-07-07 21:38:56,800 - nlp.command_router - INFO - API Request: GET http://127.0.0.1:8000/seller/products
+2025-07-07 21:38:56,800 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer whatsapp-1234567890'}
+2025-07-07 21:38:56,804 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10448ee40>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-07 21:38:56,804 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10448ee40>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-07 21:38:56,804 - nlp.command_router - INFO - Simulated response for get_inventory: {"products": [{"name": "Rice", "price": 50, "stock": 100}, {"name": "Wheat", "price": 40, "stock": 75}, {"name": "Sugar", "price": 45, "stock": 60}, {"name": "\u091a\u093e\u0935\u0932", "price": 50, "stock": 100}, {"name": "\u0917\u0947\u0939\u0942\u0902", "price": 40, "stock": 75}, {"name": "\u091a\u0940\u0928\u0940", "price": 45, "stock": 60}]}
+2025-07-07 21:38:56,804 - __main__ - INFO - Response: Current inventory:
+1. Rice – ₹50 – 100 qty
+2. Wheat – ₹40 – 75 qty
+3. Sugar – ₹45 – 60 qty
+4. चावल – ₹50 – 100 qty
+5. गेहूं – ₹40 – 75 qty
+6. चीनी – ₹45 – 60 qty
+2025-07-07 21:38:56,806 - __main__ - INFO - Processing message from 1234567890: 'मेरा इन्वेंटरी दिखाओ'
+2025-07-07 21:38:56,806 - nlp.multilingual_handler - INFO - Detected language: hi for message: मेरा इन्वेंटरी दिखाओ
+2025-07-07 21:38:56,809 - nlp.multilingual_handler - INFO - Hindi intent recognized: get_inventory
+2025-07-07 21:38:56,809 - __main__ - INFO - Parsed result: {"intent": "get_inventory", "entities": {}, "language": "hi"}
+2025-07-07 21:38:56,809 - nlp.command_router - INFO - API Request: GET http://127.0.0.1:8000/seller/products
+2025-07-07 21:38:56,810 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer whatsapp-1234567890'}
+2025-07-07 21:38:56,810 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1044f4a50>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-07 21:38:56,810 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1044f4a50>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-07 21:38:56,810 - nlp.command_router - INFO - Simulated response for get_inventory: {"products": [{"name": "Rice", "price": 50, "stock": 100}, {"name": "Wheat", "price": 40, "stock": 75}, {"name": "Sugar", "price": 45, "stock": 60}, {"name": "\u091a\u093e\u0935\u0932", "price": 50, "stock": 100}, {"name": "\u0917\u0947\u0939\u0942\u0902", "price": 40, "stock": 75}, {"name": "\u091a\u0940\u0928\u0940", "price": 45, "stock": 60}]}
+2025-07-07 21:38:56,810 - __main__ - INFO - Response: वर्तमान इन्वेंटरी:
+1. Rice – ₹50 – 100 मात्रा
+2. Wheat – ₹40 – 75 मात्रा
+3. Sugar – ₹45 – 60 मात्रा
+4. चावल – ₹50 – 100 मात्रा
+5. गेहूं – ₹40 – 75 मात्रा
+6. चीनी – ₹45 – 60 मात्रा
+2025-07-07 21:38:56,811 - __main__ - INFO - Processing message from 1234567890: 'Hello there'
+2025-07-07 21:38:56,811 - nlp.multilingual_handler - INFO - Detected language: en for message: Hello there
+2025-07-07 21:38:56,811 - nlp.intent_handler - INFO - Raw command: Hello there
+2025-07-07 21:38:56,811 - nlp.intent_handler - INFO - Normalized command: hello there
+2025-07-07 21:38:56,811 - nlp.intent_handler - INFO - Language detection: en
+2025-07-07 21:38:56,815 - nlp.intent_handler - WARNING - No intent matched for message: Hello there
+2025-07-07 21:38:56,815 - nlp.multilingual_handler - INFO - English intent recognized: unknown
+2025-07-07 21:38:56,815 - __main__ - INFO - Parsed result: {"intent": "unknown", "entities": {}, "raw_text": "Hello there", "normalized_text": "hello there", "language": "en"}
+2025-07-07 21:38:56,815 - __main__ - INFO - Response: Sorry, I couldn't understand that command.
+2025-07-07 21:41:02,154 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-07 21:41:02,155 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-07 21:41:02,158 - __main__ - INFO - Processing message from 1234567890: 'Show my inventory'
+2025-07-07 21:41:02,158 - nlp.multilingual_handler - INFO - Detected language: en for message: Show my inventory
+2025-07-07 21:41:02,159 - nlp.intent_handler - INFO - Raw command: Show my inventory
+2025-07-07 21:41:02,159 - nlp.intent_handler - INFO - Normalized command: show my inventory
+2025-07-07 21:41:02,159 - nlp.intent_handler - INFO - Language detection: en
+2025-07-07 21:41:02,159 - nlp.intent_handler - INFO - Recognized intent: get_inventory, entities: {}
+2025-07-07 21:41:02,159 - nlp.multilingual_handler - INFO - English intent recognized: get_inventory
+2025-07-07 21:41:02,159 - __main__ - INFO - Parsed result: {"intent": "get_inventory", "entities": {}, "language": "en", "raw_text": "Show my inventory", "normalized_text": "show my inventory"}
+2025-07-07 21:41:02,159 - nlp.command_router - INFO - API Request: GET http://127.0.0.1:8000/seller/products
+2025-07-07 21:41:02,159 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer whatsapp-1234567890'}
+2025-07-07 21:41:02,164 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10696af90>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-07 21:41:02,164 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10696af90>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-07 21:41:02,164 - nlp.command_router - INFO - Simulated response for get_inventory: {"products": [{"name": "Rice", "price": 50, "stock": 100}, {"name": "Wheat", "price": 40, "stock": 75}, {"name": "Sugar", "price": 45, "stock": 60}, {"name": "\u091a\u093e\u0935\u0932", "price": 50, "stock": 100}, {"name": "\u0917\u0947\u0939\u0942\u0902", "price": 40, "stock": 75}, {"name": "\u091a\u0940\u0928\u0940", "price": 45, "stock": 60}]}
+2025-07-07 21:41:02,164 - __main__ - INFO - Response: Current inventory:
+1. Rice – ₹50 – 100 qty
+2. Wheat – ₹40 – 75 qty
+3. Sugar – ₹45 – 60 qty
+4. चावल – ₹50 – 100 qty
+5. गेहूं – ₹40 – 75 qty
+6. चीनी – ₹45 – 60 qty
+2025-07-07 21:41:02,166 - __main__ - INFO - Processing message from 1234567890: 'मेरा इन्वेंटरी दिखाओ'
+2025-07-07 21:41:02,166 - nlp.multilingual_handler - INFO - Detected language: hi for message: मेरा इन्वेंटरी दिखाओ
+2025-07-07 21:41:02,169 - nlp.multilingual_handler - INFO - Hindi intent recognized: get_inventory
+2025-07-07 21:41:02,169 - __main__ - INFO - Parsed result: {"intent": "get_inventory", "entities": {}, "language": "hi"}
+2025-07-07 21:41:02,169 - nlp.command_router - INFO - API Request: GET http://127.0.0.1:8000/seller/products
+2025-07-07 21:41:02,169 - nlp.command_router - INFO - Headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer whatsapp-1234567890'}
+2025-07-07 21:41:02,170 - nlp.command_router - ERROR - API request failed: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x106b10a50>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-07 21:41:02,170 - nlp.command_router - WARNING - Backend connection failed, falling back to simulation: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /seller/products (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x106b10a50>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-07 21:41:02,170 - nlp.command_router - INFO - Simulated response for get_inventory: {"products": [{"name": "Rice", "price": 50, "stock": 100}, {"name": "Wheat", "price": 40, "stock": 75}, {"name": "Sugar", "price": 45, "stock": 60}, {"name": "\u091a\u093e\u0935\u0932", "price": 50, "stock": 100}, {"name": "\u0917\u0947\u0939\u0942\u0902", "price": 40, "stock": 75}, {"name": "\u091a\u0940\u0928\u0940", "price": 45, "stock": 60}]}
+2025-07-07 21:41:02,170 - __main__ - INFO - Response: वर्तमान इन्वेंटरी:
+1. Rice – ₹50 – 100 मात्रा
+2. Wheat – ₹40 – 75 मात्रा
+3. Sugar – ₹45 – 60 मात्रा
+4. चावल – ₹50 – 100 मात्रा
+5. गेहूं – ₹40 – 75 मात्रा
+6. चीनी – ₹45 – 60 मात्रा
+2025-07-07 21:41:02,171 - __main__ - INFO - Processing message from 1234567890: 'Hello there'
+2025-07-07 21:41:02,171 - nlp.multilingual_handler - INFO - Detected language: en for message: Hello there
+2025-07-07 21:41:02,171 - nlp.intent_handler - INFO - Raw command: Hello there
+2025-07-07 21:41:02,171 - nlp.intent_handler - INFO - Normalized command: hello there
+2025-07-07 21:41:02,171 - nlp.intent_handler - INFO - Language detection: en
+2025-07-07 21:41:02,177 - nlp.intent_handler - WARNING - No intent matched for message: Hello there
+2025-07-07 21:41:02,177 - nlp.multilingual_handler - INFO - English intent recognized: unknown
+2025-07-07 21:41:02,177 - __main__ - INFO - Parsed result: {"intent": "unknown", "entities": {}, "raw_text": "Hello there", "normalized_text": "hello there", "language": "en"}
+2025-07-07 21:41:02,177 - __main__ - INFO - Response: Sorry, I couldn't understand that command.
+2025-07-07 21:41:12,439 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-07 21:41:12,440 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-07 21:41:12,441 - nlp.multilingual_handler - INFO - Detected language: en for message: Show my inventory
+2025-07-07 21:41:12,442 - nlp.intent_handler - INFO - Raw command: Show my inventory
+2025-07-07 21:41:12,442 - nlp.intent_handler - INFO - Normalized command: show my inventory
+2025-07-07 21:41:12,442 - nlp.intent_handler - INFO - Language detection: en
+2025-07-07 21:41:12,442 - nlp.intent_handler - INFO - Recognized intent: get_inventory, entities: {}
+2025-07-07 21:41:12,442 - nlp.multilingual_handler - INFO - English intent recognized: get_inventory
+2025-07-07 21:41:12,442 - __main__ - INFO - Message: 'Show my inventory'
+2025-07-07 21:41:12,442 - __main__ - INFO - Expected: {"intent": "get_inventory", "entities": {}, "language": "en"}
+2025-07-07 21:41:12,442 - __main__ - INFO - Actual: {"intent": "get_inventory", "entities": {}, "language": "en", "raw_text": "Show my inventory", "normalized_text": "show my inventory"}
+2025-07-07 21:41:12,442 - nlp.multilingual_handler - INFO - Detected language: en for message: Add new product Rice 50rs 20qty
+2025-07-07 21:41:12,442 - nlp.intent_handler - INFO - Raw command: Add new product Rice 50rs 20qty
+2025-07-07 21:41:12,442 - nlp.intent_handler - INFO - Normalized command: ऐड new product rice 50rs 20qty
+2025-07-07 21:41:12,442 - nlp.intent_handler - INFO - Language detection: hi
+2025-07-07 21:41:12,446 - nlp.intent_handler - WARNING - No intent matched for message: Add new product Rice 50rs 20qty
+2025-07-07 21:41:12,446 - nlp.multilingual_handler - INFO - English intent recognized: unknown
+2025-07-07 21:41:12,446 - __main__ - INFO - Message: 'Add new product Rice 50rs 20qty'
+2025-07-07 21:41:12,446 - __main__ - INFO - Expected: {"intent": "add_product", "entities": {"product_name": "Rice", "price": "50", "quantity": "20"}, "language": "en"}
+2025-07-07 21:41:12,446 - __main__ - INFO - Actual: {"intent": "unknown", "entities": {}, "raw_text": "Add new product Rice 50rs 20qty", "normalized_text": "ऐड new product rice 50rs 20qty", "language": "en"}
+2025-07-07 21:41:12,447 - nlp.multilingual_handler - INFO - Detected language: hi for message: मेरे प्रोडक्ट दिखाओ
+2025-07-07 21:41:12,450 - nlp.multilingual_handler - INFO - Hindi intent recognized: get_inventory
+2025-07-07 21:41:12,450 - __main__ - INFO - Message: 'मेरे प्रोडक्ट दिखाओ'
+2025-07-07 21:41:12,450 - __main__ - INFO - Expected: {"intent": "get_inventory", "entities": {}, "language": "hi"}
+2025-07-07 21:41:12,450 - __main__ - INFO - Actual: {"intent": "get_inventory", "entities": {}, "language": "hi"}
+2025-07-07 21:41:12,450 - nlp.multilingual_handler - INFO - Detected language: hi for message: नया प्रोडक्ट चावल 50 रुपये 20 पीस जोड़ो
+2025-07-07 21:41:12,450 - nlp.multilingual_handler - INFO - Hindi intent recognized: add_product
+2025-07-07 21:41:12,450 - __main__ - INFO - Message: 'नया प्रोडक्ट चावल 50 रुपये 20 पीस जोड़ो'
+2025-07-07 21:41:12,450 - __main__ - INFO - Expected: {"intent": "add_product", "entities": {"product_name": "चावल", "price": "50", "quantity": "20"}, "language": "hi"}
+2025-07-07 21:41:12,450 - __main__ - INFO - Actual: {"intent": "add_product", "entities": {"name": "चावल", "price": 50, "stock": 20}, "language": "hi"}
+2025-07-07 21:41:12,451 - nlp.multilingual_handler - INFO - Detected language: hi for message: Add नया product चावल 50rs
+2025-07-07 21:41:12,452 - nlp.multilingual_handler - INFO - Hindi intent recognized: unknown
+2025-07-07 21:41:12,452 - __main__ - INFO - Message: 'Add नया product चावल 50rs'
+2025-07-07 21:41:12,452 - __main__ - INFO - Expected: {"intent": "add_product", "entities": {"product_name": "चावल", "price": "50"}, "language": "en"}
+2025-07-07 21:41:12,452 - __main__ - INFO - Actual: {"intent": "unknown", "entities": {}, "language": "hi"}
+2025-07-07 21:41:12,453 - nlp.multilingual_handler - INFO - Detected language: hi for message: नया प्रोडक्ट दाल₹ 100 रुपये 50 पीस जोड़ो
+2025-07-07 21:41:12,453 - nlp.multilingual_handler - INFO - Hindi intent recognized: add_product
+2025-07-07 21:41:12,453 - __main__ - INFO - Message: 'नया प्रोडक्ट दाल₹ 100 रुपये 50 पीस जोड़ो'
+2025-07-07 21:41:12,453 - __main__ - INFO - Expected: {"intent": "add_product", "entities": {"product_name": "दाल₹", "price": "100", "quantity": "50"}, "language": "hi"}
+2025-07-07 21:41:12,453 - __main__ - INFO - Actual: {"intent": "add_product", "entities": {"name": "दाल₹", "price": 100, "stock": 50}, "language": "hi"}
+2025-07-08 11:13:19,238 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-08 11:13:19,239 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-08 11:16:43,115 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-08 11:16:43,116 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-08 11:17:08,330 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-08 11:17:08,330 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-08 11:19:12,105 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-08 11:19:12,106 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-08 11:19:36,263 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-08 11:19:36,263 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-08 11:21:47,737 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-08 11:21:47,738 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-08 11:21:53,548 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-08 11:21:53,548 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-08 11:23:30,387 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-08 11:23:30,390 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-08 11:25:57,841 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-08 11:25:57,841 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-08 11:32:38,120 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-08 11:32:38,120 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-08 12:00:59,686 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-08 12:00:59,687 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-08 12:04:36,538 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-08 12:04:36,538 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-08 12:07:20,515 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-08 12:07:20,515 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-08 12:18:47,705 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-08 12:18:47,706 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-08 15:08:54,634 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-08 15:08:54,635 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-08 15:09:59,907 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-08 15:09:59,910 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
+2025-07-08 15:11:46,872 - nlp.command_router - INFO - Command Router initialized - API integration active
+2025-07-08 15:11:46,873 - nlp.command_router - INFO - Log file location: /Users/sanjaysuman/One Tappe/OneTappeProject/logs/command_router.log
