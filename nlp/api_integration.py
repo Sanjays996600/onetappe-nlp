@@ -84,6 +84,14 @@ def process_command(data: CommandInput):
     )
     return response
 
+@router.get("/", tags=["Default"])
+def root():
+    return {"message": "Welcome to OneTappe WhatsApp Backend"}
+
+@router.get("/webhook-test", tags=["Default"])
+def test_webhook():
+    return {"message": "Webhook test successful"}
+
 # Include router in the app
 app.include_router(router)
 
