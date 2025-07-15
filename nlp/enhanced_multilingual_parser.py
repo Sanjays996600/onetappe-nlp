@@ -905,19 +905,21 @@ def test_mixed_language_extraction():
             except Exception as e:
                 print(f"Normalization error: {str(e)}")
         
-        # Parse the command
+                # Parse the command
         result = parse_multilingual_command(cmd)
         print(f"Intent: {result.get('intent')}")
         print(f"Entities: {json.dumps(result.get('entities', {}), ensure_ascii=False)}")
         print(f"Raw Text: {result.get('raw_text')}")
         print(f"Normalized Text: {result.get('normalized_text')}")
-        print(f"Response: {format_response(
+        
+        response = format_response(
             intent=result.get('intent'),
             entities=result.get('entities', {}),
             language=result.get('language'),
             raw_text=result.get('raw_text'),
             normalized_text=result.get('normalized_text')
-        )}")
+        )
+        print(f"Response: {response}")
         print("---")
 
 def evaluate_parser_accuracy():
