@@ -1,9 +1,10 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, APIRouter, HTTPException
 from pydantic import BaseModel
 from typing import Dict, Any, Optional
 
 # Import our intent handler
 from nlp.intent_handler import parse_command, detect_language
+from nlp.enhanced_multilingual_parser import parse_multilingual_command, format_response
 
 # Define request and response models
 class CommandRequest(BaseModel):
@@ -19,10 +20,19 @@ class CommandResponse(BaseModel):
     raw_text: str
     normalized_text: str
 
-# Create FastAPI app
-app = FastAPI(title="WhatsApp Command Intent Handler API")
+class CommandInput(BaseModel):
+    text: str
 
-@app.post("/api/parse-command", response_model=CommandResponse)
+# Create FastAPI app
+app = FastAPI(
+    title="OneTappe WhatsApp Backend",
+    version="1.0.0",
+    description="Handles WhatsApp-based commerce actions"
+)
+
+router = APIRouter()
+
+@router.post("/api/parse-command", response_model=CommandResponse)
 async def handle_command(request: CommandRequest):
     """
     Parse a WhatsApp command and return the recognized intent and entities
@@ -45,7 +55,7 @@ async def handle_command(request: CommandRequest):
         normalized_text=result.get("normalized_text", request.message.lower().strip())
     )
 
-@app.get("/api/supported-intents")
+@router.get("/api/supported-intents")
 async def get_supported_intents():
     """
     Return a list of supported intents and example commands
@@ -61,6 +71,21 @@ async def get_supported_intents():
         },
         "languages": ["en", "hi"]
     }
+
+@router.post("/process", summary="Parse WhatsApp command", tags=["NLP Parser"])
+def process_command(data: CommandInput):
+    result = parse_multilingual_command(data.text)
+    response = format_response(
+        intent=result.get("intent"),
+        entities=result.get("entities", {}),
+        language=result.get("language"),
+        raw_text=result.get("raw_text"),
+        normalized_text=result.get("normalized_text")
+    )
+    return response
+
+# Include router in the app
+app.include_router(router)
 
 # Example of how to run the API server
 if __name__ == "__main__":
