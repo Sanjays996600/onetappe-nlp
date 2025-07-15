@@ -5,6 +5,7 @@ from typing import Dict, Any, Optional
 # Import our intent handler
 from nlp.intent_handler import parse_command, detect_language
 from nlp.enhanced_multilingual_parser import parse_multilingual_command, format_response
+from nlp.command_router import router as nlp_router
 
 # Define request and response models
 class CommandRequest(BaseModel):
@@ -72,17 +73,7 @@ async def get_supported_intents():
         "languages": ["en", "hi"]
     }
 
-@router.post("/process", summary="Parse WhatsApp command", tags=["NLP Parser"])
-def process_command(data: CommandInput):
-    result = parse_multilingual_command(data.text)
-    response = format_response(
-        intent=result.get("intent"),
-        entities=result.get("entities", {}),
-        language=result.get("language"),
-        raw_text=result.get("raw_text"),
-        normalized_text=result.get("normalized_text")
-    )
-    return response
+# /process endpoint is now defined in command_router.py
 
 @router.get("/", tags=["Default"])
 def root():
@@ -92,8 +83,9 @@ def root():
 def test_webhook():
     return {"message": "Webhook test successful"}
 
-# Include router in the app
+# Include routers in the app
 app.include_router(router)
+app.include_router(nlp_router)
 
 # Example of how to run the API server
 if __name__ == "__main__":

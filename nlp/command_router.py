@@ -2,8 +2,28 @@ import requests
 import json
 import logging
 import datetime
-from typing import Dict, Any, Optional, Union
+import re
+from typing import Dict, Any, Optional, Union, Tuple, List
 from urllib.parse import urljoin
+from fastapi import APIRouter
+from pydantic import BaseModel
+from nlp.enhanced_multilingual_parser import parse_multilingual_command, format_response
+
+router = APIRouter()
+
+class CommandInput(BaseModel):
+    text: str
+
+@router.post("/process", tags=["NLP Parser"])
+async def process_command(input: CommandInput):
+    result = parse_multilingual_command(input.text)
+    return format_response(
+        intent=result.get('intent'),
+        entities=result.get('entities', {}),
+        language=result.get('language'),
+        raw_text=result.get('raw_text'),
+        normalized_text=result.get('normalized_text')
+    )
 
 # Setup logging
 import os
@@ -39,6 +59,11 @@ BASE_URL = "http://127.0.0.1:8000"
 # Response templates for different languages
 RESPONSE_TEMPLATES = {
     "en": {
+        "register": {
+            "success": "Business '{business_name}' registered successfully at {location}. Welcome to One Tappe!",
+            "error": "Failed to register business. Error: {error}",
+            "missing_info": "Please provide both business name and location for registration. Format: register business_name=YourBusinessName location=YourLocation"
+        },
         "add_product": {
             "success": "Product {name} added successfully with price ₹{price} and stock {stock}.",
             "error": "Failed to add product {name}. Error: {error}"
@@ -83,6 +108,11 @@ RESPONSE_TEMPLATES = {
         "unknown": "Sorry, I couldn't understand that command."
     },
     "hi": {
+        "register": {
+            "success": "व्यापार '{business_name}' {location} में सफलतापूर्वक पंजीकृत किया गया। One Tappe में आपका स्वागत है!",
+            "error": "व्यापार पंजीकरण में विफल। त्रुटि: {error}",
+            "missing_info": "कृपया पंजीकरण के लिए व्यापार का नाम और स्थान दोनों प्रदान करें। प्रारूप: रजिस्टर व्यापार=आपकाव्यापारनाम स्थान=आपकास्थान"
+        },
         "add_product": {
             "success": "प्रोडक्ट {name} को ₹{price} कीमत और {stock} स्टॉक के साथ सफलतापूर्वक जोड़ा गया।",
             "error": "प्रोडक्ट {name} को जोड़ने में विफल। त्रुटि: {error}"
@@ -130,6 +160,10 @@ RESPONSE_TEMPLATES = {
 
 # API endpoint mappings
 API_ENDPOINTS = {
+    "register": {
+        "path": "/seller/register",
+        "method": "POST"
+    },
     "add_product": {
         "path": "/products",
         "method": "POST"
@@ -377,6 +411,100 @@ def format_top_products_response(products_data: list, language: str, time_range:
     
     return products_str
 
+def register_seller(entities: Dict[str, Any], language: str, user_id: str = None) -> str:
+    """
+    Register a new seller with the provided business name and location
+    
+    Args:
+        entities: Dictionary containing business_name and location
+        language: Language code ('en' or 'hi')
+        user_id: User ID for authentication (WhatsApp number)
+        
+    Returns:
+        Response message
+    """
+    import time
+    from nlp.entity_utils import validate_register_entities
+    from nlp.response_utils import get_response_template, format_error_details
+    
+    start_time = time.time()
+    
+    # Log the registration attempt with metadata
+    logger.info(f"Processing seller registration: user_id={user_id}, language={language}")
+    
+    # Validate required entities
+    validation_errors = validate_register_entities(entities)
+    
+    if validation_errors:
+        error_details = format_error_details(validation_errors, language)
+        logger.warning(f"Validation errors in seller registration: {validation_errors}, user_id={user_id}")
+        
+        # Return specific error message based on missing fields
+        if 'business_name' in validation_errors and 'location' in validation_errors:
+            return get_response_template('register', 'missing_info', language)
+        elif 'business_name' in validation_errors:
+            return get_response_template('register', 'missing_business_name', language)
+        elif 'location' in validation_errors:
+            return get_response_template('register', 'missing_location', language)
+        else:
+            return get_response_template('register', 'validation_error', language).format(error_details=error_details)
+    
+    # Extract validated entities
+    business_name = entities.get('business_name')
+    location = entities.get('location')
+    
+    # Add WhatsApp number and registration timestamp if not already present
+    if 'whatsapp_number' not in entities and user_id:
+        entities['whatsapp_number'] = user_id
+    
+    if 'registered_at' not in entities:
+        entities['registered_at'] = int(time.time())  # Unix timestamp
+    
+    # Prepare data for API request
+    data = {
+        'business_name': business_name,
+        'location': location,
+        'whatsapp_number': entities.get('whatsapp_number', user_id),
+        'registered_at': entities.get('registered_at')
+    }
+    
+    # Get API endpoint details
+    endpoint_info = API_ENDPOINTS.get('register')
+    if not endpoint_info:
+        logger.error("API endpoint for register not found")
+        return get_response_template('register', 'error', language).format(error="API configuration error")
+    
+    # Make API request
+    response = make_api_request(
+        endpoint=endpoint_info['path'],
+        method=endpoint_info['method'],
+        data=data,
+        user_id=user_id
+    )
+    
+    # Calculate and log processing duration
+    processing_time = (time.time() - start_time) * 1000  # in milliseconds
+    logger.info(f"Seller registration processing completed in {processing_time:.2f}ms for user_id={user_id}")
+    
+    # Check for errors
+    if 'error' in response:
+        error_message = response['error']
+        logger.error(f"Error registering seller: {error_message}, user_id={user_id}")
+        
+        # Check for duplicate registration
+        if "duplicate" in error_message.lower() or "already exists" in error_message.lower():
+            return get_response_template('register', 'duplicate', language)
+        
+        return get_response_template('register', 'error', language).format(error=error_message)
+    
+    # Return success message
+    logger.info(f"Seller registered successfully: business_name={business_name}, location={location}, user_id={user_id}")
+    return get_response_template('register', 'success', language).format(
+        business_name=business_name,
+        location=location,
+        whatsapp_number=entities.get('whatsapp_number', user_id)
+    )
+
 def format_customer_data_response(customers_data: list, language: str, time_range: str) -> str:
     """
     Format customer data into a readable string
@@ -504,7 +632,10 @@ def route_command(intent_or_parsed_result: Union[str, Dict[str, Any]], entities:
     params = {}
     data = {}
     
-    if intent == "add_product":
+    if intent == "register":
+        # For register intent, call the dedicated function
+        return register_seller(entities, language, user_id)
+    elif intent == "add_product":
         data = {
             "product_name": entities.get("name", ""),
             "price": entities.get("price", 0),
@@ -1078,6 +1209,222 @@ if __name__ == "__main__":
         print(f"Intent: {cmd['intent']}")
         print(f"Entities: {cmd['entities']}")
         print(f"Response: {response}\n")
+
+
+async def process_command(text: str, user_id: str) -> str:
+    """
+    Process a raw text command from WhatsApp and return a response
+    
+    Args:
+        text: The raw text message from the user
+        user_id: The WhatsApp user ID (phone number)
+        
+    Returns:
+        Response message to send back to the user
+    """
+    logger.info(f"Processing command from user {user_id}: {text}")
+    
+    try:
+        # Parse the command to extract intent and entities
+        parsed_result = parse_command(text)
+        
+        # Route the command to the appropriate handler
+        response = route_command(parsed_result, user_id=user_id)
+        
+        logger.info(f"Response for user {user_id}: {response}")
+        return response
+    except ImportError as ie:
+        logger.error(f"Import error in command processing: {str(ie)}")
+        return "Our service is currently undergoing maintenance. Please try again in a few minutes."
+    except ValueError as ve:
+        logger.error(f"Value error in command processing: {str(ve)}")
+        return "I couldn't understand your request format. Please check your input and try again, or type 'help' for assistance."
+    except Exception as e:
+        logger.error(f"Error processing command: {str(e)}")
+        # Return a friendly error message with more specific guidance
+        return "Sorry, I couldn't process your request. Please try again with a simpler command or type 'help' for a list of available commands."
+
+
+def parse_command(text: str) -> Dict[str, Any]:
+    """
+    Parse a raw text command to extract intent and entities
+    
+    Args:
+        text: The raw text message from the user
+        
+    Returns:
+        Dictionary with intent, entities, and language
+    """
+    # Validate input
+    if not text:
+        logger.warning("Empty text received")
+        return {
+            "intent": "unknown",
+            "entities": {},
+            "language": "en"
+        }
+        
+    if not isinstance(text, str):
+        logger.warning(f"Invalid text type received: {type(text)}")
+        return {
+            "intent": "unknown",
+            "entities": {},
+            "language": "en"
+        }
+        
+    # Trim excessive whitespace
+    text = text.strip()
+    if not text:
+        logger.warning("Text contains only whitespace")
+        return {
+            "intent": "unknown",
+            "entities": {},
+            "language": "en"
+        }
+        
+    # Detect language (simple implementation - can be enhanced)
+    language = detect_language(text)
+    
+    # Convert text to lowercase for easier matching
+    text_lower = text.lower()
+    
+    # Initialize result
+    result = {
+        "intent": "unknown",
+        "entities": {},
+        "language": language
+    }
+    
+    # Check for help command
+    if text_lower in ["help", "मदद", "सहायता"]:
+        result["intent"] = "help"
+        return result
+    
+    # Match register command
+    register_match = re.search(r'register\s+(?:business_?name=)?([\w\s]+)\s+(?:location=)?([\w\s]+)', text_lower)
+    if register_match:
+        result["intent"] = "register"
+        result["entities"] = {
+            "business_name": register_match.group(1).strip(),
+            "location": register_match.group(2).strip()
+        }
+        return result
+    
+    # Match add product command
+    add_product_match = re.search(r'add\s+product\s+(?:name=)?([\w\s]+)\s+(?:price=)?(\d+)\s+(?:stock=)?(\d+)', text_lower)
+    if add_product_match:
+        result["intent"] = "add_product"
+        result["entities"] = {
+            "name": add_product_match.group(1).strip(),
+            "price": int(add_product_match.group(2)),
+            "stock": int(add_product_match.group(3))
+        }
+        return result
+    
+    # Match edit stock command
+    edit_stock_match = re.search(r'(?:edit|update)\s+stock\s+(?:name=)?([\w\s]+)\s+(?:stock=)?(\d+)', text_lower)
+    if edit_stock_match:
+        result["intent"] = "edit_stock"
+        result["entities"] = {
+            "name": edit_stock_match.group(1).strip(),
+            "stock": int(edit_stock_match.group(2))
+        }
+        return result
+    
+    # Match get inventory command
+    if re.search(r'(?:get|show)\s+(?:my\s+)?inventory', text_lower):
+        result["intent"] = "get_inventory"
+        return result
+    
+    # Match get low stock command
+    if re.search(r'(?:get|show)\s+(?:my\s+)?low\s+stock', text_lower):
+        result["intent"] = "get_low_stock"
+        return result
+    
+    # Match get report command
+    report_match = re.search(r'(?:get|show)\s+(?:my\s+)?(?:sales\s+)?report(?:\s+for\s+(.+))?', text_lower)
+    if report_match:
+        result["intent"] = "get_report"
+        time_range = report_match.group(1) if report_match.group(1) else "today"
+        result["entities"] = {"range": time_range}
+        return result
+    
+    # Match get orders command
+    orders_match = re.search(r'(?:get|show)\s+(?:my\s+)?orders(?:\s+for\s+(.+))?', text_lower)
+    if orders_match:
+        result["intent"] = "get_orders"
+        time_range = orders_match.group(1) if orders_match.group(1) else "today"
+        result["entities"] = {"range": time_range}
+        return result
+    
+    # Match get top products command
+    top_products_match = re.search(r'(?:get|show)\s+(?:my\s+)?top\s+(\d+)?\s*products(?:\s+for\s+(.+))?', text_lower)
+    if top_products_match:
+        result["intent"] = "get_top_products"
+        limit = int(top_products_match.group(1)) if top_products_match.group(1) else 5
+        time_range = top_products_match.group(2) if top_products_match.group(2) else "month"
+        result["entities"] = {"limit": limit, "range": time_range}
+        return result
+    
+    # Match search product command
+    search_match = re.search(r'(?:search|find|check)\s+(?:product\s+)?([\w\s]+)', text_lower)
+    if search_match:
+        result["intent"] = "search_product"
+        result["entities"] = {"name": search_match.group(1).strip()}
+        return result
+    
+    # If no intent matched, return unknown
+    return result
+
+
+def detect_language(text: str) -> str:
+    """
+    Detect the language of the text
+    
+    Args:
+        text: The text to detect language for
+        
+    Returns:
+        Language code (en/hi)
+    """
+    if not text:
+        return "en"
+        
+    # Simple language detection based on common Hindi words and patterns
+    hindi_words = [
+        "मेरा", "हमारा", "आप", "तुम", "है", "हैं", "था", "थे", "की", "का", "के", "में", "पर", "से", "को", 
+        "मदद", "सहायता", "दिखाओ", "स्टॉक", "रिपोर्ट", "बिक्री", "उत्पाद", "जोड़ें", "अपडेट", "रजिस्टर",
+        "दिखाना", "बताओ", "कितना", "कौनसा", "कब", "क्यों", "कैसे", "कहां", "मिला", "चाहिए"
+    ]
+    
+    # Hindi command patterns
+    hindi_patterns = [
+        r'स्टॉक\s+दिखाओ',
+        r'रिपोर्ट\s+दिखाओ',
+        r'उत्पाद\s+जोड़ें',
+        r'स्टॉक\s+अपडेट',
+        r'बिक्री\s+रिपोर्ट',
+        r'मेरा\s+स्टॉक',
+        r'मेरी\s+बिक्री',
+        r'कम\s+स्टॉक',
+        r'नया\s+उत्पाद'
+    ]
+    
+    # Count Hindi words in the text
+    hindi_word_count = sum(1 for word in hindi_words if word in text.lower())
+    
+    # Check for Hindi patterns
+    hindi_pattern_match = any(re.search(pattern, text.lower()) for pattern in hindi_patterns)
+    
+    # If Hindi words or patterns are found, consider it Hindi
+    # Adjusted threshold to be more sensitive to Hindi content
+    if hindi_word_count >= 1 or hindi_pattern_match:
+        logger.info(f"Detected Hindi language in text: {text} (word count: {hindi_word_count})")
+        return "hi"
+    
+    # Default to English
+    logger.info(f"Detected English language in text: {text}")
+    return "en"
     
     print("\nTesting Hindi commands:\n")
     for cmd in hindi_test_commands:
